@@ -1,69 +1,362 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Page Website</title>
-    <meta
-      name="description"
-      content="A clean single-page website deployed with GitHub Pages."
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="nav">
-        <a class="brand" href="#top">SPWOA</a>
-        <div class="links">
-          <a href="#about">About</a>
-          <a href="#features">Features</a>
-          <a href="#contact">Contact</a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tuhin Mohanta — Platform Transformation & Reliability Leader | Healthcare SaaS | Cloud Modernization | SRE | DevSecOps" />
+  <title>Tuhin Mohanta — Platform & Reliability Leader</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --muted:#9bb0d0;
+      --text:#eaf2ff;
+      --accent:#7cc4ff;
+      --accent2:#a7f3d0;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(124,196,255,.18), transparent 60%),
+        radial-gradient(1000px 700px at 90% 20%, rgba(167,243,208,.12), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(124,196,255,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 60px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:10px 0 22px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .brand .name{
+      font-size:18px; letter-spacing:.2px; font-weight:650;
+    }
+    .brand .role{
+      font-size:13px; color:var(--muted);
+    }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
+    }
+    .pill{
+      padding:9px 12px; border:1px solid var(--border);
+      border-radius:999px; text-decoration:none; font-size:13px;
+      background: rgba(255,255,255,.04);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .pill:hover{transform: translateY(-1px); background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.18);}
+    .hero{
+      display:grid; grid-template-columns: 1.4fr .9fr; gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(800px 260px at 20% 0%, rgba(124,196,255,.16), transparent 60%);
+      pointer-events:none;
+    }
+    .card > *{position:relative}
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:7px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .h1{
+      margin:12px 0 10px;
+      font-size:40px; line-height:1.05;
+      letter-spacing:-.7px;
+      font-weight:780;
+    }
+    @media (max-width: 520px){ .h1{font-size:34px} }
+    .sub{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      border-radius:14px;
+      padding:11px 14px;
+      border:1px solid var(--border);
+      text-decoration:none;
+      font-size:13px;
+      background: rgba(255,255,255,.06);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.20);}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(124,196,255,.30), rgba(167,243,208,.20));
+      border-color: rgba(124,196,255,.35);
+    }
+    .grid{
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns: repeat(2, 1fr)} }
+    @media (max-width: 520px){ .grid{grid-template-columns: 1fr} }
+    .metric{
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background: rgba(0,0,0,.10);
+    }
+    .metric .v{font-size:18px; font-weight:750}
+    .metric .k{font-size:12px; color:var(--muted); margin-top:3px}
+    .section{
+      margin-top:18px;
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px; letter-spacing:.2px;
+    }
+    .tags{
+      display:flex; flex-wrap:wrap; gap:8px;
+    }
+    .tag{
+      font-size:12px;
+      padding:7px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background: rgba(255,255,255,.04);
+      color: rgba(234,242,255,.92);
+    }
+    .list{
+      display:grid; gap:10px;
+    }
+    .item{
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:16px;
+      background: rgba(0,0,0,.10);
+    }
+    .item .t{font-weight:700; margin-bottom:4px}
+    .item .d{color:var(--muted); font-size:13px}
+    .cols{
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+      margin-top:14px;
+    }
+    @media (max-width: 900px){ .cols{grid-template-columns:1fr} }
+    footer{
+      margin-top:26px; color:var(--muted); font-size:12px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .small{font-size:12px; color:var(--muted)}
+    .divider{height:1px; background: var(--border); margin:18px 0;}
+    .quote{
+      font-size:13px; color:rgba(234,242,255,.92);
+      margin:0;
+    }
+    .quote span{color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="name">Tuhin Mohanta</div>
+        <div class="role">Platform Transformation & Reliability Leader • Healthcare SaaS • Bengaluru</div>
+      </div>
+      <div class="nav">
+        <a class="pill" href="#impact">Impact</a>
+        <a class="pill" href="#focus">Focus</a>
+        <a class="pill" href="#journey">Journey</a>
+        <a class="pill" href="#recommendations">Recommendations</a>
+        <a class="pill" href="#connect">Connect</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card">
+        <div class="kicker">Director-caliber mandate • Cloud → SaaS modernization • Reliability economics</div>
+        <div class="h1">Modernize regulated platforms into cloud-native SaaS—<br/>with reliability, compliance, and cost efficiency built in.</div>
+        <p class="sub">
+          Senior Manager, Software Development at Oracle Health. 20+ years building enterprise-scale platforms and engineering organizations across
+          Cloud Transformation, Platform Engineering, DevSecOps, and SRE.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/tuhinmohanta/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="#connect">Executive summary</a>
+          <a class="btn" href="#journey">Career timeline</a>
         </div>
-      </nav>
 
-      <section class="hero-content" id="top">
-        <p class="eyebrow">Single Page Website</p>
-        <h1>Simple, fast, and ready for GitHub Pages.</h1>
-        <p>
-          This is a production-ready starter page that can be hosted directly from
-          this repository using GitHub Pages.
+        <div id="impact" class="grid">
+          <div class="metric">
+            <div class="v">$2B+ portfolio</div>
+            <div class="k">Healthcare revenue influence & modernization</div>
+          </div>
+          <div class="metric">
+            <div class="v">50+ deployments</div>
+            <div class="k">Zero-downtime cloud migration at scale</div>
+          </div>
+          <div class="metric">
+            <div class="v">$25M+ / year</div>
+            <div class="k">Annual savings via cost-to-serve optimization</div>
+          </div>
+          <div class="metric">
+            <div class="v">70% cost reduction</div>
+            <div class="k">Hosting cost reduction through infra optimization</div>
+          </div>
+          <div class="metric">
+            <div class="v">99.9% uptime</div>
+            <div class="k">SRE operating model for mission-critical apps</div>
+          </div>
+          <div class="metric">
+            <div class="v">4 days → 8 hours</div>
+            <div class="k">Provisioning lead time via IaC & automation</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="quote">
+          “He connects big-picture strategy to execution: aligning platform choices with product goals, partnering with Security and Finance on compliance and cost,
+          and communicating crisply with stakeholders.” <span>— peer recommendation</span>
         </p>
-        <a class="cta" href="#contact">Get in touch</a>
-      </section>
-    </header>
+      </div>
 
-    <main>
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>
-          This page is intentionally lightweight and accessible, with semantic HTML
-          and responsive styling.
-        </p>
-      </section>
+      <div class="card" id="focus">
+        <h2>Core focus areas</h2>
+        <div class="tags" aria-label="skills">
+          <span class="tag">Platform Engineering</span>
+          <span class="tag">SRE / Observability</span>
+          <span class="tag">Cloud Modernization</span>
+          <span class="tag">DevSecOps</span>
+          <span class="tag">OCI / AWS</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Infrastructure as Code</span>
+          <span class="tag">HIPAA / PHI Governance</span>
+          <span class="tag">Operating Model Design</span>
+        </div>
 
-      <section id="features" class="card">
-        <h2>Features</h2>
-        <ul>
-          <li>Single HTML + CSS setup</li>
-          <li>Mobile-friendly layout</li>
-          <li>Easy GitHub Pages deployment via Actions</li>
-        </ul>
-      </section>
+        <div class="section">
+          <h2>What he’s best at</h2>
+          <div class="list">
+            <div class="item">
+              <div class="t">Cloud → SaaS transformation</div>
+              <div class="d">Replatforming legacy healthcare systems into cloud-native operating models with zero-downtime execution.</div>
+            </div>
+            <div class="item">
+              <div class="t">Reliability as architecture</div>
+              <div class="d">SLOs, runbooks, incident learning, observability defaults, and healthier on-call—engineered into delivery.</div>
+            </div>
+            <div class="item">
+              <div class="t">Cost-to-serve optimization</div>
+              <div class="d">Capacity, automation, standardization, and governance—turning platform decisions into measurable savings.</div>
+            </div>
+            <div class="item">
+              <div class="t">Org building & talent multiplication</div>
+              <div class="d">Hiring, coaching, career paths, succession—building teams that operate with ownership beyond the leader.</div>
+            </div>
+          </div>
+        </div>
 
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>
-          Replace this section with your preferred contact details or form links.
-        </p>
-      </section>
-    </main>
+        <div class="section" id="connect">
+          <h2>Executive summary</h2>
+          <p class="small">
+            Tuhin is a transformation leader who modernizes mission-critical healthcare platforms into cloud-native SaaS.
+            He combines deep technical authority with operating-model rigor across SRE, DevSecOps, and platform engineering,
+            delivering measurable reliability, compliance, and cost outcomes at enterprise scale.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cols" id="journey">
+      <div class="card">
+        <h2>Career timeline</h2>
+        <div class="list">
+          <div class="item">
+            <div class="t">Oracle Health — Senior Manager, Software Development</div>
+            <div class="d">Oct 2023–Present • Cloud modernization & SaaS transformation • OCI • SRE/DevSecOps • $2B+ portfolio influence</div>
+          </div>
+          <div class="item">
+            <div class="t">Cerner — Senior Manager / Sr Engineering Manager / Architect / Manager</div>
+            <div class="d">2016–2023 • Platform engineering • AWS/Kubernetes • DX • SAFe adoption • Governance & quality frameworks</div>
+          </div>
+          <div class="item">
+            <div class="t">Siemens Technology & Services</div>
+            <div class="d">2011–2015 • CI/CD early adoption • automation-first culture • tooling modernization</div>
+          </div>
+          <div class="item">
+            <div class="t">Earlier roles: Novell, Nokia, Samsung, Mindtree</div>
+            <div class="d">2005–2011 • Integration & delivery engineering • release frameworks • device/software engineering foundations</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="recommendations">
+        <h2>Leadership signals (from recommendations)</h2>
+        <div class="list">
+          <div class="item">
+            <div class="t">Trust + execution across geographies</div>
+            <div class="d">Builds high-trust teams spanning India and North America, delivering predictable outcomes.</div>
+          </div>
+          <div class="item">
+            <div class="t">SRE maturity</div>
+            <div class="d">SLOs, incident response, observability defaults, post-incident learning; improved MTTR and on-call health.</div>
+          </div>
+          <div class="item">
+            <div class="t">Technical depth + strategic clarity</div>
+            <div class="d">Can dive deep into details while connecting architecture to portfolio economics and product goals.</div>
+          </div>
+          <div class="item">
+            <div class="t">Talent multiplier</div>
+            <div class="d">Deliberate coaching, career paths, and culture-building that scales beyond the leader.</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Best-fit roles</h2>
+          <div class="tags">
+            <span class="tag">Director / Sr Director — Platform Engineering</span>
+            <span class="tag">Director — SRE / Reliability</span>
+            <span class="tag">Director — Cloud Modernization</span>
+            <span class="tag">Head of Platform / Enablement</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer>
-      <p>© <span id="year"></span> SPWOA. All rights reserved.</p>
+      <div>© <span id="y"></span> Tuhin Mohanta • Single-page profile</div>
+      <div class="small">Built for GitHub Pages • Minimal, fast, accessible</div>
     </footer>
+  </div>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
