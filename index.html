@@ -160,6 +160,12 @@
     }
     .item .t{font-weight:700; margin-bottom:4px}
     .item .d{color:var(--muted); font-size:13px}
+    .item .meta{
+      margin-top:8px;
+      font-size:12px;
+      color:var(--accent2);
+      letter-spacing:.1px;
+    }
     .cols{
       display:grid; grid-template-columns: 1fr 1fr; gap:12px;
       margin-top:14px;
@@ -190,6 +196,7 @@
         <a class="pill" href="#impact">Impact</a>
         <a class="pill" href="#focus">Focus</a>
         <a class="pill" href="#journey">Journey</a>
+        <a class="pill" href="#articles">Articles</a>
         <a class="pill" href="#recommendations">Recommendations</a>
         <a class="pill" href="#connect">Connect</a>
       </div>
@@ -349,6 +356,14 @@
       </div>
     </div>
 
+    <div class="card section" id="articles">
+      <h2>LinkedIn Articles (sorted by reactions)</h2>
+      <p class="small">
+        Title + two-line snippet + engagement metadata (reactions and comments) are shown below in descending reaction order.
+      </p>
+      <div class="list" id="article-list"></div>
+    </div>
+
     <footer>
       <div>© <span id="y"></span> Tuhin Mohanta • Single-page profile</div>
       <div class="small">Built for GitHub Pages • Minimal, fast, accessible</div>
@@ -357,6 +372,48 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    const linkedInArticles = [
+      // Populate from LinkedIn exports/scrapes when available.
+      // Shape:
+      // {
+      //   title: "...",
+      //   snippet: "First line.\nSecond line.",
+      //   reactions: 0,
+      //   comments: 0,
+      //   url: "https://www.linkedin.com/..."
+      // }
+    ];
+
+    const list = document.getElementById("article-list");
+    if (!linkedInArticles.length) {
+      const empty = document.createElement("div");
+      empty.className = "item";
+      empty.innerHTML = `
+        <div class="t">No article feed available in this environment</div>
+        <div class="d">LinkedIn blocks unauthenticated scraping from this runtime, so live article extraction could not be completed here. Add exported article data to the <code>linkedInArticles</code> array to render this section automatically.</div>
+      `;
+      list.appendChild(empty);
+    } else {
+      linkedInArticles
+        .sort((a, b) => b.reactions - a.reactions)
+        .forEach((article) => {
+          const entry = document.createElement("div");
+          entry.className = "item";
+
+          const snippet = article.snippet
+            .split("\n")
+            .slice(0, 2)
+            .join("<br/>");
+
+          entry.innerHTML = `
+            <div class="t"><a href="${article.url}" target="_blank" rel="noreferrer">${article.title}</a></div>
+            <div class="d">${snippet}</div>
+            <div class="meta">👍 ${article.reactions} reactions • 💬 ${article.comments} comments</div>
+          `;
+          list.appendChild(entry);
+        });
+    }
   </script>
 </body>
 </html>
