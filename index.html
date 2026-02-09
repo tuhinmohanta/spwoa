@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Page Website</title>
+    <meta
+      name="description"
+      content="A clean single-page website deployed with GitHub Pages."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#top">SPWOA</a>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero-content" id="top">
+        <p class="eyebrow">Single Page Website</p>
+        <h1>Simple, fast, and ready for GitHub Pages.</h1>
+        <p>
+          This is a production-ready starter page that can be hosted directly from
+          this repository using GitHub Pages.
+        </p>
+        <a class="cta" href="#contact">Get in touch</a>
+      </section>
+    </header>
+
+    <main>
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+          This page is intentionally lightweight and accessible, with semantic HTML
+          and responsive styling.
+        </p>
+      </section>
+
+      <section id="features" class="card">
+        <h2>Features</h2>
+        <ul>
+          <li>Single HTML + CSS setup</li>
+          <li>Mobile-friendly layout</li>
+          <li>Easy GitHub Pages deployment via Actions</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>
+          Replace this section with your preferred contact details or form links.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> SPWOA. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
