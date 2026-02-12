@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /private/
+
+Host: https://tuhinmohanta.com
 Sitemap: https://tuhinmohanta.com/sitemap.xml
