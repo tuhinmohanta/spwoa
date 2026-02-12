@@ -926,14 +926,34 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
   /* ---------- Configuration ---------- */
   const PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
   const ITEMS_PER_PAGE = 6;
+  const FEED_TIMEOUT = 4000; // 4s per-feed timeout — slow feeds get dropped silently
   const FEEDS = [
+    /* --- Global AI & Tech --- */
     { url:'https://techcrunch.com/category/artificial-intelligence/feed/', name:'TechCrunch' },
     { url:'https://venturebeat.com/category/ai/feed/', name:'VentureBeat' },
     { url:'https://www.technologyreview.com/topic/artificial-intelligence/feed', name:'MIT Tech Review' },
     { url:'https://feeds.arstechnica.com/arstechnica/technology-lab', name:'Ars Technica' },
     { url:'https://www.wired.com/feed/tag/ai/latest/rss', name:'WIRED' },
+    { url:'https://www.theverge.com/rss/ai-artificial-intelligence/index.xml', name:'The Verge' },
+    { url:'https://www.zdnet.com/topic/artificial-intelligence/rss.xml', name:'ZDNet' },
+    { url:'https://feeds.feedburner.com/TheHackersNews', name:'The Hacker News' },
+    /* --- Enterprise & CXO --- */
+    { url:'https://hbr.org/topic/technology/feed', name:'Harvard Business Review' },
+    { url:'https://www.mckinsey.com/rss/insights', name:'McKinsey' },
+    { url:'https://www.reuters.com/technology/rss', name:'Reuters Tech' },
+    /* --- Healthcare --- */
     { url:'https://www.healthcareitnews.com/feed', name:'Healthcare IT News' },
-    { url:'https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms', name:'Economic Times' }
+    { url:'https://www.fiercehealthcare.com/rss/xml', name:'Fierce Healthcare' },
+    /* --- India Specific --- */
+    { url:'https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms', name:'Economic Times' },
+    { url:'https://www.livemint.com/rss/technology', name:'Mint' },
+    { url:'https://indianexpress.com/section/technology/feed/', name:'Indian Express Tech' },
+    { url:'https://www.moneycontrol.com/rss/technology.xml', name:'Moneycontrol Tech' },
+    { url:'https://inc42.com/feed/', name:'Inc42' },
+    /* --- AI Research & Policy --- */
+    { url:'https://blog.google/technology/ai/rss/', name:'Google AI Blog' },
+    { url:'https://openai.com/blog/rss.xml', name:'OpenAI Blog' },
+    { url:'https://www.technologyreview.com/topic/policy/feed', name:'MIT Policy' }
   ];
 
   /* ---------- Filter keyword map ---------- */
@@ -941,7 +961,7 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
     cxo: ['cxo','ceo','cto','cio','ciso','executive','leadership','board','c-suite','strategy','chief','officer','management','decision-maker','boardroom'],
     healthcare: ['health','clinical','patient','fda','pharma','medical','hospital','biotech','drug','diagnosis','therapeutic','ehr','telemedicine','healthcare'],
     security: ['security','cyber','threat','vulnerability','breach','attack','defense','malware','ransomware','zero-day','phishing','infosec','cybersecurity','hack'],
-    india: ['india','indian','nasscom','meity','bengaluru','bangalore','delhi','mumbai','hyderabad','infosys','tcs','wipro','reliance','tata','niti aayog','digital india'],
+    india: ['india','indian','nasscom','meity','bengaluru','bangalore','delhi','mumbai','hyderabad','infosys','tcs','wipro','reliance','tata','niti aayog','digital india','airawat','indiaai','bhashini','aadhaar','upi','startup india','make in india','niti','iit','iisc','isro','it ministry','chandrayaan','rupee'],
     sovereign: ['sovereign','national ai','government ai','geopolitical','nvidia sovereign','state ai','country ai','national strategy','digital sovereignty','ai independence'],
     privacy: ['privacy','gdpr','data protection','consent','pii','compliance','ccpa','dpdp','anonymization','surveillance','personal data','data rights','cookie','tracking'],
     genai: ['gpt','llm','generative','gemini','claude','anthropic','openai','diffusion','foundation model','chatgpt','copilot','midjourney','stable diffusion','large language','transformer','llama','mistral','deepseek','sora','dall-e'],
@@ -1124,16 +1144,20 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
     })).filter(item => item.title.length > 5);
   }
 
-  /* ---------- Fetch a single feed ---------- */
+  /* ---------- Fetch a single feed with timeout protection ---------- */
   async function fetchFeed(feed){
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FEED_TIMEOUT);
     try{
-      const res = await fetch(PROXY + encodeURIComponent(feed.url));
+      const res = await fetch(PROXY + encodeURIComponent(feed.url), { signal: controller.signal });
+      clearTimeout(timer);
       if(!res.ok) return [];
       const data = await res.json();
       if(data.status !== 'ok' || !data.items) return [];
       return processFeedItems(data.items, feed.name);
     } catch(e){
-      return [];
+      clearTimeout(timer);
+      return []; // timeout or network error — silent fail
     }
   }
 
@@ -1144,7 +1168,7 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
     allItems.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
     refreshGrid();
 
-    // Phase 2: Fetch live feeds in parallel
+    // Phase 2: Fetch live feeds in parallel (each with individual 4s timeout)
     try{
       const results = await Promise.allSettled(FEEDS.map(f => fetchFeed(f)));
       let liveItems = [];
