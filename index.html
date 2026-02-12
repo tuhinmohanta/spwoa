@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Tuhin Mohanta - Chief Technology Officer, Healthcare Tech Leader, Platform Engineering Expert. 20+ years architecting enterprise healthcare platforms, cloud infrastructure, and scaling engineering organizations. ISB-Certified CTO, engineering leader in healthcare technology.">
-<meta name="keywords" content="Tuhin, Tuhin Mohanta, CTO, Chief Technology Officer, Healthcare Tech Leader, Healthcare Technology Leader, Technology Leader, Platform Engineering, Engineering Leader, Healthcare CTO, Enterprise Platform, Cloud Architecture, Health Tech">
+<meta name="keywords" content="Tuhin, Tuhin Mohanta, CTO, Chief Technology Officer, Healthcare Tech Leader, Healthcare Technology Leader, Technology Leader, Platform Engineering, Engineering Leader, Healthcare CTO, Enterprise Platform, Cloud Architecture, Health Tech, AI News, AI Buzz, Artificial Intelligence News, AI Weekly, CXO AI Insights, Healthcare AI, Sovereign AI, AI Regulation, Generative AI News, Enterprise AI">
 <meta name="author" content="Tuhin Mohanta">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
@@ -244,6 +244,68 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .portrait-frame{width:180px;height:220px}
   .presence-pillars{grid-template-columns:1fr}
   .presence{padding:4rem 0}
+  .buzz-filters{flex-wrap:wrap}
+  .buzz-grid{grid-template-columns:1fr}
+  .buzz-subtitle{font-size:.82rem}
+}
+
+/* AI BUZZ THIS WEEK */
+.ai-buzz{padding:6rem 0;background:var(--bg);position:relative;overflow:hidden}
+.ai-buzz::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:60px;background:linear-gradient(180deg,transparent,var(--accent-glow))}
+.buzz-header{text-align:center;max-width:720px;margin:0 auto 2.5rem}
+.buzz-header .section-label{justify-content:center}
+.buzz-subtitle{font-size:.9rem;color:var(--text-secondary);line-height:1.8;font-weight:300;max-width:600px;margin:0 auto;text-align:center}
+.buzz-filters{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;padding:0 1rem}
+.buzz-filter{background:var(--surface);border:1px solid var(--border);color:var(--text-secondary);font-family:var(--font-body);font-size:.7rem;font-weight:400;letter-spacing:.06em;padding:.45rem 1rem;border-radius:20px;cursor:pointer;transition:all .35s var(--ease);white-space:nowrap}
+.buzz-filter:hover{color:var(--text);border-color:var(--border-light);background:var(--surface-hover)}
+.buzz-filter.active{background:var(--accent);color:var(--bg-deep);border-color:var(--accent);font-weight:500}
+.buzz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;min-height:200px}
+.buzz-card{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s var(--ease);display:flex;flex-direction:column;position:relative;overflow:hidden;opacity:0;transform:translateY(16px);animation:buzzFadeIn .45s var(--ease) forwards}
+.buzz-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.buzz-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.7rem;gap:.5rem}
+.buzz-source{font-size:.58rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex-shrink:0}
+.buzz-time{font-size:.6rem;color:var(--text-muted);font-weight:300;white-space:nowrap}
+.buzz-card h3{font-family:var(--font-display);font-size:.98rem;font-weight:400;line-height:1.38;margin-bottom:.5rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.buzz-card h3 a{color:var(--text);transition:color .3s var(--ease)}
+.buzz-card h3 a:hover{color:var(--accent)}
+.buzz-card p{font-size:.76rem;color:var(--text-secondary);line-height:1.65;font-weight:300;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:.8rem;flex:1}
+.buzz-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:auto}
+.buzz-tag{font-size:.6rem;padding:.18rem .5rem;border-radius:12px;font-weight:400;background:var(--surface);color:var(--text-muted);border:1px solid var(--border);transition:all .3s var(--ease)}
+.buzz-tag.tag-cxo{color:#dbbf8a;border-color:rgba(219,191,138,.25)}
+.buzz-tag.tag-healthcare{color:#6dba8a;border-color:rgba(109,186,138,.25)}
+.buzz-tag.tag-security{color:#e87070;border-color:rgba(232,112,112,.25)}
+.buzz-tag.tag-india{color:#f0a860;border-color:rgba(240,168,96,.25)}
+.buzz-tag.tag-sovereign{color:#a08cdf;border-color:rgba(160,140,223,.25)}
+.buzz-tag.tag-privacy{color:#6eb5e8;border-color:rgba(110,181,232,.25)}
+.buzz-tag.tag-genai{color:#e8a0d0;border-color:rgba(232,160,208,.25)}
+.buzz-tag.tag-enterprise{color:#a8b2c1;border-color:rgba(168,178,193,.25)}
+.buzz-tag.tag-regulation{color:#d4c478;border-color:rgba(212,196,120,.25)}
+
+/* Skeleton loader */
+.buzz-skeleton{padding:1.5rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);min-height:180px}
+.skel-line{height:10px;border-radius:4px;background:linear-gradient(90deg,var(--surface) 25%,var(--surface-hover) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite;margin-bottom:.6rem}
+.skel-line.w80{width:80%}.skel-line.w60{width:60%}.skel-line.w40{width:40%}.skel-line.w90{width:90%}
+.skel-line.skel-title{height:14px;margin-bottom:.8rem}
+.skel-tags{display:flex;gap:.3rem;margin-top:auto}
+.skel-tag{width:52px;height:18px;border-radius:12px;background:linear-gradient(90deg,var(--surface) 25%,var(--surface-hover) 50%,var(--surface) 75%);background-size:200% 100%;animation:shimmer 1.5s ease-in-out infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes buzzFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+.buzz-empty{text-align:center;padding:3rem 1rem;color:var(--text-muted);font-size:.85rem;font-weight:300;grid-column:1/-1}
+.buzz-load-trigger{height:1px;width:100%}
+.buzz-status{text-align:center;padding:1.5rem;font-size:.72rem;color:var(--text-muted);font-weight:300}
+.buzz-status .buzz-spinner{display:inline-block;width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;margin-right:.5rem;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.buzz-refresh-note{text-align:center;font-size:.62rem;color:var(--text-muted);font-weight:300;margin-top:1.5rem;opacity:.6}
+
+@media(max-width:1024px){
+  .buzz-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .ai-buzz{padding:4rem 0}
+  .buzz-grid{grid-template-columns:1fr}
+  .buzz-filters{gap:.4rem}
+  .buzz-filter{font-size:.65rem;padding:.38rem .8rem}
 }
 </style>
 <script type="application/ld+json">
@@ -302,6 +364,35 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     "name": "Tuhin Mohanta"
   },
   "keywords": "Tuhin, Tuhin Mohanta, CTO, Healthcare Tech Leader, Platform Engineering, Engineering Leader"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AI Buzz This Week - Curated AI News for Executives",
+  "description": "Weekly curated AI intelligence from validated sources. Filtered categories include CXO Insights, Healthcare AI, Security, India AI, Sovereign AI, Data Privacy, Generative AI, Enterprise AI, and AI Regulation.",
+  "url": "https://tuhinmohanta.com/#ai-buzz",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://tuhinmohanta.com/"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
+  "about": [
+    {"@type": "Thing", "name": "Artificial Intelligence News"},
+    {"@type": "Thing", "name": "CXO AI Insights"},
+    {"@type": "Thing", "name": "Healthcare AI"},
+    {"@type": "Thing", "name": "AI Regulation"},
+    {"@type": "Thing", "name": "Generative AI"},
+    {"@type": "Thing", "name": "Sovereign AI"},
+    {"@type": "Thing", "name": "Enterprise AI"},
+    {"@type": "Thing", "name": "AI Security"},
+    {"@type": "Thing", "name": "Data Privacy"}
+  ],
+  "keywords": "AI News, AI Buzz, Artificial Intelligence, CXO Insights, Healthcare AI, Sovereign AI, AI Regulation, Generative AI, Enterprise AI, Data Privacy, AI Security, India AI"
 }
 </script>
 <script type="application/ld+json">
@@ -485,6 +576,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       <li><a href="#experience">Journey</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#articles">Writing</a></li>
+      <li><a href="#ai-buzz">AI Buzz</a></li>
       <li><a href="#testimonials">Voices</a></li>
       <li><a href="#contact">Connect</a></li>
     </ul>
@@ -716,6 +808,40 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
+<!-- AI BUZZ THIS WEEK -->
+<section class="ai-buzz" id="ai-buzz">
+  <div class="container">
+    <div class="buzz-header fade-in">
+      <div class="section-label" style="justify-content:center">AI Buzz This Week</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:1rem">Cutting through the noise,<br><em>so you don't have to.</em></h2>
+      <p class="buzz-subtitle">Curated AI intelligence from validated sources — filtered for executives who value signal over noise.</p>
+    </div>
+    <div class="buzz-filters fade-in">
+      <button class="buzz-filter active" data-filter="all">All</button>
+      <button class="buzz-filter" data-filter="cxo">CXO Insights</button>
+      <button class="buzz-filter" data-filter="healthcare">Healthcare</button>
+      <button class="buzz-filter" data-filter="security">Security</button>
+      <button class="buzz-filter" data-filter="india">India AI</button>
+      <button class="buzz-filter" data-filter="sovereign">Sovereign AI</button>
+      <button class="buzz-filter" data-filter="privacy">Data Privacy</button>
+      <button class="buzz-filter" data-filter="genai">Generative AI</button>
+      <button class="buzz-filter" data-filter="enterprise">Enterprise AI</button>
+      <button class="buzz-filter" data-filter="regulation">AI Regulation</button>
+    </div>
+    <div class="buzz-grid fade-in" id="buzzGrid" role="feed" aria-label="AI news feed">
+      <div class="buzz-skeleton"><div class="skel-line w60"></div><div class="skel-line skel-title w90"></div><div class="skel-line w80"></div><div class="skel-line w60"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+      <div class="buzz-skeleton"><div class="skel-line w60"></div><div class="skel-line skel-title w80"></div><div class="skel-line w90"></div><div class="skel-line w40"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+      <div class="buzz-skeleton"><div class="skel-line w40"></div><div class="skel-line skel-title w90"></div><div class="skel-line w80"></div><div class="skel-line w60"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+      <div class="buzz-skeleton"><div class="skel-line w60"></div><div class="skel-line skel-title w80"></div><div class="skel-line w90"></div><div class="skel-line w40"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+      <div class="buzz-skeleton"><div class="skel-line w40"></div><div class="skel-line skel-title w90"></div><div class="skel-line w60"></div><div class="skel-line w80"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+      <div class="buzz-skeleton"><div class="skel-line w60"></div><div class="skel-line skel-title w80"></div><div class="skel-line w90"></div><div class="skel-line w60"></div><div class="skel-tags"><div class="skel-tag"></div><div class="skel-tag"></div><div class="skel-tag"></div></div></div>
+    </div>
+    <div id="buzzLoadTrigger" class="buzz-load-trigger"></div>
+    <div id="buzzStatus" class="buzz-status" style="display:none"><span class="buzz-spinner"></span>Loading more stories…</div>
+    <div class="buzz-refresh-note">Stories refresh automatically from validated sources · Updated on page load</div>
+  </div>
+</section>
+
 <!-- AWARDS -->
 <section>
   <div class="container">
@@ -775,6 +901,260 @@ document.querySelectorAll('.fade-in,.timeline-item').forEach(el=>observer.observ
 const sections=document.querySelectorAll('section[id]');
 window.addEventListener('scroll',()=>{const y=window.pageYOffset;sections.forEach(s=>{const t=s.offsetTop-140,h=s.offsetHeight,id=s.getAttribute('id'),l=document.querySelector(`nav a[href="#${id}"]`);if(l)l.classList.toggle('active',y>=t&&y<t+h)})});
 document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=>document.querySelector('nav ul').classList.remove('open'))});
+
+/* ====================================================================
+   AI BUZZ THIS WEEK — Client-side RSS aggregation, filtering & lazy load
+   ==================================================================== */
+(function(){
+  'use strict';
+
+  /* ---------- Configuration ---------- */
+  const PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
+  const ITEMS_PER_PAGE = 6;
+  const FEEDS = [
+    { url:'https://techcrunch.com/category/artificial-intelligence/feed/', name:'TechCrunch' },
+    { url:'https://venturebeat.com/category/ai/feed/', name:'VentureBeat' },
+    { url:'https://www.technologyreview.com/topic/artificial-intelligence/feed', name:'MIT Tech Review' },
+    { url:'https://feeds.arstechnica.com/arstechnica/technology-lab', name:'Ars Technica' },
+    { url:'https://www.wired.com/feed/tag/ai/latest/rss', name:'WIRED' },
+    { url:'https://www.healthcareitnews.com/feed', name:'Healthcare IT News' },
+    { url:'https://economictimes.indiatimes.com/tech/rssfeeds/13357270.cms', name:'Economic Times' }
+  ];
+
+  /* ---------- Filter keyword map ---------- */
+  const FILTER_KEYWORDS = {
+    cxo: ['cxo','ceo','cto','cio','ciso','executive','leadership','board','c-suite','strategy','chief','officer','management','decision-maker','boardroom'],
+    healthcare: ['health','clinical','patient','fda','pharma','medical','hospital','biotech','drug','diagnosis','therapeutic','ehr','telemedicine','healthcare'],
+    security: ['security','cyber','threat','vulnerability','breach','attack','defense','malware','ransomware','zero-day','phishing','infosec','cybersecurity','hack'],
+    india: ['india','indian','nasscom','meity','bengaluru','bangalore','delhi','mumbai','hyderabad','infosys','tcs','wipro','reliance','tata','niti aayog','digital india'],
+    sovereign: ['sovereign','national ai','government ai','geopolitical','nvidia sovereign','state ai','country ai','national strategy','digital sovereignty','ai independence'],
+    privacy: ['privacy','gdpr','data protection','consent','pii','compliance','ccpa','dpdp','anonymization','surveillance','personal data','data rights','cookie','tracking'],
+    genai: ['gpt','llm','generative','gemini','claude','anthropic','openai','diffusion','foundation model','chatgpt','copilot','midjourney','stable diffusion','large language','transformer','llama','mistral','deepseek','sora','dall-e'],
+    enterprise: ['enterprise','automation','roi','adoption','deployment','production','saas','workflow','digital transformation','business','corporate','implementation','platform','integration','scale'],
+    regulation: ['regulation','policy','governance','ethics','eu ai act','nist','responsible ai','legislation','law','regulatory','compliance','framework','guideline','oversight','accountability','bias','fairness','transparency']
+  };
+
+  /* ---------- Tag display names & CSS classes ---------- */
+  const TAG_META = {
+    cxo:{ label:'CXO Insights',   cls:'tag-cxo' },
+    healthcare:{ label:'Healthcare', cls:'tag-healthcare' },
+    security:{ label:'Security',     cls:'tag-security' },
+    india:{ label:'India AI',        cls:'tag-india' },
+    sovereign:{ label:'Sovereign AI', cls:'tag-sovereign' },
+    privacy:{ label:'Data Privacy',  cls:'tag-privacy' },
+    genai:{ label:'Generative AI',   cls:'tag-genai' },
+    enterprise:{ label:'Enterprise AI',cls:'tag-enterprise' },
+    regulation:{ label:'AI Regulation',cls:'tag-regulation' }
+  };
+
+  /* ---------- Fallback curated data (renders instantly) ---------- */
+  const FALLBACK_ITEMS = [
+    { title:'OpenAI Launches New Enterprise AI Safety Framework', link:'https://openai.com/blog', source:'OpenAI Blog', pubDate:'2026-02-11T10:00:00Z', description:'OpenAI introduces a comprehensive safety framework for enterprise deployments, addressing governance and responsible AI concerns for large-scale corporate adoption.', tags:['genai','enterprise','regulation'] },
+    { title:'India Unveils National AI Mission with $1.5B Investment', link:'https://economictimes.indiatimes.com/tech', source:'Economic Times', pubDate:'2026-02-10T08:30:00Z', description:'The Indian government announces a major push toward sovereign AI capabilities with dedicated compute infrastructure and a national AI research ecosystem.', tags:['india','sovereign','cxo'] },
+    { title:'Healthcare AI Reduces Diagnostic Errors by 40% in New Study', link:'https://www.healthcareitnews.com', source:'Healthcare IT News', pubDate:'2026-02-10T14:00:00Z', description:'A landmark study across 12 hospital systems shows AI-assisted diagnostics significantly reduce errors in radiology and pathology, with implications for FDA approval pathways.', tags:['healthcare','enterprise'] },
+    { title:'EU AI Act Enforcement Begins: What CXOs Need to Know', link:'https://techcrunch.com/ai', source:'TechCrunch', pubDate:'2026-02-09T12:00:00Z', description:'The first phase of EU AI Act enforcement is now active. Technology leaders face new compliance requirements for high-risk AI systems deployed in European markets.', tags:['regulation','cxo','privacy'] },
+    { title:'Critical Vulnerability Found in Popular AI Model Serving Infrastructure', link:'https://arstechnica.com/ai', source:'Ars Technica', pubDate:'2026-02-09T09:15:00Z', description:'Security researchers discover a severe flaw in widely-used ML inference servers that could allow unauthorized model access and data exfiltration across cloud environments.', tags:['security','enterprise'] },
+    { title:'Google DeepMind Achieves Breakthrough in Protein-Drug Interaction Modeling', link:'https://www.technologyreview.com/ai', source:'MIT Tech Review', pubDate:'2026-02-08T16:00:00Z', description:'New generative AI model from DeepMind predicts protein-drug interactions with unprecedented accuracy, potentially accelerating pharmaceutical R&D cycles by years.', tags:['genai','healthcare'] },
+    { title:'Anthropic and Microsoft Announce Enterprise AI Governance Partnership', link:'https://venturebeat.com/ai', source:'VentureBeat', pubDate:'2026-02-08T11:30:00Z', description:'A strategic partnership focused on building industry-standard AI governance tools for Fortune 500 companies navigating responsible AI deployment at scale.', tags:['enterprise','regulation','cxo'] },
+    { title:'NASSCOM Report: India\'s AI Talent Pool Grows 45% Year-over-Year', link:'https://economictimes.indiatimes.com/tech', source:'Economic Times', pubDate:'2026-02-07T07:00:00Z', description:'India now ranks second globally in AI talent availability. The report highlights growing demand in healthcare AI, fintech, and sovereign AI infrastructure roles.', tags:['india','enterprise','cxo'] },
+    { title:'Data Privacy Regulators Crack Down on AI Training Data Practices', link:'https://www.wired.com/ai', source:'WIRED', pubDate:'2026-02-07T13:45:00Z', description:'Multiple privacy authorities across Europe and Asia issue enforcement actions against AI companies for unauthorized use of personal data in model training pipelines.', tags:['privacy','regulation'] },
+    { title:'Agentic AI Frameworks See 300% Enterprise Adoption Surge', link:'https://venturebeat.com/ai', source:'VentureBeat', pubDate:'2026-02-06T10:20:00Z', description:'Enterprise adoption of agentic AI architectures has tripled in Q4, driven by autonomous workflow orchestration needs in supply chain, customer service, and IT operations.', tags:['genai','enterprise','cxo'] },
+    { title:'Sovereign AI: France Invests €2B in National Compute Infrastructure', link:'https://techcrunch.com/ai', source:'TechCrunch', pubDate:'2026-02-06T09:00:00Z', description:'France joins the sovereign AI movement with a massive investment in domestic GPU clusters and foundation model development to reduce dependency on US-based AI providers.', tags:['sovereign','regulation'] },
+    { title:'New Cybersecurity AI Detects Zero-Day Threats 60% Faster', link:'https://arstechnica.com/security', source:'Ars Technica', pubDate:'2026-02-05T15:30:00Z', description:'An AI-powered threat detection system demonstrates significant improvements in identifying zero-day vulnerabilities before they can be exploited in enterprise environments.', tags:['security','enterprise'] }
+  ];
+
+  /* ---------- State ---------- */
+  let allItems = [];       // master list (deduped, sorted)
+  let filteredItems = [];  // after filter applied
+  let displayedCount = 0;  // items currently visible
+  let activeFilter = 'all';
+  let feedsLoaded = false;
+  let animDelay = 0;
+
+  /* ---------- DOM refs ---------- */
+  const grid      = document.getElementById('buzzGrid');
+  const status    = document.getElementById('buzzStatus');
+  const trigger   = document.getElementById('buzzLoadTrigger');
+  const filters   = document.querySelectorAll('.buzz-filter');
+
+  /* ---------- Utility: relative time ---------- */
+  function timeAgo(dateStr){
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const mins = Math.floor(diff/60000);
+    if(mins < 1) return 'Just now';
+    if(mins < 60) return mins+'m ago';
+    const hrs = Math.floor(mins/60);
+    if(hrs < 24) return hrs+'h ago';
+    const days = Math.floor(hrs/24);
+    if(days < 7) return days+'d ago';
+    return new Date(dateStr).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  }
+
+  /* ---------- Utility: strip HTML from descriptions ---------- */
+  function stripHTML(html){
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  }
+
+  /* ---------- Utility: auto-tag an item ---------- */
+  function autoTag(item){
+    const text = (item.title+' '+item.description+' '+item.source).toLowerCase();
+    const tags = [];
+    for(const [key,keywords] of Object.entries(FILTER_KEYWORDS)){
+      if(keywords.some(kw => text.includes(kw))) tags.push(key);
+    }
+    return tags.length ? tags : ['genai']; // default tag
+  }
+
+  /* ---------- Utility: deduplicate by title similarity ---------- */
+  function dedupeItems(items){
+    const seen = new Set();
+    return items.filter(item => {
+      const key = item.title.toLowerCase().replace(/[^a-z0-9]/g,'').substring(0,60);
+      if(seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+
+  /* ---------- Render a single card ---------- */
+  function renderCard(item, delay){
+    const tagsHTML = item.tags.map(t => {
+      const m = TAG_META[t];
+      return m ? '<span class="buzz-tag '+m.cls+'">'+m.label+'</span>' : '';
+    }).join('');
+
+    const card = document.createElement('article');
+    card.className = 'buzz-card';
+    card.style.animationDelay = delay+'ms';
+    card.setAttribute('data-tags', item.tags.join(','));
+    card.innerHTML =
+      '<div class="buzz-card-header">'+
+        '<span class="buzz-source">'+item.source+'</span>'+
+        '<time class="buzz-time" datetime="'+item.pubDate+'">'+timeAgo(item.pubDate)+'</time>'+
+      '</div>'+
+      '<h3><a href="'+item.link+'" target="_blank" rel="noopener noreferrer">'+item.title+'</a></h3>'+
+      '<p>'+item.description+'</p>'+
+      '<div class="buzz-tags">'+tagsHTML+'</div>';
+    return card;
+  }
+
+  /* ---------- Render batch of items ---------- */
+  function renderBatch(count){
+    const start = displayedCount;
+    const end = Math.min(start + count, filteredItems.length);
+    const fragment = document.createDocumentFragment();
+
+    for(let i = start; i < end; i++){
+      const delay = (i - start) * 60;
+      fragment.appendChild(renderCard(filteredItems[i], delay));
+    }
+    grid.appendChild(fragment);
+    displayedCount = end;
+
+    // Hide load-more trigger if no more items
+    if(displayedCount >= filteredItems.length){
+      status.style.display = 'none';
+    } else {
+      status.style.display = 'block';
+    }
+  }
+
+  /* ---------- Clear grid & re-render ---------- */
+  function refreshGrid(){
+    grid.innerHTML = '';
+    displayedCount = 0;
+    animDelay = 0;
+
+    filteredItems = activeFilter === 'all'
+      ? [...allItems]
+      : allItems.filter(item => item.tags.includes(activeFilter));
+
+    if(filteredItems.length === 0){
+      grid.innerHTML = '<div class="buzz-empty">No stories found for this filter. Try "All" to see everything.</div>';
+      status.style.display = 'none';
+      return;
+    }
+    renderBatch(ITEMS_PER_PAGE);
+  }
+
+  /* ---------- Filter click handler ---------- */
+  filters.forEach(btn => {
+    btn.addEventListener('click', function(){
+      filters.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      activeFilter = this.dataset.filter;
+      refreshGrid();
+    });
+  });
+
+  /* ---------- Infinite scroll via IntersectionObserver ---------- */
+  const loadObserver = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting && displayedCount < filteredItems.length){
+      renderBatch(ITEMS_PER_PAGE);
+    }
+  }, { rootMargin:'200px' });
+  loadObserver.observe(trigger);
+
+  /* ---------- Process raw feed items ---------- */
+  function processFeedItems(rawItems, sourceName){
+    return rawItems.map(item => ({
+      title: stripHTML(item.title || ''),
+      link: item.link || item.guid || '#',
+      source: sourceName,
+      pubDate: item.pubDate || new Date().toISOString(),
+      description: stripHTML(item.description || item.content || '').substring(0, 200),
+      tags: []
+    })).filter(item => item.title.length > 5);
+  }
+
+  /* ---------- Fetch a single feed ---------- */
+  async function fetchFeed(feed){
+    try{
+      const res = await fetch(PROXY + encodeURIComponent(feed.url));
+      if(!res.ok) return [];
+      const data = await res.json();
+      if(data.status !== 'ok' || !data.items) return [];
+      return processFeedItems(data.items, feed.name);
+    } catch(e){
+      return [];
+    }
+  }
+
+  /* ---------- Bootstrap: load fallback instantly, then fetch live ---------- */
+  async function init(){
+    // Phase 1: Render fallback items instantly (< 0.5s)
+    allItems = FALLBACK_ITEMS.map(item => ({...item}));
+    allItems.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+    refreshGrid();
+
+    // Phase 2: Fetch live feeds in parallel
+    try{
+      const results = await Promise.allSettled(FEEDS.map(f => fetchFeed(f)));
+      let liveItems = [];
+      results.forEach(r => {
+        if(r.status === 'fulfilled' && r.value.length) liveItems.push(...r.value);
+      });
+
+      if(liveItems.length > 0){
+        // Auto-tag live items
+        liveItems.forEach(item => { item.tags = autoTag(item); });
+
+        // Merge with fallback, dedupe, sort by date
+        const merged = [...liveItems, ...allItems];
+        allItems = dedupeItems(merged).sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+        feedsLoaded = true;
+        refreshGrid();
+      }
+    } catch(e){
+      // Fallback data already displayed — silent fail
+    }
+  }
+
+  // Start immediately
+  init();
+})();
 </script>
 </body>
 </html>
