@@ -986,42 +986,8 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
     regulation:{ label:'AI Regulation',cls:'tag-regulation' }
   };
 
-  /* ---------- Fallback curated data (renders instantly) ---------- */
-  const FALLBACK_ITEMS = [
-    /* -- Business Model Disruption & Commercial AI -- */
-    { title:'How AI Is Quietly Rewriting the Economics of Software Companies', link:'https://hbr.org/topic/technology', source:'Harvard Business Review', pubDate:'2026-02-12T06:00:00Z', description:'The marginal cost of building software is approaching zero. AI-native startups are shipping in weeks what used to take teams of 50 a year. Incumbents face a pricing crisis they did not see coming.', tags:['enterprise','cxo'] },
-    { title:'The $4.4 Trillion Question: McKinsey Updates Its AI Economic Impact Forecast', link:'https://www.mckinsey.com/mgi/overview', source:'McKinsey', pubDate:'2026-02-11T14:00:00Z', description:'McKinsey\'s latest analysis raises global AI economic potential to $4.4T annually. The biggest winners are not tech companies - they are traditional industries that redesigned processes around AI from the ground up.', tags:['enterprise','cxo'] },
-    { title:'Why 60% of Fortune 500 CFOs Now Report AI on Their Balance Sheets', link:'https://www.reuters.com/technology/', source:'Reuters Tech', pubDate:'2026-02-11T10:00:00Z', description:'AI has moved from an IT line item to a strategic asset. CFOs are capitalizing AI investments, reclassifying models as intellectual property, and tying executive comp to AI-driven revenue growth.', tags:['cxo','enterprise','regulation'] },
-    /* -- People & Workforce Transformation -- */
-    { title:'The Human Side of AI: How Unilever Retrained 30,000 Employees Instead of Replacing Them', link:'https://hbr.org/topic/technology', source:'Harvard Business Review', pubDate:'2026-02-11T08:00:00Z', description:'Unilever\'s bet on workforce augmentation over automation is paying off. Productivity rose 35% while attrition dropped. The playbook is becoming a blueprint for responsible AI-era workforce strategy.', tags:['cxo','enterprise'] },
-    { title:'India\'s GCC Boom Meets AI: 1.2 Million Knowledge Workers Face Role Reinvention', link:'https://economictimes.indiatimes.com/tech', source:'Economic Times', pubDate:'2026-02-10T07:00:00Z', description:'India\'s Global Capability Centers employ 1.9 million people. AI is not eliminating these jobs - it is fundamentally reshaping them. The centers that upskill fastest will capture disproportionate value.', tags:['india','enterprise','cxo'] },
-    /* -- Healthcare & Life Sciences -- */
-    { title:'AI Designs a Novel Antibiotic in 48 Hours That Took Researchers a Decade to Find', link:'https://www.statnews.com/', source:'STAT News', pubDate:'2026-02-10T16:00:00Z', description:'A generative chemistry model identified a new class of antibiotics effective against drug-resistant bacteria. The discovery compressed a decade of research into two days - a watershed moment for drug development.', tags:['healthcare','genai'] },
-    { title:'How AI Is Transforming Clinical Trials: From 10 Years and $2B to 4 Years and $500M', link:'https://www.healthcareitnews.com', source:'Healthcare IT News', pubDate:'2026-02-09T12:00:00Z', description:'AI-powered patient matching, protocol optimization, and synthetic control arms are fundamentally restructuring the economics of bringing new drugs to market. Pharma business models will never be the same.', tags:['healthcare','enterprise','cxo'] },
-    /* -- Process & Operational AI -- */
-    { title:'Walmart\'s AI Supply Chain Saved $1.7B Last Quarter - Here Is What Every CXO Should Learn', link:'https://venturebeat.com/ai/', source:'VentureBeat', pubDate:'2026-02-09T09:30:00Z', description:'Walmart\'s demand forecasting AI now operates across 10,500 stores in 19 countries. The system reduced food waste by 30% and stockouts by 45%. This is what AI at operational scale actually looks like.', tags:['enterprise','cxo'] },
-    { title:'From Pilot to Production: Why 80% of Enterprise AI Projects Still Fail to Scale', link:'https://www.mckinsey.com/mgi/overview', source:'McKinsey', pubDate:'2026-02-08T15:00:00Z', description:'The gap between AI experimentation and enterprise value remains vast. McKinsey identifies three root causes: organizational misalignment, data infrastructure debt, and the absence of AI product management.', tags:['enterprise','cxo'] },
-    /* -- Generative AI & Foundation Models -- */
-    { title:'OpenAI\'s New Reasoning Model Solves PhD-Level Science Problems - What It Means for R&D', link:'https://openai.com/blog', source:'OpenAI Blog', pubDate:'2026-02-08T11:00:00Z', description:'The latest reasoning model demonstrates PhD-level performance in physics, chemistry, and biology benchmarks. Research labs across pharmaceuticals, materials science, and energy are already integrating it.', tags:['genai','enterprise'] },
-    { title:'The Rise of AI Agents: When Software Stops Waiting for Instructions and Starts Acting', link:'https://www.technologyreview.com/ai', source:'MIT Tech Review', pubDate:'2026-02-08T08:00:00Z', description:'Agentic AI systems that plan, execute, and self-correct are moving from research to production. The implications for knowledge work, customer service, and software development are profound and immediate.', tags:['genai','enterprise','cxo'] },
-    /* -- India AI Ecosystem -- */
-    { title:'India\'s AI Startups Raised $3.2B in 2025 - Where the Smart Money Is Going', link:'https://inc42.com', source:'Inc42', pubDate:'2026-02-07T08:00:00Z', description:'India\'s AI startup funding hit a record high. The largest bets are in healthcare AI, vernacular language models, and AI-powered fintech - reflecting India-specific problems that global models cannot solve.', tags:['india','enterprise','cxo'] },
-    { title:'Bhashini 2.0: India\'s Multilingual AI Platform Now Serves 400 Million Users', link:'https://indianexpress.com/section/technology/', source:'Indian Express Tech', pubDate:'2026-02-07T06:30:00Z', description:'India\'s government-backed language AI platform has crossed 400M users, enabling real-time translation across 22 languages. It is quietly becoming the world\'s largest AI public good infrastructure.', tags:['india','sovereign','genai'] },
-    /* -- Security & Trust -- */
-    { title:'The New Arms Race: How AI-Powered Cyberattacks Are Outpacing AI-Powered Defense', link:'https://feeds.feedburner.com/TheHackersNews', source:'The Hacker News', pubDate:'2026-02-06T14:00:00Z', description:'Attackers are using LLMs to generate polymorphic malware and automate social engineering at scale. Security teams face a fundamental asymmetry: defenders must be right every time, attackers only once.', tags:['security','enterprise'] },
-    { title:'Deepfakes Cost Businesses $12B in 2025 - The Trust Crisis AI Created', link:'https://www.wired.com/tag/ai/', source:'WIRED', pubDate:'2026-02-06T10:30:00Z', description:'From CEO voice cloning to fabricated financial documents, AI-generated fraud has become a board-level risk. Companies are building verification infrastructure that did not need to exist two years ago.', tags:['security','cxo','enterprise'] },
-    /* -- Regulation & Governance -- */
-    { title:'EU AI Act Is Live: The First Companies Fined, and What Every Global CTO Must Do Now', link:'https://www.reuters.com/technology/', source:'Reuters Tech', pubDate:'2026-02-06T08:00:00Z', description:'Two companies received the first formal penalties under the EU AI Act for deploying high-risk systems without proper documentation. Compliance is no longer optional - it is a market access requirement.', tags:['regulation','cxo','privacy'] },
-    { title:'India\'s DPDP Act Meets AI: New Guidelines on Algorithmic Accountability Released', link:'https://www.livemint.com/technology', source:'Mint', pubDate:'2026-02-05T09:00:00Z', description:'India\'s data protection authority issues landmark guidance on AI systems processing personal data. Organizations must now document model training data provenance and provide algorithmic impact assessments.', tags:['india','privacy','regulation'] },
-    /* -- Sovereign AI & Geopolitics -- */
-    { title:'The Sovereign AI Race: 40 Countries Now Building National Foundation Models', link:'https://www.technologyreview.com/ai', source:'MIT Tech Review', pubDate:'2026-02-05T16:00:00Z', description:'From Abu Dhabi\'s Falcon to India\'s Airawat, nations are investing billions in homegrown AI. The geopolitical calculus: whoever controls their own AI stack controls their economic future.', tags:['sovereign','cxo'] },
-    /* -- Vertical AI Disruption -- */
-    { title:'How AI Is Killing the Traditional Consulting Business Model', link:'https://www.forbes.com/ai/', source:'Forbes AI', pubDate:'2026-02-05T12:00:00Z', description:'AI-powered analysis tools now do in minutes what junior consultants did in weeks. The $300B consulting industry faces an existential question: what do you charge for when the analysis is free?', tags:['enterprise','cxo'] },
-    { title:'AI in Agriculture: An Indian Startup Helps 8 Million Farmers Increase Yields by 22%', link:'https://economictimes.indiatimes.com/tech', source:'Economic Times', pubDate:'2026-02-05T07:00:00Z', description:'Using satellite imagery and regional language voice interfaces, an Indian agri-AI startup is transforming subsistence farming. The model proves AI\'s greatest impact may be in sectors rarely covered by tech media.', tags:['india','enterprise'] },
-    { title:'AI-Powered Legal Tech Is Reshaping How Fortune 500 Companies Handle Contracts', link:'https://www.zdnet.com/ai/', source:'ZDNet', pubDate:'2026-02-04T14:00:00Z', description:'Enterprise legal AI platforms now review, draft, and negotiate contracts 90% faster than human teams. Law firms are restructuring their entire business around AI-augmented workflows.', tags:['enterprise','cxo','genai'] },
-    { title:'Education\'s AI Moment: Personalized Learning at Scale Is Finally Working', link:'https://www.wired.com/tag/ai/', source:'WIRED', pubDate:'2026-02-04T10:00:00Z', description:'New evidence from 500 schools shows AI tutoring systems improve outcomes by 40% for students who struggled most. The technology is not replacing teachers - it is giving every student what only the privileged few had: a personal tutor.', tags:['enterprise','genai'] },
-    { title:'JPMorgan\'s AI Trading Systems Now Handle 60% of Equity Trades - The Shift Nobody Predicted', link:'https://www.reuters.com/technology/', source:'Reuters Tech', pubDate:'2026-02-04T08:00:00Z', description:'Algorithmic trading powered by LLMs that read earnings calls, parse regulatory filings, and process satellite data in real-time. The commercial transformation of financial services by AI is deeper than headlines suggest.', tags:['enterprise','cxo','genai'] }
-  ];
+  /* ---------- No hardcoded fallback — all content is live from RSS feeds ---------- */
+  const FALLBACK_ITEMS = [];
 
   /* ---------- State ---------- */
   let allItems = [];       // master list (deduped, sorted)
@@ -1186,14 +1152,11 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
     }
   }
 
-  /* ---------- Bootstrap: load fallback instantly, then fetch live ---------- */
+  /* ---------- Bootstrap: fetch live feeds, show skeletons while loading ---------- */
   async function init(){
-    // Phase 1: Render fallback items instantly (< 0.5s)
-    allItems = FALLBACK_ITEMS.map(item => ({...item}));
-    allItems.sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
-    refreshGrid();
+    // Skeletons are already in the HTML — they show while feeds load
 
-    // Phase 2: Fetch live feeds in parallel (each with individual 4s timeout)
+    // Fetch all live feeds in parallel (each with individual 4s timeout)
     try{
       const results = await Promise.allSettled(FEEDS.map(f => fetchFeed(f)));
       let liveItems = [];
@@ -1205,14 +1168,16 @@ document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=
         // Auto-tag live items
         liveItems.forEach(item => { item.tags = autoTag(item); });
 
-        // Merge with fallback, dedupe, sort by date
-        const merged = [...liveItems, ...allItems];
-        allItems = dedupeItems(merged).sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
+        // Dedupe, sort by date
+        allItems = dedupeItems(liveItems).sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate));
         feedsLoaded = true;
         refreshGrid();
+      } else {
+        // All feeds failed — show empty state
+        grid.innerHTML = '<div class="buzz-empty">Live feeds are loading. Please refresh the page in a moment.</div>';
       }
     } catch(e){
-      // Fallback data already displayed — silent fail
+      grid.innerHTML = '<div class="buzz-empty">Live feeds are loading. Please refresh the page in a moment.</div>';
     }
   }
 
