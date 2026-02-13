@@ -232,11 +232,17 @@ section{padding:6rem 0}
 .cta-btn.icon-btn:hover{background:var(--accent-dim);border-color:var(--accent-bright);color:var(--accent-bright);transform:translateY(-2px)}
 
 /* BIO DOWNLOAD */
-.bio-section{background:linear-gradient(135deg,var(--bg-elevated) 0%,var(--bg-card) 100%);border:1px solid var(--border-accent);border-radius:12px;padding:3rem;text-align:center;margin-top:6rem}
-.bio-section h3{font-family:var(--font-display);font-size:1.6rem;font-weight:400;color:var(--text);margin-bottom:.8rem}
-.bio-section p{font-size:.9rem;color:var(--text-secondary);margin-bottom:1.8rem;font-weight:300}
-.bio-download-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;background:var(--accent);color:var(--bg-deep);border-radius:8px;font-size:.85rem;font-weight:500;letter-spacing:.05em;text-decoration:none;transition:all .4s var(--ease);border:none;cursor:pointer}
-.bio-download-btn:hover{background:var(--accent-bright);transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,169,110,0.2)}
+.bio-section{padding:7rem 0;position:relative;background:radial-gradient(circle at 30% 50%,var(--accent-dim),transparent 60%),radial-gradient(circle at 70% 80%,var(--silver-glow),transparent 50%)}
+.bio-section::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:50px;background:linear-gradient(180deg,transparent,var(--accent-glow))}
+.bio-content{text-align:center;max-width:800px;margin:0 auto}
+.bio-section .section-label{justify-content:center;margin-bottom:1.5rem}
+.bio-section h2{font-family:var(--font-display);font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:400;line-height:1.25;margin-bottom:1.4rem}
+.bio-section h2 em{font-style:italic;color:var(--accent)}
+.bio-section p{font-size:.95rem;color:var(--text-secondary);line-height:1.85;max-width:640px;margin:0 auto 2.8rem;font-weight:300}
+.bio-download-wrapper{display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
+.bio-download-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2.2rem;background:var(--accent);color:var(--bg-deep);border-radius:8px;font-size:.85rem;font-weight:500;letter-spacing:.05em;text-decoration:none;transition:all .4s var(--ease);border:none;cursor:pointer}
+.bio-download-btn:hover{background:var(--accent-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(201,169,110,0.25)}
+.bio-download-btn svg{width:18px;height:18px;fill:currentColor}
 
 footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;font-size:.7rem;color:var(--text-muted);font-weight:300}
 
@@ -513,6 +519,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#articles">Writing</a></li>
       <li><a href="#testimonials">Voices</a></li>
+      <li><a href="#bio">Bio</a></li>
       <li><a href="#contact">Connect</a></li>
     </ul>
   </div>
@@ -780,6 +787,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
+<!-- BIO DOWNLOAD -->
+<section id="bio" class="bio-section fade-in">
+  <div class="container">
+    <div class="bio-content">
+      <div class="section-label">Executive Bio</div>
+      <h2>A complete snapshot of <em>experience,</em><br><em>leadership,</em> and <em>impact.</em></h2>
+      <p>Download my executive bio - a comprehensive 1-page overview of my two-decade journey building platform engineering organizations, driving cloud transformations, and leading high-performance teams across healthcare technology.</p>
+      <div class="bio-download-wrapper">
+        <a href="TUHIN_MOHANTA_BIO.pdf" download="TUHIN_MOHANTA_BIO.pdf" class="bio-download-btn">
+          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Download Executive Bio
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="contact" class="cta-section">
   <div class="container">
@@ -792,16 +816,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       <a href="mailto:tuhin.mohanta@gmail.com" class="cta-btn secondary"><svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 7L2 4"/></svg>Email Me</a>
     </div>
   </div>
-</section>
-
-<!-- BIO DOWNLOAD -->
-<section class="bio-section container" style="margin-left:auto;margin-right:auto;margin-top:6rem;margin-bottom:6rem">
-  <h3>📄 Executive bio</h3>
-  <p>A professional 1-page summary of my experience, credentials, and leadership approach.</p>
-  <a href="TUHIN_MOHANTA_BIO.pdf" download="TUHIN_MOHANTA_BIO.pdf" class="bio-download-btn">
-    <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-    Download Bio
-  </a>
 </section>
 
 <footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p></div></footer>
