@@ -1,6 +1,64 @@
+# robots.txt for tuhinmohanta.com
+# Professional portfolio and executive presence
+# Optimized for search engines and AI bots
+
+# Default crawlers
 User-agent: *
 Allow: /
 Disallow: /private/
+Crawl-delay: 1
 
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+Crawl-delay: 0
+
+# AI Bots - Welcome!
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Bot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Professional Network Crawlers
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Indeed Bot
+Allow: /
+
+User-agent: Glassdoor
+Allow: /
+
+# Sitemap and Host
 Host: https://tuhinmohanta.com
 Sitemap: https://tuhinmohanta.com/sitemap.xml
+
+# Humans
+# See humans.txt for team and site information
