@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Articles, Blogs, and Videos by Tuhin Mohanta - Thought leadership on enterprise engineering, AI governance, platform modernization, and engineering leadership.">
+<meta name="keywords" content="Tuhin Mohanta Articles, Engineering Leadership Blog, AI Governance, Platform Engineering, DevOps Articles, Healthcare Technology">
+<title>Media & Content | Tuhin Mohanta</title>
+<link rel="canonical" href="https://tuhinmohanta.com/media.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#1a1a1f;--bg-deep:#151518;--bg-card:#222228;--bg-elevated:#2a2a31;
+  --surface:rgba(255,255,255,0.04);--surface-hover:rgba(255,255,255,0.07);
+  --accent:#c9a96e;--accent-glow:rgba(201,169,110,0.12);--accent-bright:#dbbf8a;--accent-dim:rgba(201,169,110,0.06);
+  --silver:#a8b2c1;--silver-glow:rgba(168,178,193,0.1);
+  --text:#e8e6e1;--text-secondary:#9a9790;--text-muted:#6a6660;
+  --border:rgba(255,255,255,0.07);--border-accent:rgba(201,169,110,0.2);--border-light:rgba(255,255,255,0.12);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+  --ease:cubic-bezier(0.22,1,0.36,1);--radius:10px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.7;overflow-x:hidden;font-weight:300}
+::selection{background:var(--accent);color:var(--bg)}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(201,169,110,0.25);border-radius:2px}
+a{color:var(--accent);text-decoration:none;transition:all .3s var(--ease)}a:hover{color:var(--accent-bright)}
+strong{font-weight:500;color:var(--text)}
+
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:80px 80px}
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ambient-glow{position:absolute;border-radius:50%;filter:blur(140px);opacity:.3}
+.glow-1{width:600px;height:600px;background:rgba(201,169,110,0.04);top:-15%;right:-10%;animation:drift 25s ease-in-out infinite}
+.glow-2{width:400px;height:400px;background:rgba(168,178,193,0.03);bottom:10%;left:-8%;animation:drift 25s ease-in-out infinite 8s}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-25px)}}
+
+.icon{width:20px;height:20px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.container{max-width:1120px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 0;transition:all .5s var(--ease);background:rgba(26,26,31,0.88);backdrop-filter:blur(30px) saturate(1.2);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto;padding:0 2.5rem}
+.logo{font-family:var(--font-display);font-size:1.3rem;font-weight:500;letter-spacing:.02em;color:var(--text)}
+.logo span{color:var(--accent);font-weight:400}
+nav ul{display:flex;list-style:none;gap:2rem}
+nav ul a{font-size:.7rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);transition:all .3s var(--ease);position:relative}
+nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .4s var(--ease)}
+nav ul a:hover,nav ul a.active{color:var(--text)}
+nav ul a:hover::after,nav ul a.active::after{width:100%}
+
+/* HEADER */
+.page-header{padding:8rem 0 3rem;text-align:center}
+.page-header h1{font-family:var(--font-display);font-size:clamp(2.4rem,4.5vw,3.4rem);font-weight:400;line-height:1.2;letter-spacing:-.01em;margin-bottom:1rem}
+.page-header h1 em{font-style:italic;color:var(--accent)}
+.page-header p{font-size:.95rem;color:var(--text-secondary);max-width:640px;margin:0 auto;line-height:1.85}
+
+/* FILTER TABS */
+.filter-tabs{display:flex;justify-content:center;gap:1rem;margin:3rem 0;flex-wrap:wrap}
+.filter-tab{padding:.6rem 1.8rem;border:1px solid var(--border);border-radius:50px;font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);background:transparent;cursor:pointer;transition:all .4s var(--ease)}
+.filter-tab:hover{border-color:var(--border-accent);color:var(--text)}
+.filter-tab.active{border-color:var(--accent);background:var(--accent-dim);color:var(--accent)}
+
+/* CONTENT GRID */
+.content-section{padding:4rem 0}
+.section-title{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:400;line-height:1.25;margin-bottom:2.5rem;text-align:center}
+.section-title em{font-style:italic;color:var(--accent)}
+.content-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-bottom:4rem}
+.content-card{padding:1.8rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s var(--ease);opacity:1}
+.content-card.hidden{display:none}
+.content-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.content-type{font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem}
+.content-type.gold{color:var(--accent)}.content-type.silver{color:var(--silver)}.content-type.green{color:#6dba8a}.content-type.blue{color:#6ea8fe}
+.content-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;line-height:1.35;margin-bottom:.5rem}
+.content-card h3 a{color:var(--text);transition:color .3s var(--ease)}
+.content-card h3 a:hover{color:var(--accent)}
+.content-card p{font-size:.78rem;color:var(--text-secondary);line-height:1.65;margin-bottom:.8rem;font-weight:300}
+.content-meta{font-size:.66rem;color:var(--text-muted);display:flex;gap:1.2rem;font-weight:300}
+
+/* VIDEO CARDS */
+.video-card{display:flex;gap:1.2rem;align-items:flex-start}
+.video-thumbnail{width:180px;height:100px;flex-shrink:0;border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.video-thumbnail img{width:100%;height:100%;object-fit:cover}
+.play-icon{position:absolute;width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.9);display:flex;align-items:center;justify-content:center;color:var(--bg);font-size:1.2rem}
+.video-content{flex:1}
+
+/* BACK LINK */
+.back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:2rem;transition:all .3s var(--ease)}
+.back-link:hover{color:var(--accent)}
+
+footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;font-size:.7rem;color:var(--text-muted);font-weight:300;margin-top:4rem}
+
+@media(max-width:768px){
+  .container{padding:0 1.5rem}
+  .content-grid{grid-template-columns:1fr}
+  .page-header{padding:6rem 0 2rem}
+  .video-card{flex-direction:column}
+  .video-thumbnail{width:100%;height:180px}
+}
+</style>
+</head>
+<body>
+<div class="ambient"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Tuhin <span>Mohanta</span></a>
+    <ul>
+      <li><a href="index.html#presence">Presence</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Journey</a></li>
+      <li><a href="index.html#expertise">Expertise</a></li>
+      <li><a href="media.html" class="active">Writing</a></li>
+      <li><a href="index.html#testimonials">Voices</a></li>
+      <li><a href="index.html#contact">Connect</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <a href="index.html" class="back-link">
+      <svg class="icon" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Home
+    </a>
+    <h1>Articles, Blogs & <em>Media</em></h1>
+    <p>Thought leadership on enterprise engineering, AI governance, platform modernization, DevOps transformation, and the human side of technology leadership.</p>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All Content</button>
+      <button class="filter-tab" data-filter="articles">Articles</button>
+      <button class="filter-tab" data-filter="blogs">Blogs</button>
+      <button class="filter-tab" data-filter="videos">Videos</button>
+    </div>
+
+    <!-- ARTICLES -->
+    <section class="content-section">
+      <h2 class="section-title">Thought Leadership <em>Articles</em></h2>
+      <div class="content-grid" id="articles-grid">
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Why 77% of Organizations Can't Scale AI Beyond Pilots</a></h3>
+          <p>A data-driven analysis of what 87 senior executives at ISB revealed about AI scaling barriers, the three structural constraints blocking most organizations, and how the successful 23% approach task distribution.</p>
+          <div class="content-meta"><span>6 min read</span><span>56 reactions · 22 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">The Smell of a Place: When Excellence Becomes Contagious</a></h3>
+          <p>A reflection on leadership culture from the ISB campus immersion experience - what it means when excellence is embedded in culture, not announced in speeches.</p>
+          <div class="content-meta"><span>5 min read</span><span>115 reactions · 31 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Reflections from Converge 2025: Leadership Lessons for the AI Era</a></h3>
+          <p>Key takeaways from Walmart Global Tech's Converge 2025 - dialogues with Nandan Nilekani, Suresh Kumar, and the future of agentic AI, frugal innovation, and responsible technology.</p>
+          <div class="content-meta"><span>4 min read</span><span>39 reactions · 2 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type green">Podcast</div>
+          <h3><a href="https://www.linkedin.com/pulse/ai-hype-roi-reality-589b-wake-up-call-cxos-harshal-jawale-jwk0f/" target="_blank">AI Leadership Dialogues: Why AI ROI Frameworks Built for ERP Fail for AI</a></h3>
+          <p>A conversation with Harshal Jawale on why 77% of Indian enterprises deploy AI but can't demonstrate ROI, the 5 missing bridges from pilot to production, and practical frameworks for this quarter.</p>
+          <div class="content-meta"><span>Podcast Episode</span><span>62 reactions · 4 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type silver">Featured Post</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Build a Team So Strong No One Knows Who the Leader Is</a></h3>
+          <p>My leadership philosophy - why invisible leadership is the most powerful kind, actionable frameworks for developing high-trust teams, and why succession planning is an act of courage.</p>
+          <div class="content-meta"><span>Long-form Post</span><span>63 reactions · 23 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type silver">Featured Post</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Completed: ISB Leadership with AI - Levelling Up for AI-Led Leadership</a></h3>
+          <p>Reflections on completing dual ISB executive programmes - CTO + Leadership with AI. Top leadership learnings for AI-era leaders on strategy, governance, ethics, and execution at scale.</p>
+          <div class="content-meta"><span>Long-form Post</span><span>242 reactions · 112 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/pulse/when-ground-shifts-what-do-you-stand-tuhin-mohanta-fjxec" target="_blank">When the Ground Shifts, What Do You Stand On?</a></h3>
+          <p>A reflection on navigating uncertainty and organizational change - exploring the anchors that hold when everything else is in flux, and what it means to lead with conviction when the path forward isn't clear.</p>
+          <div class="content-meta"><span>5 min read</span><span>48 reactions · 8 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/pulse/what-leaders-getting-wrong-ai-its-technology-you-tuhin-mohanta-qbf4c" target="_blank">What Leaders Are Getting Wrong About AI: It's Not the Technology, It's You</a></h3>
+          <p>The uncomfortable truth about AI adoption - why the bottleneck isn't compute power or algorithms, but leadership mindset. A candid look at the mental models that prevent organizations from leveraging AI effectively.</p>
+          <div class="content-meta"><span>6 min read</span><span>42 reactions · 23 comments</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOGS -->
+    <section class="content-section">
+      <h2 class="section-title">Technical <em>Blogs</em></h2>
+      <div class="content-grid" id="blogs-grid">
+        <!-- Add your blog posts here -->
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="content-section">
+      <h2 class="section-title">Videos & <em>Talks</em></h2>
+      <div class="content-grid" id="videos-grid">
+        <!-- Add your videos here -->
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p>
+  </div>
+</footer>
+
+<script>
+// Filter functionality
+const filterTabs = document.querySelectorAll('.filter-tab');
+const contentCards = document.querySelectorAll('.content-card');
+
+filterTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const filter = tab.dataset.filter;
+    
+    // Update active tab
+    filterTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    
+    // Filter content
+    contentCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

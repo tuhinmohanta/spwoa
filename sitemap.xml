@@ -3,12 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://tuhinmohanta.com/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://tuhinmohanta.com/profile.jpg</image:loc>
       <image:title>Tuhin Mohanta - CTO & Healthcare Tech Leader</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://tuhinmohanta.com/media.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
