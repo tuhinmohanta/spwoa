@@ -120,6 +120,12 @@ nav ul a:hover::after,nav ul a.active::after{width:100%}
 .back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:2rem;transition:all .3s var(--ease)}
 .back-link:hover{color:var(--accent)}
 
+/* COMING SOON */
+.coming-soon{text-align:center;padding:4rem 2rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);max-width:600px;margin:0 auto}
+.coming-soon-icon{font-size:2.5rem;margin-bottom:1rem;color:var(--accent);opacity:.6}
+.coming-soon h3{font-family:var(--font-display);font-size:1.3rem;font-weight:400;margin-bottom:.8rem;color:var(--text)}
+.coming-soon p{font-size:.85rem;color:var(--text-secondary);line-height:1.7;max-width:400px;margin:0 auto}
+
 footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;font-size:.7rem;color:var(--text-muted);font-weight:300;margin-top:4rem}
 
 @media(max-width:768px){
@@ -272,16 +278,24 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <!-- BLOGS -->
     <section class="content-section">
       <h2 class="section-title">Technical <em>Blogs</em></h2>
-      <div class="content-grid" id="blogs-grid">
-        <!-- Add your blog posts here -->
+      <div id="blogs-grid">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">✍️</div>
+          <h3>Deep Dives Coming Soon</h3>
+          <p>Technical explorations on platform architecture, DevOps patterns, cloud-native systems, and the engineering practices that make organizations scale. Stay tuned.</p>
+        </div>
       </div>
     </section>
 
     <!-- VIDEOS -->
     <section class="content-section">
       <h2 class="section-title">Videos & <em>Talks</em></h2>
-      <div class="content-grid" id="videos-grid">
-        <!-- Add your videos here -->
+      <div id="videos-grid">
+        <div class="coming-soon">
+          <div class="coming-soon-icon">🎥</div>
+          <h3>Talks & Sessions Coming Soon</h3>
+          <p>Conference talks, keynotes, and video content on engineering leadership, platform transformation, and building high-performance teams. Watch this space.</p>
+        </div>
       </div>
     </section>
   </div>
