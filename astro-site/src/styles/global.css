@@ -43,8 +43,9 @@ nav ul a:hover::after,nav ul a.active::after{width:100%}
 .menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.3rem;cursor:pointer}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:8rem 0 4rem}
-.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:4.5rem;align-items:center}
+.hero{min-height:100vh;position:relative;padding:8rem 0 4rem}
+.hero .container{max-width:1240px;min-height:calc(100vh - 12rem);display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,360px);gap:3rem;align-items:center}
 .hero-content{position:relative;z-index:2}
 .hero-eyebrow{display:flex;flex-direction:column;gap:.6rem;font-size:.65rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem;opacity:0;animation:fadeIn .8s .3s forwards;align-items:flex-start}
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);flex-shrink:0}
@@ -229,6 +230,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .menu-toggle{display:block}
   section{padding:4rem 0}
   .hero{min-height:auto;padding:7rem 0 3rem}
+  .hero .container{max-width:1120px;min-height:auto}
   .hero h1{font-size:2.2rem}
   .impact-row{gap:1.5rem}.impact-divider{display:none}.impact-item{min-width:110px}
   .skills-grid,.awards-grid,.testimonials-grid{grid-template-columns:1fr}
