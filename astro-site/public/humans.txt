@@ -1,0 +1,49 @@
+/* TEAM */
+
+Owner & Developer: Tuhin Mohanta
+Title: Chief Technology Officer / Enterprise Platform Engineering Leader
+Location: Bengaluru, India
+LinkedIn: https://www.linkedin.com/in/tuhinmohanta
+Twitter: @tuhinmohanta
+Email: tuhin.mohanta@gmail.com
+
+/* SITE */
+
+Last update: 2026/02/22
+Standards: HTML5, CSS3, Schema.org, Semantic Markup
+Components: Responsive Design, Progressive Enhancement, AI-Optimized
+Technologies: Pure HTML/CSS/JavaScript, No Framework
+Fonts: Playfair Display, Inter, JetBrains Mono (Google Fonts)
+Tools: VS Code, Git, GitHub Pages
+
+/* PURPOSE */
+
+Professional portfolio and executive presence for technology leadership opportunities.
+Focused on: Platform Engineering, DevOps Transformation, AI Governance, Enterprise Architecture
+Target Roles: CTO, VP Engineering, Senior Director Engineering, Head of Platform Engineering
+
+/* CERTIFICATIONS */
+
+- ISB Chief Technology Officer Programme (2024-2025)
+- ISB Leadership with AI Programme (2025)
+- Certified Scrum Master
+- ITIL Certified
+
+/* THANKS */
+
+Indian School of Business - Executive Education
+Oracle Health - Current Employer
+All colleagues and teammates over 20+ years
+Open Source Community
+
+/* KEYWORDS FOR DISCOVERY */
+
+Enterprise Platform Engineering, DevOps Transformation, Site Reliability Engineering,
+Cloud Migration, AI Governance, Healthcare Technology, Platform Modernization,
+Enterprise Architecture, Cost Optimization, TCO Management, Global Delivery,
+Offshore Collaboration, Engineering Leadership, Technology Strategy
+
+ATS Keywords: Chief Technology Officer, CTO, VP Engineering, Senior Director,
+Head of Platform Engineering, DevOps Director, SRE Director, Enterprise Architect,
+$2B+ Portfolio Management, 550+ Engineers, Multi-Cloud, Kubernetes, AWS, Oracle Cloud,
+99.9% Uptime, Zero Defects, HIPAA Compliance, FDA Compliance

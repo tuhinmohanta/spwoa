@@ -1,0 +1,146 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { 
+  title, 
+  description,
+  canonical = "https://tuhinmohanta.com/",
+  ogImage = "https://tuhinmohanta.com/profile.jpg"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content={description}>
+<meta name="keywords" content="Tuhin Mohanta, Enterprise Engineering Leader, Platform Engineering Leader, Enterprise Technology Leader, Platform Modernization, ISB CTO Programme, ISB Leadership with AI, Healthcare Technology Leadership, AI Governance, DevOps Transformation, Cloud Migration Strategy, Enterprise Architecture, Scalable Systems,Site Reliability Engineering, VP Engineering, Senior Director Engineering, AI-Ready Enterprise, Regulated Enterprise Systems, Enterprise DevOps, Cloud Infrastructure Optimization, Financial Governance, Cost-to-Serve, TCO, Global Delivery, GCC Collaboration">
+<meta name="author" content="Tuhin Mohanta">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<title>{title}</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:type" content="profile">
+<meta property="og:url" content={canonical}>
+<meta property="og:site_name" content="Tuhin Mohanta - Enterprise Engineering Leader">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:alt" content="Tuhin Mohanta - CTO & Healthcare Tech Leader">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:profile:first_name" content="Tuhin">
+<meta property="og:profile:last_name" content="Mohanta">
+<meta property="og:profile:username" content="tuhinmohanta">
+<meta property="profile:first_name" content="Tuhin">
+<meta property="profile:last_name" content="Mohanta">
+<meta property="profile:gender" content="male">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+<meta name="twitter:image:alt" content="Tuhin Mohanta - CTO & Healthcare Tech Leader">
+<meta name="twitter:creator" content="@tuhinmohanta">
+
+<meta name="theme-color" content="#1a1a1f">
+
+<!-- AI Bot Discovery Tags -->
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="google-extended" content="index, follow">
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="claude-bot" content="index, follow">
+<meta name="gptbot" content="index, follow">
+<meta name="chatgpt-user" content="index, follow">
+<meta name="perplexitybot" content="index, follow">
+<meta name="anthropic-ai" content="index, follow">
+<meta name="meta-externalagent" content="index, follow">
+<meta name="applebot-extended" content="index, follow">
+<meta name="amazonbot" content="index, follow">
+<meta name="cohere-ai" content="index, follow">
+<meta name="bytespider" content="index, follow">
+
+<!-- Professional/Career Discovery -->
+<meta name="profession" content="Chief Technology Officer, VP Engineering, Senior Director Engineering, Platform Engineering Leader">
+<meta name="availability" content="Open to executive leadership opportunities">
+<meta name="experience-years" content="20+">
+<meta name="location" content="Bengaluru, India">
+<meta name="skills" content="Platform Engineering, DevOps, SRE, Cloud Architecture, AI Governance, Enterprise Architecture, AWS, Oracle Cloud, Kubernetes, Docker, Terraform, Microservices, CI/CD, Python, Java, Healthcare Technology, Financial Services Technology">
+<meta name="certifications" content="ISB Chief Technology Officer Programme, ISB Leadership with AI, Certified Scrum Master, ITIL">
+<meta name="industries" content="Healthcare Technology, Financial Services, Enterprise Software, SaaS, Cloud Infrastructure">
+
+<!-- Additional Discovery Keywords for ATS/Recruiters -->
+<meta name="job-titles" content="Chief Technology Officer, CTO, VP Engineering, Vice President of Engineering, Senior Director of Engineering, Head of Platform Engineering, Director of DevOps, Director of SRE, Enterprise Architect">
+<meta name="technical-expertise" content="Platform Modernization, Cloud Migration, DevOps Transformation, Site Reliability Engineering, AI-Ready Systems, Regulated Systems, HIPAA Compliance, FDA Compliance, Enterprise DevOps, Cost Optimization, TCO Management, Global Delivery, Offshore Collaboration">
+<meta name="leadership-scope" content="$2B+ Portfolio, 550+ Engineers, 50+ Global Deployments, $25M+ Budget Management">
+<meta name="achievements" content="99.9% Uptime, 60% Deployment Cycle Reduction, Zero Defects, 2x KNOTT Award Winner, Siemens Innovator Award, Samsung VP Recognition">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="canonical" href={canonical}>
+<link rel="author" href="/humans.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Optimized fonts: removed unused weights (Inter 200,600; Playfair 600; JetBrains Mono entirely) -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<!-- Preload critical fonts for faster initial render -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<slot name="head" />
+</head>
+<body>
+<div class="ambient">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Tuhin <span>Mohanta</span></div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    <ul>
+      <li><a href="/#presence">Presence</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#experience">Journey</a></li>
+      <li><a href="/#expertise">Expertise</a></li>
+      <li><a href="/media">Writing</a></li>
+      <li><a href="/#testimonials">Voices</a></li>
+      <li><a href="/#bio">Bio</a></li>
+      <li><a href="/#contact">Connect</a></li>
+    </ul>
+  </div>
+</nav>
+
+<slot />
+
+<footer>
+  <div class="container">
+    <p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p>
+  </div>
+</footer>
+
+<script is:inline>
+const nav=document.querySelector('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-in,.timeline-item').forEach(el=>observer.observe(el));
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{const y=window.pageYOffset;sections.forEach(s=>{const t=s.offsetTop-140,h=s.offsetHeight,id=s.getAttribute('id'),l=document.querySelector(`nav a[href="#${id}"], nav a[href="/#${id}"]`);if(l)l.classList.toggle('active',y>=t&&y<t+h)})});
+document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=>document.querySelector('nav ul').classList.remove('open'))});
+</script>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
