@@ -118,6 +118,29 @@ footer {
   text-align: center;
   color: var(--muted);
   padding: 2rem 1rem;
+  position: relative;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.version-tag {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background: rgba(110, 168, 254, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-left: auto;
 }
 
 @media (max-width: 640px) {
