@@ -228,7 +228,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     </div>
 
     <!-- ARTICLES -->
-    <section class="content-section">
+    <section class="content-section" data-section="articles">
       <h2 class="section-title">Thought Leadership <em>Articles</em></h2>
       <div class="content-grid" id="articles-grid">
         <div class="content-card" data-category="articles">
@@ -279,8 +279,14 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
           <p>The uncomfortable truth about AI adoption - why the bottleneck isn't compute power or algorithms, but leadership mindset. A candid look at the mental models that prevent organizations from leveraging AI effectively.</p>
           <div class="content-meta"><span>6 min read</span><span>42 reactions · 23 comments</span></div>
         </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type blue">ISB Alumni Article</div>
+          <h3><a href="https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc" target="_blank">When Technology Meets Humanity: Inside India's AI Kumbh and the Blueprint for 1.4 Billion</a></h3>
+          <p>My reflections from a pan-India ISB alumni leadership conversation following India AI Impact Summit 2026. I focused on healthcare AI governance, equity architecture, and why India's SAHI-BODH-ABHA stack—with 739M+ ABHA IDs and privacy-preserving validation rails—creates infrastructure for responsible AI at population scale. Joined by fellow speakers addressing education, social impact, manufacturing, agriculture, and ecosystem infrastructure, we explored a shared roadmap for ISB leaders in healthcare, policy, and startups: build governance and equity in by design, solve for India's hardest constraints as first-class requirements, and treat people closest to the problem as co-architects of the system. Alumni from Hyderabad, Mumbai, Bengaluru, Delhi, Chennai, Pune and beyond participated—doctors, founders, product leaders, and policy professionals, many not from tech backgrounds.</p>
+          <div class="content-meta"><span>Long-form Article</span><span>March 2, 2026</span><span><a href="https://youtu.be/ukdBl1krcvU" target="_blank" style="color:var(--accent)">Watch Talk →</a></span></div>
+        </div>
       </div>
-      <div class="coming-soon">
+      <div class="coming-soon" data-category="articles">
         <div class="coming-soon-icon">📰</div>
         <h3>More Articles Coming Soon</h3>
         <p>Additional deep dives on enterprise engineering, AI governance, and technology leadership. New perspectives and insights being curated for you.</p>
@@ -288,10 +294,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     </section>
 
     <!-- BLOGS -->
-    <section class="content-section">
+    <section class="content-section" data-section="blogs">
       <h2 class="section-title">Technical <em>Blogs</em></h2>
       <div id="blogs-grid">
-        <div class="coming-soon">
+        <div class="coming-soon" data-category="blogs">
           <div class="coming-soon-icon">✍️</div>
           <h3>Deep Dives Coming Soon</h3>
           <p>Technical explorations on platform architecture, DevOps patterns, cloud-native systems, and the engineering practices that make organizations scale. Stay tuned.</p>
@@ -300,14 +306,35 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     </section>
 
     <!-- VIDEOS -->
-    <section class="content-section">
+    <section class="content-section" data-section="videos">
       <h2 class="section-title">Videos & <em>Talks</em></h2>
-      <div id="videos-grid">
-        <div class="coming-soon">
-          <div class="coming-soon-icon">🎥</div>
-          <h3>Talks & Sessions Coming Soon</h3>
-          <p>Conference talks, keynotes, and video content on engineering leadership, platform transformation, and building high-performance teams. Watch this space.</p>
+      <div class="content-grid">
+        <div class="content-card" data-category="videos">
+          <div class="content-type blue">ISB Alumni Panel • Feb 2026</div>
+          <h3><a href="https://youtu.be/ukdBl1krcvU" target="_blank">When Technology Meets Humanity: Inside India's AI Kumbh</a></h3>
+          <p>I led the healthcare AI and equity architecture discussion in this pan-India ISB alumni session following India AI Impact Summit 2026. Speaking alongside Mukesh Joshi (education governance), Sailaja Raman (social impact), Harshal Jawale (manufacturing & agriculture), and Sudhir Dharan (ecosystem infrastructure), I explored how India's SAHI-BODH-ABHA stack creates the foundation for responsible AI at population scale. From ASHABot deployment to token economics linking LLM costs to ESG footprint, we tackled the essential question: how do we build AI systems for 1.4 billion people where governance and equity are architecture, not afterthought—and where those closest to the problem lead, not follow? Alumni from Hyderabad, Mumbai, Bengaluru, Delhi, Chennai, Pune and beyond joined this leadership conversation.</p>
+          <div class="content-meta">
+            <span>February 28, 2026</span>
+            <span>ISB Enterprise Excellence</span>
+            <span>Pan-India Alumni</span>
+          </div>
+          <div style="margin-top:1.2rem">
+            <iframe width="100%" height="315" 
+              src="https://www.youtube.com/embed/ukdBl1krcvU" 
+              title="When Technology Meets Humanity: Inside India's AI Kumbh" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              style="border-radius:8px">
+            </iframe>
+          </div>
         </div>
+      </div>
+      <div class="coming-soon" data-category="videos" style="margin-top:2rem">
+        <div class="coming-soon-icon">🎥</div>
+        <h3>More Talks Coming Soon</h3>
+        <p>Additional conference talks, keynotes, and video content on engineering leadership, platform transformation, and building high-performance teams. Watch this space.</p>
       </div>
     </section>
   </div>
@@ -316,14 +343,15 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <footer>
   <div class="container">
     <p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p>
-    <div class="version-tag">v4.0.2</div>
+    <div class="version-tag">v4.0.3</div>
   </div>
 </footer>
 
 <script>
 // Filter functionality
 const filterTabs = document.querySelectorAll('.filter-tab');
-const contentCards = document.querySelectorAll('.content-card');
+const filterableElements = document.querySelectorAll('[data-category]');
+const contentSections = document.querySelectorAll('.content-section');
 
 filterTabs.forEach(tab => {
   tab.addEventListener('click', () => {
@@ -333,12 +361,27 @@ filterTabs.forEach(tab => {
     filterTabs.forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
     
-    // Filter content
-    contentCards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.classList.remove('hidden');
+    // Filter all elements with data-category (content cards, coming-soon, etc)
+    filterableElements.forEach(element => {
+      if (filter === 'all' || element.dataset.category === filter) {
+        element.classList.remove('hidden');
       } else {
-        card.classList.add('hidden');
+        element.classList.add('hidden');
+      }
+    });
+    
+    // Hide/show entire sections based on visible content
+    contentSections.forEach(section => {
+      const sectionType = section.dataset.section;
+      
+      if (filter === 'all') {
+        section.style.display = 'block';
+      } else if (sectionType === filter) {
+        // Show section for matching filter
+        section.style.display = 'block';
+      } else {
+        // Hide section if it doesn't match filter
+        section.style.display = 'none';
       }
     });
   });
