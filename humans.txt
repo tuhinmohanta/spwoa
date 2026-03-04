@@ -15,7 +15,7 @@ Components: Responsive Design, Progressive Enhancement, AI-Optimized
 Technologies: Pure HTML/CSS/JavaScript, No Framework
 Fonts: Playfair Display, Inter, JetBrains Mono (Google Fonts)
 Tools: VS Code, Git, GitHub Pages
-Version: v4.0.4
+Version: v4.0.5
 
 /* PURPOSE */
 
