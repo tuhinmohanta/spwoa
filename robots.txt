@@ -63,7 +63,19 @@ Allow: /
 User-agent: FacebookBot
 Allow: /
 
-User-agent: LinkedInBot
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ImagesiftBot
 Allow: /
 
 # Professional Network Crawlers

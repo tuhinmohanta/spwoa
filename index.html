@@ -65,6 +65,33 @@
 <meta name="leadership-scope" content="$2B+ Portfolio, 550+ Engineers, 50+ Global Deployments, $25M+ Budget Management">
 <meta name="achievements" content="99.9% Uptime, 60% Deployment Cycle Reduction, Zero Defects, 2x KNOTT Award Winner, Siemens Innovator Award, Samsung VP Recognition">
 
+<!-- KnowledgeGraph & Entity Optimization for AI -->
+<meta name="entity-type" content="Person, ProfessionalProfile, ExecutiveLeader, TechnologyLeader">
+<meta name="primary-role" content="Chief Technology Officer">
+<meta name="current-organization" content="Oracle Health">
+<meta name="education" content="ISB Chief Technology Officer Programme, ISB Leadership with AI">
+<meta name="geo.region" content="IN-KA">
+<meta name="geo.placename" content="Bengaluru, Karnataka, India">
+<meta name="geo.position" content="12.9716;77.5946">
+<meta name="ICBM" content="12.9716, 77.5946">
+
+<!-- AI Context & Semantic Understanding -->
+<meta name="context" content="Professional portfolio and executive presence for technology leadership opportunities. Demonstrates expertise in enterprise platform engineering, AI governance, healthcare technology, and large-scale DevOps transformation.">
+<meta name="target-audience" content="Recruiters, CTOs, VPs Engineering, Board Members, Technology Leaders, Executive Search Firms">
+<meta name="page-type" content="professional-profile, portfolio, executive-presence">
+<meta name="content-classification" content="technology-leadership, enterprise-engineering, platform-modernization, ai-governance">
+
+<!-- Structured Authorship & Ownership -->
+<meta name="article:author" content="Tuhin Mohanta">
+<meta name="profile:username" content="tuhinmohanta">
+<link rel="me" href="https://www.linkedin.com/in/tuhinmohanta">
+<link rel="me" href="https://twitter.com/tuhinmohanta">
+<link rel="me" href="https://github.com/tuhinmohanta">
+
+<!-- International & Language Tags -->
+<link rel="alternate" hreflang="en" href="https://tuhinmohanta.com/">
+<link rel="alternate" hreflang="x-default" href="https://tuhinmohanta.com/">
+
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -320,18 +347,47 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
+  "@type": ["Person", "ProfilePage"],
+  "@id": "https://tuhinmohanta.com/#person",
+  "identifier": "tuhinmohanta",
   "name": "Tuhin Mohanta",
+  "givenName": "Tuhin",
+  "familyName": "Mohanta",
+  "honorificPrefix": "Mr.",
   "title": "Chief Technology Officer",
   "url": "https://tuhinmohanta.com/",
   "email": "tuhin.mohanta@gmail.com",
-  "image": "https://tuhinmohanta.com/profile-image.jpg",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://tuhinmohanta.com/profile-image.jpg",
+    "contentUrl": "https://tuhinmohanta.com/profile.jpg",
+    "width": 1200,
+    "height": 630,
+    "caption": "Tuhin Mohanta - Enterprise Platform Engineering Leader"
+  },
   "sameAs": [
     "https://www.linkedin.com/in/tuhinmohanta",
-    "https://twitter.com/tuhinmohanta"
+    "https://twitter.com/tuhinmohanta",
+    "https://github.com/tuhinmohanta",
+    "https://www.youtube.com/@ForgePossibilities"
   ],
   "jobTitle": ["Senior Manager, Software Engineering", "Enterprise Platform Engineering Leader", "Chief Technology Officer", "VP Engineering Candidate", "Senior Director Engineering"],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Chief Technology Officer",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Bengaluru"
+    },
+    "estimatedSalary": {
+      "@type": "MonetaryAmountDistribution",
+      "name": "Executive Level",
+      "currency": "USD"
+    },
+    "skills": "Platform Engineering, DevOps, AI Governance, Enterprise Architecture, Cloud Migration, Site Reliability Engineering, Healthcare Technology, Team Leadership"
+  },
   "description": "Enterprise Technology & Platform Engineering Leader with ISB CTO Programme and Leadership with AI certifications. Currently Senior Manager, Software Engineering (Head of Platform Engineering) at Oracle Health. 20+ years specializing in platform modernization, AI-ready enterprise systems, DevOps transformation, cloud migration strategy, and regulated healthcare technology at scale.",
+  "disambiguatingDescription": "ISB-certified CTO and enterprise platform engineering leader specializing in healthcare technology, AI governance, and large-scale DevOps transformation. Currently leading platform engineering at Oracle Health with responsibility for 550+ engineers and $2B+ portfolio.",
   "expertise": [
     "Enterprise Platform Engineering",
     "Platform Modernization",
@@ -377,28 +433,158 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     "sameAs": "https://www.isb.edu/"
   },
   "worksFor": {
-    "@type": "Organization", 
-    "name": "Oracle Health"
+    "@type": "Organization",
+    "@id": "https://www.oracle.com/health/#organization",
+    "name": "Oracle Health",
+    "url": "https://www.oracle.com/health/",
+    "logo": "https://www.oracle.com/asset/web/favicons/favicon-192.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/oracle-health",
+      "https://twitter.com/OracleHealth"
+    ]
   },
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Bengaluru",
-    "addressCountry": "India"
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "nationality": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "follows": "https://tuhinmohanta.com/media.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tuhinmohanta.com/"
+  },
+  "subjectOf": [
+    {
+      "@type": "VideoObject",
+      "name": "When Technology Meets Humanity: Inside India's AI Kumbh",
+      "url": "https://youtu.be/ukdBl1krcvU"
+    },
+    {
+      "@type": "VideoObject",
+      "name": "The Present Tense of AI: A Dialogue on Governance and Talent",
+      "url": "https://www.youtube.com/watch?v=xdm7vYhhdgc"
+    }
+  ],
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/FollowAction",
+    "userInteractionCount": "20000+",
+    "description": "Professional network reach"
   }
 }
 </script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
+  "@type": "Organization",
+  "@id": "https://tuhinmohanta.com/#organization",
+  "name": "Tuhin Mohanta - Technology Leadership",
+  "url": "https://tuhinmohanta.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://tuhinmohanta.com/profile.jpg"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
+  "member": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/tuhinmohanta",
+    "https://twitter.com/tuhinmohanta",
+    "https://github.com/tuhinmohanta",
+    "https://www.youtube.com/@ForgePossibilities"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Professional Inquiries",
+    "email": "tuhin.mohanta@gmail.com",
+    "availableLanguage": ["English", "Hindi", "Bengali"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["WebSite", "ProfilePage"],
+  "@id": "https://tuhinmohanta.com/#website",
   "url": "https://tuhinmohanta.com/",
   "name": "Tuhin Mohanta - Enterprise Platform Engineering Leader | ISB CTO Programme",
+  "alternateName": "Tuhin Mohanta Portfolio",
   "description": "Enterprise Technology & Platform Engineering Leader specializing in platform modernization, AI-ready systems, DevOps transformation, and scalable enterprise architecture. ISB CTO Programme and Leadership with AI. 20+ years building high-performance engineering organizations.",
+  "inLanguage": "en-US",
+  "about": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
   "author": {
     "@type": "Person",
     "name": "Tuhin Mohanta"
   },
-  "keywords": "Tuhin Mohanta, Enterprise Platform Engineering Leader, Platform Modernization, ISB CTO Programme, ISB Leadership with AI, AI Governance, DevOps Transformation, Enterprise Architecture, Scalable Systems, Healthcare Technology Leadership"
+  "creator": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
+  "copyrightHolder": {
+    "@type": "Person",
+    "name": "Tuhin Mohanta"
+  },
+  "copyrightYear": 2026,
+  "datePublished": "2024-01-15",
+  "dateModified": "2026-03-04",
+  "keywords": "Tuhin Mohanta, Enterprise Platform Engineering Leader, Platform Modernization, ISB CTO Programme, ISB Leadership with AI, AI Governance, DevOps Transformation, Enterprise Architecture, Scalable Systems, Healthcare Technology Leadership",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://tuhinmohanta.com/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "mainEntity": {
+    "@id": "https://tuhinmohanta.com/#person"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://tuhinmohanta.com/#webpage",
+  "url": "https://tuhinmohanta.com/",
+  "name": "Tuhin Mohanta | Enterprise Platform Engineering Leader | ISB CTO Programme",
+  "description": "Executive technology leader with ISB CTO Programme and Leadership with AI certifications. 20+ years of enterprise platform engineering, AI governance, DevOps transformation, and healthcare technology leadership.",
+  "isPartOf": {
+    "@id": "https://tuhinmohanta.com/#website"
+  },
+  "about": {
+    "@id": "https://tuhinmohanta.com/#person"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "@id": "https://tuhinmohanta.com/#primaryimage",
+    "url": "https://tuhinmohanta.com/profile.jpg",
+    "width": 1200,
+    "height": 630,
+    "caption": "Tuhin Mohanta - Enterprise Platform Engineering Leader"
+  },
+  "datePublished": "2024-01-15",
+  "dateModified": "2026-03-04",
+  "inLanguage": "en-US",
+  "potentialAction": [
+    {
+      "@type": "ReadAction",
+      "target": ["https://tuhinmohanta.com/"]
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -666,6 +852,70 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is Tuhin Mohanta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta is an Enterprise Platform Engineering Leader and ISB-certified CTO with Leadership with AI credentials. He is currently Senior Manager, Software Engineering at Oracle Health, leading platform engineering for healthcare technology systems. With 20+ years of experience, he specializes in platform modernization, AI governance, DevOps transformation, and enterprise architecture at scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Tuhin Mohanta's educational background?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta completed the ISB Chief Technology Officer Programme and ISB Leadership with AI programme from the Indian School of Business. He also holds professional certifications including Certified Scrum Master and ITIL certification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Tuhin Mohanta's experience in healthcare technology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta leads platform engineering at Oracle Health (formerly Cerner), managing $2B+ portfolio with 550+ engineers. He specializes in regulated healthcare systems, HIPAA-compliant platforms, FDA-regulated software, and building AI-ready healthcare infrastructure. He has expertise in healthcare AI governance and equity architecture for population-scale systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What leadership achievements does Tuhin Mohanta have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta is a 2x Cerner KNOTT Award winner (highest engineering honor), recipient of the Leadership Excellence Award for Product Architecture, Siemens Innovator's Award, and Samsung Global VP Recognition from South Korea. He has been a top-rated keynote speaker for 5 consecutive years and has achieved 99.9% uptime, 60% deployment cycle reduction, and zero-defect delivery in his programs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Tuhin Mohanta's leadership philosophy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta believes in servant leadership and building autonomous, high-performance teams. His philosophy is captured in his quote: 'Build a team so strong, no one knows who the leader is. That's not invisibility – that's the highest form of leadership.' He focuses on empowering engineers, fostering DevOps culture, and delivering value at scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact Tuhin Mohanta for executive opportunities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta can be contacted via email at tuhin.mohanta@gmail.com or through LinkedIn at linkedin.com/in/tuhinmohanta. He is open to CTO, VP Engineering, and Senior Director Engineering opportunities in enterprise technology, healthcare, and platform engineering domains."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What industries has Tuhin Mohanta worked in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta has extensive experience across healthcare technology, financial services, enterprise software, SaaS platforms, and cloud infrastructure. His domain expertise spans regulated industries including HIPAA, FDA, PCI-DSS compliance, and building systems for Fortune 500 enterprises."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="ambient"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
@@ -902,9 +1152,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="section-label fade-in">Thought Leadership</div>
     <h2 class="section-title fade-in">Writing, speaking &<br><em>shaping the discourse.</em></h2>
     <div class="articles-grid fade-in">
-      <div class="article-card"><div class="article-type gold">LinkedIn Article</div><h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Why 77% of Organizations Can't Scale AI Beyond Pilots</a></h3><p>A data-driven analysis of what 87 senior executives at ISB revealed about AI scaling barriers, the three structural constraints blocking most organizations, and how the successful 23% approach task distribution.</p><div class="article-meta"><span>6 min read</span><span>56 reactions · 22 comments</span></div></div>
-      <div class="article-card"><div class="article-type gold">LinkedIn Article</div><h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">The Smell of a Place: When Excellence Becomes Contagious</a></h3><p>A reflection on leadership culture from the ISB campus immersion experience - what it means when excellence is embedded in culture, not announced in speeches.</p><div class="article-meta"><span>5 min read</span><span>115 reactions · 31 comments</span></div></div>
+      <div class="article-card"><div class="article-type blue">ISB Alumni Article</div><h3><a href="https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc" target="_blank">When Technology Meets Humanity: Inside India's AI Kumbh and the Blueprint for 1.4 Billion</a></h3><p>Reflections from a pan-India ISB alumni leadership conversation at India AI Impact Summit 2026. Focused on healthcare AI governance, equity architecture, and why India's SAHI-BODH-ABHA stack creates infrastructure for responsible AI at population scale—where governance and equity are built in by design.</p><div class="article-meta"><span>Long-form Article</span><span>March 2, 2026</span></div></div>
       <div class="article-card"><div class="article-type silver">Featured Post</div><h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Completed: ISB Leadership with AI - Levelling Up for AI-Led Leadership</a></h3><p>Reflections on completing dual ISB executive programmes - CTO + Leadership with AI. Top leadership learnings for AI-era leaders on strategy, governance, ethics, and execution at scale.</p><div class="article-meta"><span>Long-form Post</span><span>242 reactions · 112 comments</span></div></div>
+      <div class="article-card"><div class="article-type gold">LinkedIn Article</div><h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Why 77% of Organizations Can't Scale AI Beyond Pilots</a></h3><p>A data-driven analysis of what 87 senior executives at ISB revealed about AI scaling barriers, the three structural constraints blocking most organizations, and how the successful 23% approach task distribution.</p><div class="article-meta"><span>6 min read</span><span>56 reactions · 22 comments</span></div></div>
       <div class="article-card"><div class="article-type gold">LinkedIn Article</div><h3><a href="https://www.linkedin.com/pulse/what-leaders-getting-wrong-ai-its-technology-you-tuhin-mohanta-qbf4c" target="_blank">What Leaders Are Getting Wrong About AI: It's Not the Technology, It's You</a></h3><p>The uncomfortable truth about AI adoption - why the bottleneck isn't compute power or algorithms, but leadership mindset. A candid look at the mental models that prevent organizations from leveraging AI effectively.</p><div class="article-meta"><span>6 min read</span><span>42 reactions · 23 comments</span></div></div>
     </div>
     <div style="text-align:center;margin-top:2.5rem" class="fade-in">
@@ -982,7 +1232,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.0.6</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.0.7</div></div></footer>
 
 <script>
 const nav=document.querySelector('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});

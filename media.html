@@ -159,10 +159,29 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
+  "@type": ["CollectionPage", "MediaGallery"],
+  "@id": "https://tuhinmohanta.com/media.html#page",
   "name": "Articles, Blogs & Video Interviews | Tuhin Mohanta",
   "description": "Comprehensive collection of thought leadership articles, technical blogs, and video interviews on AI governance, platform modernization, enterprise engineering, talent acquisition in the AI era, digital public infrastructure, and rural economy inclusion.",
   "url": "https://tuhinmohanta.com/media.html",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://tuhinmohanta.com/#website",
+    "url": "https://tuhinmohanta.com/",
+    "name": "Tuhin Mohanta - Enterprise Platform Engineering Leader"
+  },
+  "about": {
+    "@type": "Person",
+    "@id": "https://tuhinmohanta.com/#person",
+    "name": "Tuhin Mohanta"
+  },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://tuhinmohanta.com/profile.jpg",
+    "width": 1200,
+    "height": 630
+  },
   "datePublished": "2026-02-01",
   "dateModified": "2026-03-04",
   "author": {
@@ -265,6 +284,62 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Tuhin Mohanta's expertise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta is an Enterprise Platform Engineering Leader with ISB CTO Programme and Leadership with AI certifications. He specializes in platform modernization, AI-ready enterprise systems, DevOps transformation, healthcare technology leadership, and regulated systems at scale. He has 20+ years of experience building high-performance engineering organizations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Tuhin Mohanta's current role?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta is currently Senior Manager, Software Engineering (Head of Platform Engineering) at Oracle Health, where he leads platform engineering initiatives for healthcare technology systems serving millions of patients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Tuhin Mohanta's key certifications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta holds ISB Chief Technology Officer Programme certification and ISB Leadership with AI certification from the Indian School of Business. He is also a Certified Scrum Master and ITIL certified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What topics does Tuhin Mohanta write and speak about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta's thought leadership focuses on AI governance, healthcare technology, platform modernization, DevOps transformation, talent acquisition in the AI era, digital public infrastructure, rural economy inclusion through conversational AI, and enterprise engineering leadership."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find Tuhin Mohanta's video interviews and articles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuhin Mohanta's video interviews, articles, and thought leadership content are available on his website at tuhinmohanta.com/media.html, his LinkedIn profile, and his YouTube channel 'Forge Possibilities' (@ForgePossibilities)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the India AI Impact Summit content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The India AI Impact Summit content features Tuhin Mohanta's insights on healthcare AI governance, equity architecture, the SAHI-BODH-ABHA stack, and building AI systems for population-scale deployment serving 1.4 billion people. The session explores responsible AI, digital public infrastructure, and technology meeting humanity."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="ambient"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
@@ -309,6 +384,18 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       <h2 class="section-title">Thought Leadership <em>Articles</em></h2>
       <div class="content-grid" id="articles-grid">
         <div class="content-card" data-category="articles">
+          <div class="content-type blue">ISB Alumni Article</div>
+          <h3><a href="https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc" target="_blank">When Technology Meets Humanity: Inside India's AI Kumbh and the Blueprint for 1.4 Billion</a></h3>
+          <p>Reflections from a pan-India ISB alumni leadership conversation at India AI Impact Summit 2026. Focused on healthcare AI governance, equity architecture, and why India's SAHI-BODH-ABHA stack creates infrastructure for responsible AI at population scale—where governance and equity are built in by design.</p>
+          <div class="content-meta"><span>Long-form Article</span><span>March 2, 2026</span><span><a href="https://youtu.be/ukdBl1krcvU" target="_blank" style="color:var(--accent)">Watch Talk →</a></span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type silver">Featured Post</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Completed: ISB Leadership with AI - Levelling Up for AI-Led Leadership</a></h3>
+          <p>Reflections on completing dual ISB executive programmes - CTO + Leadership with AI. Top leadership learnings for AI-era leaders on strategy, governance, ethics, and execution at scale.</p>
+          <div class="content-meta"><span>Long-form Post</span><span>242 reactions · 112 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
           <div class="content-type gold">LinkedIn Article</div>
           <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Why 77% of Organizations Can't Scale AI Beyond Pilots</a></h3>
           <p>A data-driven analysis of what 87 senior executives at ISB revealed about AI scaling barriers, the three structural constraints blocking most organizations, and how the successful 23% approach task distribution.</p>
@@ -316,15 +403,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
         </div>
         <div class="content-card" data-category="articles">
           <div class="content-type gold">LinkedIn Article</div>
-          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">The Smell of a Place: When Excellence Becomes Contagious</a></h3>
-          <p>A reflection on leadership culture from the ISB campus immersion experience - what it means when excellence is embedded in culture, not announced in speeches.</p>
-          <div class="content-meta"><span>5 min read</span><span>115 reactions · 31 comments</span></div>
-        </div>
-        <div class="content-card" data-category="articles">
-          <div class="content-type gold">LinkedIn Article</div>
-          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Reflections from Converge 2025: Leadership Lessons for the AI Era</a></h3>
-          <p>Key takeaways from Walmart Global Tech's Converge 2025 - dialogues with Nandan Nilekani, Suresh Kumar, and the future of agentic AI, frugal innovation, and responsible technology.</p>
-          <div class="content-meta"><span>4 min read</span><span>39 reactions · 2 comments</span></div>
+          <h3><a href="https://www.linkedin.com/pulse/what-leaders-getting-wrong-ai-its-technology-you-tuhin-mohanta-qbf4c" target="_blank">What Leaders Are Getting Wrong About AI: It's Not the Technology, It's You</a></h3>
+          <p>The uncomfortable truth about AI adoption - why the bottleneck isn't compute power or algorithms, but leadership mindset. A candid look at the mental models that prevent organizations from leveraging AI effectively.</p>
+          <div class="content-meta"><span>6 min read</span><span>42 reactions · 23 comments</span></div>
         </div>
         <div class="content-card" data-category="articles">
           <div class="content-type green">Podcast</div>
@@ -339,28 +420,22 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
           <div class="content-meta"><span>Long-form Post</span><span>63 reactions · 23 comments</span></div>
         </div>
         <div class="content-card" data-category="articles">
-          <div class="content-type silver">Featured Post</div>
-          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Completed: ISB Leadership with AI - Levelling Up for AI-Led Leadership</a></h3>
-          <p>Reflections on completing dual ISB executive programmes - CTO + Leadership with AI. Top leadership learnings for AI-era leaders on strategy, governance, ethics, and execution at scale.</p>
-          <div class="content-meta"><span>Long-form Post</span><span>242 reactions · 112 comments</span></div>
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">Reflections from Converge 2025: Leadership Lessons for the AI Era</a></h3>
+          <p>Key takeaways from Walmart Global Tech's Converge 2025 - dialogues with Nandan Nilekani, Suresh Kumar, and the future of agentic AI, frugal innovation, and responsible technology.</p>
+          <div class="content-meta"><span>4 min read</span><span>39 reactions · 2 comments</span></div>
+        </div>
+        <div class="content-card" data-category="articles">
+          <div class="content-type gold">LinkedIn Article</div>
+          <h3><a href="https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/" target="_blank">The Smell of a Place: When Excellence Becomes Contagious</a></h3>
+          <p>A reflection on leadership culture from the ISB campus immersion experience - what it means when excellence is embedded in culture, not announced in speeches.</p>
+          <div class="content-meta"><span>5 min read</span><span>115 reactions · 31 comments</span></div>
         </div>
         <div class="content-card" data-category="articles">
           <div class="content-type gold">LinkedIn Article</div>
           <h3><a href="https://www.linkedin.com/pulse/when-ground-shifts-what-do-you-stand-tuhin-mohanta-fjxec" target="_blank">When the Ground Shifts, What Do You Stand On?</a></h3>
           <p>A reflection on navigating uncertainty and organizational change - exploring the anchors that hold when everything else is in flux, and what it means to lead with conviction when the path forward isn't clear.</p>
           <div class="content-meta"><span>5 min read</span><span>48 reactions · 8 comments</span></div>
-        </div>
-        <div class="content-card" data-category="articles">
-          <div class="content-type gold">LinkedIn Article</div>
-          <h3><a href="https://www.linkedin.com/pulse/what-leaders-getting-wrong-ai-its-technology-you-tuhin-mohanta-qbf4c" target="_blank">What Leaders Are Getting Wrong About AI: It's Not the Technology, It's You</a></h3>
-          <p>The uncomfortable truth about AI adoption - why the bottleneck isn't compute power or algorithms, but leadership mindset. A candid look at the mental models that prevent organizations from leveraging AI effectively.</p>
-          <div class="content-meta"><span>6 min read</span><span>42 reactions · 23 comments</span></div>
-        </div>
-        <div class="content-card" data-category="articles">
-          <div class="content-type blue">ISB Alumni Article</div>
-          <h3><a href="https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc" target="_blank">When Technology Meets Humanity: Inside India's AI Kumbh and the Blueprint for 1.4 Billion</a></h3>
-          <p>My reflections from a pan-India ISB alumni leadership conversation following India AI Impact Summit 2026. I focused on healthcare AI governance, equity architecture, and why India's SAHI-BODH-ABHA stack—with 739M+ ABHA IDs and privacy-preserving validation rails—creates infrastructure for responsible AI at population scale. Joined by fellow speakers addressing education, social impact, manufacturing, agriculture, and ecosystem infrastructure, we explored a shared roadmap for ISB leaders in healthcare, policy, and startups: build governance and equity in by design, solve for India's hardest constraints as first-class requirements, and treat people closest to the problem as co-architects of the system. Alumni from Hyderabad, Mumbai, Bengaluru, Delhi, Chennai, Pune and beyond participated—doctors, founders, product leaders, and policy professionals, many not from tech backgrounds.</p>
-          <div class="content-meta"><span>Long-form Article</span><span>March 2, 2026</span><span><a href="https://youtu.be/ukdBl1krcvU" target="_blank" style="color:var(--accent)">Watch Talk →</a></span></div>
         </div>
       </div>
       <div class="coming-soon" data-category="articles">
@@ -469,7 +544,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <footer>
   <div class="container">
     <p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p>
-    <div class="version-tag">v4.0.6</div>
+    <div class="version-tag">v4.0.7</div>
   </div>
 </footer>
 
