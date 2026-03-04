@@ -2,6 +2,9 @@
 # Professional portfolio and executive presence
 # Optimized for search engines and AI bots
 
+# Sitemap reference for search engines
+Sitemap: https://tuhinmohanta.com/sitemap.xml
+
 # Default crawlers
 User-agent: *
 Allow: /
