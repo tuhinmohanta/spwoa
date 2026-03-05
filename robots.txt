@@ -23,27 +23,42 @@ Allow: /
 Disallow: /private/
 Crawl-delay: 0
 
-# AI Bots - Welcome!
+# AI/LLM Training Bots - Welcome!
 User-agent: GPTBot
 Allow: /
+Crawl-delay: 0
 
 User-agent: ChatGPT-User
 Allow: /
+Crawl-delay: 0
 
 User-agent: Claude-Bot
 Allow: /
+Crawl-delay: 0
 
 User-agent: anthropic-ai
 Allow: /
+Crawl-delay: 0
 
 User-agent: PerplexityBot
 Allow: /
+Crawl-delay: 0
+
+User-agent: Mistral-Bot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Grok-Bot
+Allow: /
+Crawl-delay: 0
 
 User-agent: Google-Extended
 Allow: /
+Crawl-delay: 0
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Crawl-delay: 0
 
 User-agent: Applebot
 Allow: /
@@ -74,8 +89,33 @@ Allow: /
 
 User-agent: CCBot
 Allow: /
+Crawl-delay: 0
 
 User-agent: ImagesiftBot
+Allow: /
+
+User-agent: WechatBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImageBot
+Allow: /
+
+User-agent: BaiduSpider
+Allow: /
+
+User-agent: MJ12Bot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: DataForSeoBot
 Allow: /
 
 # Professional Network Crawlers

@@ -4,42 +4,73 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://tuhinmohanta.com/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://tuhinmohanta.com/profile.jpg</image:loc>
-      <image:title>Tuhin Mohanta - CTO & Healthcare Tech Leader</image:title>
+      <image:title>Tuhin Mohanta - Enterprise Platform Engineering Leader & CTO</image:title>
+      <image:caption>Tuhin Mohanta, Chief Technology Officer and Platform Engineering Leader with 20+ years of enterprise architecture experience</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://tuhinmohanta.com/media.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</image:loc>
+      <image:title>India AI Impact Summit 2026 - Healthcare AI & Equity Architecture Panel Discussion</image:title>
+      <image:caption>Tuhin Mohanta speaking at India AI Kumbh at India AI Impact Summit 2026, discussing healthcare AI, SAHI-BODH-ABHA stack, and responsible AI for population scale systems</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/xdm7vYhhdgc/maxresdefault.jpg</image:loc>
+      <image:title>AI Governance and Talent Acquisition Dialogue with Debashis Sen</image:title>
+      <image:caption>Tuhin Mohanta in dialogue with Debashis Sen (IAS veteran, ex Additional Chief Secretary IT) on AI governance, talent acquisition in AI era, and digital public infrastructure</image:caption>
+    </image:image>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>When Technology Meets Humanity: Inside India's AI Kumbh</video:title>
-      <video:description>Pan-India ISB alumni session following India AI Impact Summit 2026. Healthcare AI, equity architecture, SAHI-BODH-ABHA stack, and responsible AI systems for 1.4 billion people.</video:description>
+      <video:description>Pan-India ISB alumni session following India AI Impact Summit 2026. Featuring Tuhin Mohanta on Healthcare AI, equity architecture, SAHI-BODH-ABHA stack for population-scale systems, and responsible AI governance for 1.4 billion people. Enterprise platform engineering perspective on AI-ready healthcare systems.</video:description>
       <video:content_loc>https://youtu.be/ukdBl1krcvU</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/ukdBl1krcvU</video:player_loc>
       <video:duration>2700</video:duration>
       <video:publication_date>2026-02-28</video:publication_date>
+      <video:uploader_info info="Tuhin Mohanta - Enterprise Engineering Leadership"></video:uploader_info>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>AI governance</video:tag>
+      <video:tag>healthcare technology</video:tag>
+      <video:tag>platform engineering</video:tag>
+      <video:tag>equity architecture</video:tag>
+      <video:tag>responsible AI</video:tag>
+      <video:tag>ISB CTO Programme</video:tag>
+      <video:tag>India AI Impact Summit</video:tag>
+      <video:tag>enterprise systems</video:tag>
+      <video:category>Technology</video:category>
+      <video:category>Healthcare</video:category>
     </video:video>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/xdm7vYhhdgc/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>The Present Tense of AI: A Dialogue on Governance and Talent</video:title>
-      <video:description>In-depth conversation with Debashis Sen (IAS veteran, ex Additional Chief Secretary IT) on AI evolution, talent acquisition, Learn AI from AI framework, hyper-local linguistic inclusion for rural economy transformation, and AI as Digital Public Infrastructure.</video:description>
+      <video:description>In-depth conversation between Tuhin Mohanta and Debashis Sen (IAS veteran, ex Additional Chief Secretary IT) on AI evolution, talent acquisition in AI era, Learn AI from AI framework, hyper-local linguistic inclusion for rural economy transformation through conversational AI, and AI as Digital Public Infrastructure for India. Enterprise perspective on AI governance and policy impact.</video:description>
       <video:content_loc>https://www.youtube.com/watch?v=xdm7vYhhdgc</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/xdm7vYhhdgc</video:player_loc>
       <video:duration>2100</video:duration>
       <video:publication_date>2026-02-01</video:publication_date>
+      <video:uploader_info info="Tuhin Mohanta - Enterprise Engineering Leadership"></video:uploader_info>
+      <video:family_friendly>yes</video:family_friendly>
       <video:tag>AI governance</video:tag>
       <video:tag>talent acquisition</video:tag>
       <video:tag>digital public infrastructure</video:tag>
       <video:tag>rural economy</video:tag>
       <video:tag>conversational AI</video:tag>
+      <video:tag>AI policy</video:tag>
+      <video:tag>enterprise technology</video:tag>
+      <video:tag>leadership dialogue</video:tag>
+      <video:tag>India AI</video:tag>
       <video:category>Technology</video:category>
+      <video:category>AI</video:category>
+      <video:category>Governance</video:category>
     </video:video>
   </url>
 </urlset>
