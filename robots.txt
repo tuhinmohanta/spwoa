@@ -4,6 +4,8 @@
 
 # Sitemap reference for search engines
 Sitemap: https://tuhinmohanta.com/sitemap.xml
+# LLM-friendly summary
+# llms.txt is a machine-readable profile and content index for AI tools.
 
 # Default crawlers
 User-agent: *
@@ -32,7 +34,15 @@ User-agent: ChatGPT-User
 Allow: /
 Crawl-delay: 0
 
+User-agent: OAI-SearchBot
+Allow: /
+Crawl-delay: 0
+
 User-agent: Claude-Bot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Claude-Web
 Allow: /
 Crawl-delay: 0
 
@@ -41,6 +51,10 @@ Allow: /
 Crawl-delay: 0
 
 User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Perplexity-User
 Allow: /
 Crawl-delay: 0
 
@@ -115,6 +129,9 @@ Allow: /
 User-agent: DotBot
 Allow: /
 
+User-agent: DuckAssistBot
+Allow: /
+
 User-agent: DataForSeoBot
 Allow: /
 
@@ -132,6 +149,7 @@ Allow: /
 # Sitemap and Host
 Host: https://tuhinmohanta.com
 Sitemap: https://tuhinmohanta.com/sitemap.xml
+Sitemap: https://tuhinmohanta.com/llms.txt
 
 # Humans
 # See humans.txt for team and site information

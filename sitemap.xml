@@ -4,29 +4,34 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://tuhinmohanta.com/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://tuhinmohanta.com/profile.jpg</image:loc>
-      <image:title>Tuhin Mohanta - Enterprise Platform Engineering Leader & CTO</image:title>
+      <image:title>Tuhin Mohanta - Enterprise Platform Engineering Leader &amp; CTO</image:title>
       <image:caption>Tuhin Mohanta, Chief Technology Officer and Platform Engineering Leader with 20+ years of enterprise architecture experience</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://tuhinmohanta.com/media.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</image:loc>
-      <image:title>India AI Impact Summit 2026 - Healthcare AI & Equity Architecture Panel Discussion</image:title>
+      <image:title>India AI Impact Summit 2026 - Healthcare AI &amp; Equity Architecture Panel Discussion</image:title>
       <image:caption>Tuhin Mohanta speaking at India AI Kumbh at India AI Impact Summit 2026, discussing healthcare AI, SAHI-BODH-ABHA stack, and responsible AI for population scale systems</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://i.ytimg.com/vi/xdm7vYhhdgc/maxresdefault.jpg</image:loc>
       <image:title>AI Governance and Talent Acquisition Dialogue with Debashis Sen</image:title>
       <image:caption>Tuhin Mohanta in dialogue with Debashis Sen (IAS veteran, ex Additional Chief Secretary IT) on AI governance, talent acquisition in AI era, and digital public infrastructure</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/AmiwBAMd9SM/maxresdefault.jpg</image:loc>
+      <image:title>After the Summit Lights Fade: Hard Decisions for India's AI Decade</image:title>
+      <image:caption>India AI Impact Summit 2026 talk by Tuhin Mohanta on AI roadmaps for CTOs, digital rails strategy, board-level governance, and inclusive voice-first execution.</image:caption>
     </image:image>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</video:thumbnail_loc>
@@ -72,5 +77,33 @@
       <video:category>AI</video:category>
       <video:category>Governance</video:category>
     </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/AmiwBAMd9SM/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>After the Summit Lights Fade: Hard Decisions for India's AI Decade</video:title>
+      <video:description>India AI Impact Summit 2026 talk for CTOs and technology leaders shaping 12-24 month AI roadmaps. Covers India's AI architecture, SAHI-BODH healthcare governance, offline-first and voice-first design, and board-level governance priorities for inclusive AI execution.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=AmiwBAMd9SM</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/AmiwBAMd9SM</video:player_loc>
+      <video:duration>1800</video:duration>
+      <video:publication_date>2026-03-12</video:publication_date>
+      <video:uploader_info info="Tuhin Mohanta - Enterprise Engineering Leadership"></video:uploader_info>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>India AI Impact Summit 2026</video:tag>
+      <video:tag>AI strategy</video:tag>
+      <video:tag>CTO leadership</video:tag>
+      <video:tag>digital public infrastructure</video:tag>
+      <video:tag>healthcare AI governance</video:tag>
+      <video:tag>voice-first design</video:tag>
+      <video:tag>offline-first architecture</video:tag>
+      <video:tag>enterprise technology</video:tag>
+      <video:category>Technology</video:category>
+      <video:category>AI</video:category>
+      <video:category>Leadership</video:category>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://tuhinmohanta.com/llms.txt</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

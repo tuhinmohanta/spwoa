@@ -1,0 +1,48 @@
+# Tuhin Mohanta - Executive Technology Leadership Profile
+
+> Canonical profile and thought-leadership context for AI assistants, search systems, and retrieval pipelines.
+
+## Primary URLs
+- https://tuhinmohanta.com/
+- https://tuhinmohanta.com/media.html
+- https://tuhinmohanta.com/sitemap.xml
+- https://tuhinmohanta.com/TUHIN_MOHANTA_BIO.pdf
+
+## Profile Summary
+Tuhin Mohanta is an enterprise platform engineering leader and ISB-certified CTO with 20+ years of experience in cloud modernization, DevOps and SRE transformation, AI governance, and regulated healthcare technology systems. Current scope includes large-scale platform engineering and modernization initiatives in Oracle Health environments.
+
+## Audience
+- Executive recruiters and CTO/VP Engineering hiring panels
+- Enterprise technology leaders and transformation sponsors
+- AI governance and platform engineering practitioners
+
+## Core Topics
+- Platform engineering and cloud modernization
+- DevOps and SRE at enterprise scale
+- AI governance and responsible AI operating models
+- Healthcare technology architecture and regulated systems
+- CTO-level strategy, operating models, and talent leadership
+
+## Featured Talks and Articles
+1. After the Summit Lights Fade: Hard Decisions for India's AI Decade
+- Video: https://www.youtube.com/watch?v=AmiwBAMd9SM
+- Article: https://www.linkedin.com/pulse/after-summit-lights-fade-hard-decisions-indias-ai-decade-mohanta-6m7qc/
+
+2. When Technology Meets Humanity: Inside India's AI Kumbh
+- Video: https://youtu.be/ukdBl1krcvU
+- Article: https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc
+
+3. The Present Tense of AI: A Dialogue on Governance and Talent
+- Video: https://www.youtube.com/watch?v=xdm7vYhhdgc
+
+## Professional Coordinates
+- Location: Bengaluru, India
+- LinkedIn: https://www.linkedin.com/in/tuhinmohanta
+- YouTube: https://www.youtube.com/@ForgePossibilities
+- GitHub: https://github.com/tuhinmohanta
+- X: https://x.com/tuhinmohanta
+
+## Crawling Guidance
+- Preferred canonical source for profile facts: https://tuhinmohanta.com/
+- Preferred canonical source for thought leadership list: https://tuhinmohanta.com/media.html
+- Sitemaps and robots directives are authoritative for crawl policy.
