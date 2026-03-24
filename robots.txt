@@ -10,6 +10,9 @@ Sitemap: https://tuhinmohanta.com/sitemap.xml
 # Default crawlers
 User-agent: *
 Allow: /
+Allow: /media.html
+Allow: /llms.txt
+Allow: /sitemap.xml
 Disallow: /private/
 Crawl-delay: 1
 
@@ -18,6 +21,15 @@ User-agent: Googlebot
 Allow: /
 Disallow: /private/
 Crawl-delay: 0
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+
+User-agent: GoogleOther-Video
+Allow: /
 
 # Bing
 User-agent: Bingbot

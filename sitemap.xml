@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://tuhinmohanta.com/</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,9 +15,14 @@
   </url>
   <url>
     <loc>https://tuhinmohanta.com/media.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg</image:loc>
+      <image:title>Beyond the Hype: Operationalizing AI for the Next Billion</image:title>
+      <image:caption>India AI Impact Summit 2026 field walkthrough by Tuhin Mohanta focused on operational AI execution, custom inferencing hardware, Indic language inclusion, and real-world sector deployment.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</image:loc>
       <image:title>India AI Impact Summit 2026 - Healthcare AI &amp; Equity Architecture Panel Discussion</image:title>
@@ -33,6 +38,26 @@
       <image:title>After the Summit Lights Fade: Hard Decisions for India's AI Decade</image:title>
       <image:caption>India AI Impact Summit 2026 talk by Tuhin Mohanta on AI roadmaps for CTOs, digital rails strategy, board-level governance, and inclusive voice-first execution.</image:caption>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Beyond the Hype: Operationalizing AI for the Next Billion</video:title>
+      <video:description>India AI Impact Summit 2026 floor walkthrough covering operational AI at scale: custom GPU inferencing for affordability, multilingual AI in 22 Indic languages, and practical deployments across clinical trials, mobility safety, and food hygiene.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=Qu2TOpPfkdg</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/Qu2TOpPfkdg</video:player_loc>
+      <video:publication_date>2026-03-24</video:publication_date>
+      <video:uploader_info info="Tuhin Mohanta - Enterprise Engineering Leadership"></video:uploader_info>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>IndiaAI2026</video:tag>
+      <video:tag>Global leadership</video:tag>
+      <video:tag>digital transformation</video:tag>
+      <video:tag>AI operationalization</video:tag>
+      <video:tag>custom inferencing hardware</video:tag>
+      <video:tag>Indic language AI</video:tag>
+      <video:tag>Global South AI</video:tag>
+      <video:category>Technology</video:category>
+      <video:category>AI</video:category>
+      <video:category>Leadership</video:category>
+    </video:video>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>When Technology Meets Humanity: Inside India's AI Kumbh</video:title>
@@ -102,8 +127,20 @@
   </url>
   <url>
     <loc>https://tuhinmohanta.com/llms.txt</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://tuhinmohanta.com/robots.txt</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tuhinmohanta.com/humans.txt</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
