@@ -9,13 +9,13 @@ Email: tuhin.mohanta@gmail.com
 
 /* SITE */
 
-Last update: 2026/03/22
+Last update: 2026/03/26
 Standards: HTML5, CSS3, Schema.org, Semantic Markup
 Components: Responsive Design, Progressive Enhancement, AI-Optimized
 Technologies: Pure HTML/CSS/JavaScript, No Framework
 Fonts: Playfair Display, Inter, JetBrains Mono (Google Fonts)
 Tools: VS Code, Git, GitHub Pages
-Version: v4.2.4
+Version: v4.2.5
 
 /* PURPOSE */
 

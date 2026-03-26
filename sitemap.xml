@@ -4,7 +4,7 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://tuhinmohanta.com/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,9 +15,14 @@
   </url>
   <url>
     <loc>https://tuhinmohanta.com/media.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg</image:loc>
+      <image:title>Beyond the Hype: Token Dynamics &amp; AI Sovereignty</image:title>
+      <image:caption>Tuhin Mohanta at India AI Impact Summit 2026 on token economics, enterprise inference cost structures, model portability, and AI sovereignty for leaders scaling AI to production.</image:caption>
+    </image:image>
     <image:image>
       <image:loc>https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg</image:loc>
       <image:title>Beyond the Hype: Operationalizing AI for the Next Billion</image:title>
@@ -38,6 +43,27 @@
       <image:title>After the Summit Lights Fade: Hard Decisions for India's AI Decade</image:title>
       <image:caption>India AI Impact Summit 2026 talk by Tuhin Mohanta on AI roadmaps for CTOs, digital rails strategy, board-level governance, and inclusive voice-first execution.</image:caption>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Beyond the Hype: Token Dynamics &amp; AI Sovereignty</video:title>
+      <video:description>A strategic leadership talk on token dynamics, enterprise cost structures, and AI sovereignty choices. Explores inference economics, model portability, and governance controls for leaders moving AI from pilots to core operations. Recorded at India AI Impact Summit 2026.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=APb4Vuuwx-Q</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/APb4Vuuwx-Q</video:player_loc>
+      <video:publication_date>2026-03-26</video:publication_date>
+      <video:uploader_info info="Tuhin Mohanta - Enterprise Engineering Leadership"></video:uploader_info>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:tag>token dynamics</video:tag>
+      <video:tag>AI sovereignty</video:tag>
+      <video:tag>AI governance</video:tag>
+      <video:tag>inference economics</video:tag>
+      <video:tag>enterprise AI</video:tag>
+      <video:tag>India AI Impact Summit 2026</video:tag>
+      <video:tag>AI leadership</video:tag>
+      <video:tag>model portability</video:tag>
+      <video:category>Technology</video:category>
+      <video:category>AI</video:category>
+      <video:category>Leadership</video:category>
+    </video:video>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Beyond the Hype: Operationalizing AI for the Next Billion</video:title>
@@ -127,7 +153,7 @@
   </url>
   <url>
     <loc>https://tuhinmohanta.com/llms.txt</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -139,7 +165,7 @@
   </url>
   <url>
     <loc>https://tuhinmohanta.com/humans.txt</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
