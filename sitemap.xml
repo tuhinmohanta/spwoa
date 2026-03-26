@@ -12,6 +12,21 @@
       <image:title>Tuhin Mohanta - Enterprise Platform Engineering Leader &amp; CTO</image:title>
       <image:caption>Tuhin Mohanta, Chief Technology Officer and Platform Engineering Leader with 20+ years of enterprise architecture experience</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg</image:loc>
+      <image:title>Featured Talk - Beyond the Hype: Token Dynamics &amp; AI Sovereignty</image:title>
+      <image:caption>Homepage featured talk by Tuhin Mohanta on token dynamics, enterprise inference economics, model portability, and AI sovereignty.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg</image:loc>
+      <image:title>Featured Talk - Beyond the Hype: Operationalizing AI for the Next Billion</image:title>
+      <image:caption>Homepage featured talk from India AI Impact Summit 2026 on operational AI, multilingual systems, and cost-efficient deployment.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://i.ytimg.com/vi/AmiwBAMd9SM/maxresdefault.jpg</image:loc>
+      <image:title>Featured Talk - After the Summit Lights Fade: Hard Decisions for India's AI Decade</image:title>
+      <image:caption>Homepage featured talk for CTOs on AI governance, digital rails, and voice-first execution after India AI Impact Summit 2026.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://tuhinmohanta.com/media.html</loc>
@@ -88,7 +103,7 @@
       <video:thumbnail_loc>https://i.ytimg.com/vi/ukdBl1krcvU/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>When Technology Meets Humanity: Inside India's AI Kumbh</video:title>
       <video:description>Pan-India ISB alumni session following India AI Impact Summit 2026. Featuring Tuhin Mohanta on Healthcare AI, equity architecture, SAHI-BODH-ABHA stack for population-scale systems, and responsible AI governance for 1.4 billion people. Enterprise platform engineering perspective on AI-ready healthcare systems.</video:description>
-      <video:content_loc>https://youtu.be/ukdBl1krcvU</video:content_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=ukdBl1krcvU</video:content_loc>
       <video:player_loc>https://www.youtube.com/embed/ukdBl1krcvU</video:player_loc>
       <video:duration>2700</video:duration>
       <video:publication_date>2026-02-28</video:publication_date>
