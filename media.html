@@ -127,8 +127,6 @@
 <meta name="ai-content-signals" content="fresh linked content, latest summit talk, video-backed leadership insights, structured data rich, machine-readable index in llms.txt">
 
 <!-- Structured Authorship & Ownership -->
-<meta name="article:section" content="Technology, AI Governance, Enterprise Engineering">
-<meta name="article:tag" content="AI Governance, Conscious Leadership, AI Leadership, Human in the Lead, Platform Engineering, DevOps, Healthcare Technology, Enterprise Architecture">
 <meta name="profile:username" content="tuhinmohanta">
 <meta name="profile:first_name" content="Tuhin">
 <meta name="profile:last_name" content="Mohanta">
@@ -151,7 +149,7 @@
 <link rel="alternate" hreflang="x-default" href="https://tuhinmohanta.com/media.html">
 <link rel="author" href="/humans.txt">
 <link rel="alternate" type="text/markdown" title="LLMs Profile" href="https://tuhinmohanta.com/llms.txt">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -196,6 +194,7 @@ nav ul a{font-size:.7rem;font-weight:400;letter-spacing:.14em;text-transform:upp
 nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .4s var(--ease)}
 nav ul a:hover,nav ul a.active{color:var(--text)}
 nav ul a:hover::after,nav ul a.active::after{width:100%}
+.menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.3rem;cursor:pointer}
 
 /* HEADER */
 .page-header{padding:8rem 0 3rem;text-align:center}
@@ -252,6 +251,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 
 @media(max-width:768px){
   .container{padding:0 1.5rem}
+  nav ul{display:none}
+  nav ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(26,26,31,0.95);backdrop-filter:blur(20px);padding:1.5rem 2rem;gap:1.2rem;border-bottom:1px solid var(--border)}
+  .menu-toggle{display:block}
   .content-grid{grid-template-columns:1fr}
   .page-header{padding:6rem 0 2rem}
   .content-section[data-section="videos"] .content-card[data-category="videos"] p{min-height:auto}
@@ -643,6 +645,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="logo">Tuhin <span>Mohanta</span></a>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
     <ul>
       <li><a href="index.html#presence">Presence</a></li>
       <li><a href="index.html#about">About</a></li>
@@ -922,6 +925,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 const filterTabs = document.querySelectorAll('.filter-tab');
 const filterableElements = document.querySelectorAll('[data-category]');
 const contentSections = document.querySelectorAll('.content-section');
+const navList = document.querySelector('nav ul');
+
+document.querySelectorAll('nav ul a').forEach(link => {
+  link.addEventListener('click', () => navList.classList.remove('open'));
+});
 
 filterTabs.forEach(tab => {
   tab.addEventListener('click', () => {

@@ -152,16 +152,14 @@ User-agent: LinkedInBot
 Allow: /
 Crawl-delay: 1
 
-User-agent: Indeed Bot
+User-agent: IndeedBot
 Allow: /
 
 User-agent: Glassdoor
 Allow: /
 
-# Sitemap and Host
-Host: https://tuhinmohanta.com
+# Sitemap
 Sitemap: https://tuhinmohanta.com/sitemap.xml
-Sitemap: https://tuhinmohanta.com/llms.txt
 
 # Humans
 # See humans.txt for team and site information
