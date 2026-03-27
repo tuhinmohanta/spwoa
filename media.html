@@ -152,7 +152,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -195,6 +196,9 @@ nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1
 nav ul a:hover,nav ul a.active{color:var(--text)}
 nav ul a:hover::after,nav ul a.active::after{width:100%}
 .menu-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.3rem;cursor:pointer}
+.nav-cta{display:inline-flex;align-items:center;padding:.45rem 1.1rem;border:1px solid var(--border-accent);border-radius:6px;font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);transition:all .3s var(--ease);white-space:nowrap;margin-left:1rem}
+.nav-cta:hover{background:var(--accent);color:var(--bg-deep)}
+@media(max-width:768px){.nav-cta{display:none}}
 
 /* HEADER */
 .page-header{padding:8rem 0 3rem;text-align:center}
@@ -260,6 +264,13 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .video-card{flex-direction:column}
   .video-thumbnail{width:100%;height:180px}
 }
+
+/* LITE YOUTUBE */
+.yt-lite{position:relative;cursor:pointer;background:#000;border-radius:8px;overflow:hidden;aspect-ratio:16/9;display:block}
+.yt-lite img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;transition:opacity .3s}
+.yt-lite:hover img{opacity:.7}
+.yt-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--bg);border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;padding-left:3px}
+.yt-lite:hover .yt-play{background:var(--accent-bright);transform:translate(-50%,-50%) scale(1.1)}
 </style>
 <script type="application/ld+json">
 {
@@ -655,6 +666,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       <li><a href="index.html#testimonials">Voices</a></li>
       <li><a href="index.html#contact">Connect</a></li>
     </ul>
+    <a href="mailto:tuhin.mohanta@gmail.com" class="nav-cta">Let's Talk</a>
   </div>
 </nav>
 
@@ -788,15 +800,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
             <span><a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" target="_blank" style="color:var(--accent)">Watch on YouTube →</a></span>
           </div>
           <div class="video-embed">
-            <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/APb4Vuuwx-Q" 
-              title="Beyond the Hype: Token Dynamics & AI Sovereignty" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="border-radius:8px">
-            </iframe>
+            <div class="yt-lite" data-id="APb4Vuuwx-Q" data-title="Beyond the Hype: Token Dynamics &amp; AI Sovereignty" role="button" tabindex="0" aria-label="Play Beyond the Hype: Token Dynamics &amp; AI Sovereignty">
+            <img src="https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg" alt="Beyond the Hype: Token Dynamics &amp; AI Sovereignty" loading="lazy">
+            <button class="yt-play" aria-label="Play video">&#9654;</button>
+          </div>
           </div>
         </div>
         <div class="content-card" data-category="videos">
@@ -809,15 +816,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
             <span><a href="https://www.linkedin.com/posts/tuhinmohanta_indiaai2026-globalleadership-digitaltransformation-activity-7442023637521526785-dqtY" target="_blank" style="color:var(--accent)">LinkedIn Post →</a></span>
           </div>
           <div class="video-embed">
-            <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/Qu2TOpPfkdg" 
-              title="Beyond the Hype: Operationalizing AI for the Next Billion" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="border-radius:8px">
-            </iframe>
+            <div class="yt-lite" data-id="Qu2TOpPfkdg" data-title="Beyond the Hype: Operationalizing AI for the Next Billion" role="button" tabindex="0" aria-label="Play Beyond the Hype: Operationalizing AI for the Next Billion">
+            <img src="https://i.ytimg.com/vi/Qu2TOpPfkdg/hqdefault.jpg" alt="Beyond the Hype: Operationalizing AI for the Next Billion" loading="lazy">
+            <button class="yt-play" aria-label="Play video">&#9654;</button>
+          </div>
           </div>
         </div>
         <div class="content-card" data-category="videos">
@@ -830,15 +832,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
             <span><a href="https://www.linkedin.com/pulse/after-summit-lights-fade-hard-decisions-indias-ai-decade-mohanta-6m7qc/" target="_blank" style="color:var(--accent)">LinkedIn Article →</a></span>
           </div>
           <div class="video-embed">
-            <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/AmiwBAMd9SM" 
-              title="After the Summit Lights Fade: Hard Decisions for India's AI Decade" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="border-radius:8px">
-            </iframe>
+            <div class="yt-lite" data-id="AmiwBAMd9SM" data-title="After the Summit Lights Fade: Hard Decisions for India&#39;s AI Decade" role="button" tabindex="0" aria-label="Play After the Summit Lights Fade: Hard Decisions for India&#39;s AI Decade">
+            <img src="https://i.ytimg.com/vi/AmiwBAMd9SM/hqdefault.jpg" alt="After the Summit Lights Fade: Hard Decisions for India&#39;s AI Decade" loading="lazy">
+            <button class="yt-play" aria-label="Play video">&#9654;</button>
+          </div>
           </div>
         </div>
         <div class="content-card" data-category="videos">
@@ -851,15 +848,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
             <span><a href="https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc" target="_blank" style="color:var(--accent)" rel="noopener noreferrer" aria-label="Read LinkedIn article about When Technology Meets Humanity: Inside India's AI Kumbh">LinkedIn Article →</a></span>
           </div>
           <div class="video-embed">
-            <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/ukdBl1krcvU" 
-              title="When Technology Meets Humanity: Inside India's AI Kumbh" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="border-radius:8px">
-            </iframe>
+            <div class="yt-lite" data-id="ukdBl1krcvU" data-title="When Technology Meets Humanity: Inside India&#39;s AI Kumbh" role="button" tabindex="0" aria-label="Play When Technology Meets Humanity: Inside India&#39;s AI Kumbh">
+            <img src="https://i.ytimg.com/vi/ukdBl1krcvU/hqdefault.jpg" alt="When Technology Meets Humanity: Inside India&#39;s AI Kumbh" loading="lazy">
+            <button class="yt-play" aria-label="Play video">&#9654;</button>
+          </div>
           </div>
         </div>
         <div class="content-card" data-category="videos">
@@ -872,15 +864,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
             <span><a href="https://www.linkedin.com/posts/tuhinmohanta_aistrategy-executiveleadership-digitalinclusion-activity-7431876778886987776-GaLl" target="_blank" style="color:var(--accent)">LinkedIn Post →</a></span>
           </div>
           <div class="video-embed">
-            <iframe width="100%" height="315" 
-              src="https://www.youtube.com/embed/xdm7vYhhdgc" 
-              title="The Present Tense of AI: A Dialogue on Governance and Talent" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style="border-radius:8px">
-            </iframe>
+            <div class="yt-lite" data-id="xdm7vYhhdgc" data-title="The Present Tense of AI: A Dialogue on Governance and Talent" role="button" tabindex="0" aria-label="Play The Present Tense of AI: A Dialogue on Governance and Talent">
+            <img src="https://i.ytimg.com/vi/xdm7vYhhdgc/hqdefault.jpg" alt="The Present Tense of AI: A Dialogue on Governance and Talent" loading="lazy">
+            <button class="yt-play" aria-label="Play video">&#9654;</button>
+          </div>
           </div>
         </div>
       </div>
@@ -916,7 +903,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 <footer>
   <div class="container">
     <p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p>
-    <div class="version-tag">v4.3.0</div>
+    <div class="version-tag">v4.4.0</div>
   </div>
 </footer>
 
@@ -963,6 +950,24 @@ filterTabs.forEach(tab => {
       }
     });
   });
+});
+</script>
+
+<script>
+document.querySelectorAll('.yt-lite').forEach(function(el){
+  function activate(){
+    var id=el.dataset.id,title=el.dataset.title;
+    var iframe=document.createElement('iframe');
+    iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
+    iframe.title=title;iframe.width='100%';iframe.height='315';
+    iframe.frameBorder='0';
+    iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen=true;
+    iframe.style.borderRadius='8px';
+    el.replaceWith(iframe);
+  }
+  el.addEventListener('click',activate);
+  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')activate();});
 });
 </script>
 </body>
