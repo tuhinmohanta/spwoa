@@ -156,9 +156,12 @@
 <link rel="canonical" href="https://tuhinmohanta.com/">
 <link rel="author" href="/humans.txt">
 <link rel="alternate" type="text/markdown" title="LLMs Profile" href="https://tuhinmohanta.com/llms.txt">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link rel="preload" as="image" href="profile.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 <style>
@@ -229,7 +232,7 @@ nav ul a:hover::after,nav ul a.active::after{width:100%}
 .hero-meta-item .label{font-size:.6rem;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
 .hero-meta-item .value{font-size:.82rem;color:var(--text-secondary);font-weight:300}
 
-.hero-portrait{position:relative;display:flex;justify-content:center;opacity:0;animation:fadeIn 1.2s .6s forwards}
+.hero-portrait{position:relative;display:flex;justify-content:center;opacity:0;animation:fadeIn 1.2s .6s forwards;will-change:opacity}
 .portrait-frame{position:relative;width:300px;height:380px}
 .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:var(--radius);filter:grayscale(0.1) contrast(1.04);position:relative;z-index:2}
 .portrait-glow{position:absolute;inset:-2px;border-radius:calc(var(--radius) + 2px);z-index:1;background:linear-gradient(160deg,var(--accent-glow),transparent 40%,var(--silver-glow) 90%);opacity:.7}
@@ -300,10 +303,10 @@ section{padding:6rem 0}
 /* TIMELINE */
 .timeline{position:relative;padding-left:3rem}
 .timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--accent),var(--border) 50%,transparent)}
-.timeline-item{position:relative;padding-bottom:3rem;padding-left:2rem;opacity:0;transform:translateY(20px);transition:all .7s var(--ease)}
-.timeline-item.visible{opacity:1;transform:translateY(0)}
+.timeline-item{position:relative;padding-bottom:3rem;padding-left:2rem;opacity:0;transform:translateX(-28px);transition:opacity .7s var(--ease),transform .7s var(--ease);will-change:transform}
+.timeline-item.visible{opacity:1;transform:translateX(0)}
 .timeline-item::before{content:'';position:absolute;left:-3rem;top:6px;width:15px;height:15px;border-radius:50%;border:2px solid var(--border);background:var(--bg);transition:all .4s var(--ease);z-index:2}
-.timeline-item.current::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 20px var(--accent-glow)}
+.timeline-item.current::before{border-color:var(--accent);background:var(--accent);animation:pulseGlow 2.5s ease-in-out infinite}
 .timeline-period{font-size:.68rem;font-weight:300;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.3rem}
 .timeline-role{font-family:var(--font-display);font-size:1.2rem;font-weight:400;margin-bottom:.15rem;color:var(--text)}
 .timeline-company{font-size:.8rem;color:var(--accent);margin-bottom:.7rem;font-weight:300}
@@ -323,8 +326,8 @@ section{padding:6rem 0}
 
 /* ARTICLES */
 .articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.article-card{padding:1.8rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s var(--ease)}
-.article-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
+.article-card{padding:1.8rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);transition:border-color .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease);will-change:transform}
+.article-card:hover{border-color:var(--border-accent);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.35),0 0 0 1px rgba(201,169,110,0.12)}
 .article-type{font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.5rem}
 .article-type.gold{color:var(--accent)}.article-type.silver{color:var(--silver)}.article-type.green{color:#6dba8a}
 .article-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;line-height:1.35;margin-bottom:.5rem}
@@ -397,8 +400,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-.fade-in{opacity:0;transform:translateY(24px);transition:all .8s var(--ease)}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 20px var(--accent-glow)}50%{box-shadow:0 0 35px rgba(201,169,110,0.25)}}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
 
 @media(max-width:1024px){
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}
@@ -1261,7 +1268,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
         <div class="portrait-frame">
           <picture>
             <source srcset="profile.webp" type="image/webp">
-            <img src="profile.jpg" alt="Tuhin Mohanta - Enterprise Platform Engineering Leader" loading="eager" width="300" height="380" decoding="async">
+            <img src="profile.jpg" alt="Tuhin Mohanta - Enterprise Platform Engineering Leader" loading="eager" width="300" height="380" decoding="sync" fetchpriority="high">
           </picture>
           <div class="portrait-glow"></div>
           <div class="portrait-line portrait-line-1"></div>
@@ -1602,7 +1609,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.6.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.7.0</div></div></footer>
 
 <!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
@@ -1638,9 +1645,12 @@ window.addEventListener('scroll',()=>{
   sections.forEach(s=>{const t=s.offsetTop-140,h=s.offsetHeight,id=s.getAttribute('id'),l=document.querySelector(`nav a[href="#${id}"]`);if(l)l.classList.toggle('active',y>=t&&y<t+h)});
 },{passive:true});
 
-// Fade-in observer
-const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.fade-in,.timeline-item').forEach(el=>observer.observe(el));
+// Fade-in observer (handles fade-in, fade-in-left, timeline-item)
+const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');observer.unobserve(el.target);}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-in,.fade-in-left,.timeline-item').forEach((el,i)=>{
+  if(el.classList.contains('timeline-item'))el.style.transitionDelay=(i%5*.1)+'s';
+  observer.observe(el);
+});
 
 // Mobile nav close on link click
 document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=>document.querySelector('nav ul').classList.remove('open'))});
