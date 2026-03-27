@@ -1,7 +1,7 @@
 // Service Worker — tuhinmohanta.com
-// v4.9.0 · Cache-first for static assets, network-first for HTML
+// v4.10.0 · Cache-first for static assets, network-first for HTML
 
-const CACHE = 'tm-v4.9.0';
+const CACHE = 'tm-v4.10.0';
 const STATIC = [
   '/',
   '/index.html',
@@ -9,6 +9,9 @@ const STATIC = [
   '/profile.jpg',
   '/profile.webp',
   '/favicon.svg',
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png',
   '/humans.txt',
 ];
 
