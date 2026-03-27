@@ -156,6 +156,7 @@
 <link rel="canonical" href="https://tuhinmohanta.com/">
 <link rel="author" href="/humans.txt">
 <link rel="alternate" type="text/markdown" title="LLMs Profile" href="https://tuhinmohanta.com/llms.txt">
+<script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -424,8 +425,34 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .portrait-frame{width:180px;height:220px}
   .presence-pillars{grid-template-columns:1fr}
   .presence{padding:4rem 0}
+  .mobile-cta-bar{display:flex}
+  body{padding-bottom:56px}
 }
 
+/* ── Scroll progress bar ── */
+#scroll-progress{position:fixed;top:0;left:0;width:0%;height:2px;background:var(--accent);z-index:9999;transition:width .1s linear;pointer-events:none}
+
+/* ── Back-to-top ── */
+#back-to-top{position:fixed;bottom:5rem;right:1.5rem;width:40px;height:40px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border-accent);color:var(--accent);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .35s var(--ease),background .3s;z-index:500}
+#back-to-top.visible{opacity:1;pointer-events:auto}
+#back-to-top:hover{background:var(--accent);color:var(--bg-deep);transform:translateY(-3px)}
+@media(max-width:768px){#back-to-top{bottom:4.5rem;right:1rem}}
+
+/* ── Mobile CTA bar ── */
+.mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;padding:.85rem 1.5rem;background:rgba(21,21,24,0.96);backdrop-filter:blur(20px) saturate(1.2);border-top:1px solid var(--border);align-items:center;justify-content:space-between;gap:1rem}
+.mobile-cta-bar span{font-size:.72rem;color:var(--text-secondary);font-weight:300;letter-spacing:.03em}
+.mobile-cta-bar a{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.4rem;background:var(--accent);color:var(--bg-deep);border-radius:6px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s}
+.mobile-cta-bar a:hover{background:var(--accent-bright)}
+
+/* ── Video lightbox modal ── */
+#video-modal{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
+#video-modal.open{opacity:1;pointer-events:auto}
+#video-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.88);backdrop-filter:blur(12px)}
+#video-modal-inner{position:relative;width:100%;max-width:900px;aspect-ratio:16/9;background:#000;border-radius:var(--radius);overflow:hidden;z-index:1;box-shadow:0 40px 80px rgba(0,0,0,0.6);transform:scale(.95);transition:transform .35s var(--ease)}
+#video-modal.open #video-modal-inner{transform:scale(1)}
+#video-modal iframe{width:100%;height:100%;border:none;display:block}
+#video-modal-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:1.4rem;line-height:1;padding:.3rem;transition:color .2s;z-index:2}
+#video-modal-close:hover{color:#fff}
 
 </style>
 <script type="application/ld+json">
@@ -1192,6 +1219,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 </script>
 </head>
 <body>
+<div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
 <div class="ambient"><div class="ambient-glow glow-1"></div><div class="ambient-glow glow-2"></div></div>
 
 <nav>
@@ -1212,6 +1240,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </nav>
 
+<div class="mobile-cta-bar">
+  <span>Open to executive leadership opportunities</span>
+  <a href="mailto:tuhin.mohanta@gmail.com">Let's Talk</a>
+</div>
+
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
@@ -1227,7 +1260,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
       </div>
       <div class="hero-portrait">
         <div class="portrait-frame">
-          <img src="profile.jpg" alt="Tuhin Mohanta - Enterprise Platform Engineering Leader" loading="eager">
+          <picture>
+            <source srcset="profile.webp" type="image/webp">
+            <img src="profile.jpg" alt="Tuhin Mohanta - Enterprise Platform Engineering Leader" loading="eager" width="300" height="380" decoding="async">
+          </picture>
           <div class="portrait-glow"></div>
           <div class="portrait-line portrait-line-1"></div>
           <div class="portrait-line portrait-line-2"></div>
@@ -1453,41 +1489,41 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="talks-grid fade-in">
 
       <div class="talk-card">
-        <a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" target="_blank" class="talk-thumb-wrap" aria-label="Watch Beyond the Hype: Token Dynamics &amp; AI Sovereignty on YouTube">
-          <img src="https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg" alt="Beyond the Hype: Token Dynamics &amp; AI Sovereignty" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" data-video-id="APb4Vuuwx-Q" class="talk-thumb-wrap js-video-trigger" aria-label="Watch Beyond the Hype: Token Dynamics &amp; AI Sovereignty">
+          <img src="https://i.ytimg.com/vi/APb4Vuuwx-Q/hqdefault.jpg" alt="Beyond the Hype: Token Dynamics &amp; AI Sovereignty" loading="lazy" width="480" height="360">
           <div class="talk-play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><polygon points="10,8 17,12 10,16" fill="white"/></svg></div>
         </a>
         <div class="talk-body">
           <div class="article-type blue">India AI Impact Summit • Mar 2026</div>
-          <h3><a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" target="_blank">Beyond the Hype: Token Dynamics &amp; AI Sovereignty</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" data-video-id="APb4Vuuwx-Q" class="js-video-trigger">Beyond the Hype: Token Dynamics &amp; AI Sovereignty</a></h3>
           <p>Token economics, inference cost structures, model portability, and AI sovereignty choices — an execution-first lens for leaders moving AI from pilots to core operations.</p>
-          <div class="talk-meta"><span>March 2026</span><span><a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" target="_blank" style="color:var(--accent)">Watch →</a></span></div>
+          <div class="talk-meta"><span>March 2026</span><span><a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" data-video-id="APb4Vuuwx-Q" class="js-video-trigger" style="color:var(--accent)">Watch →</a></span></div>
         </div>
       </div>
 
       <div class="talk-card">
-        <a href="https://www.youtube.com/watch?v=Qu2TOpPfkdg" target="_blank" class="talk-thumb-wrap" aria-label="Watch Beyond the Hype: Operationalizing AI for the Next Billion on YouTube">
-          <img src="https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg" alt="Beyond the Hype: Operationalizing AI for the Next Billion" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=Qu2TOpPfkdg" data-video-id="Qu2TOpPfkdg" class="talk-thumb-wrap js-video-trigger" aria-label="Watch Beyond the Hype: Operationalizing AI for the Next Billion">
+          <img src="https://i.ytimg.com/vi/Qu2TOpPfkdg/maxresdefault.jpg" alt="Beyond the Hype: Operationalizing AI for the Next Billion" loading="lazy" width="1280" height="720">
           <div class="talk-play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><polygon points="10,8 17,12 10,16" fill="white"/></svg></div>
         </a>
         <div class="talk-body">
           <div class="article-type blue">India AI Impact Summit • Mar 2026</div>
-          <h3><a href="https://www.youtube.com/watch?v=Qu2TOpPfkdg" target="_blank">Beyond the Hype: Operationalizing AI for the Next Billion</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=Qu2TOpPfkdg" data-video-id="Qu2TOpPfkdg" class="js-video-trigger">Beyond the Hype: Operationalizing AI for the Next Billion</a></h3>
           <p>Custom inferencing silicon, multilingual AI across 22 Indic languages, and real-world deployments in healthcare, mobility, and food systems. Where execution replaces hype.</p>
           <div class="talk-meta"><span>March 2026</span><span><a href="https://www.linkedin.com/posts/tuhinmohanta_indiaai2026-globalleadership-digitaltransformation-activity-7442023637521526785-dqtY" target="_blank" style="color:var(--accent)">LinkedIn Post →</a></span></div>
         </div>
       </div>
 
       <div class="talk-card">
-        <a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" target="_blank" class="talk-thumb-wrap" aria-label="Watch After the Summit Lights Fade: Hard Decisions for India's AI Decade on YouTube">
-          <img src="https://i.ytimg.com/vi/AmiwBAMd9SM/maxresdefault.jpg" alt="After the Summit Lights Fade: Hard Decisions for India's AI Decade" loading="lazy">
+        <a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" data-video-id="AmiwBAMd9SM" class="talk-thumb-wrap js-video-trigger" aria-label="Watch After the Summit Lights Fade: Hard Decisions for India's AI Decade">
+          <img src="https://i.ytimg.com/vi/AmiwBAMd9SM/maxresdefault.jpg" alt="After the Summit Lights Fade: Hard Decisions for India's AI Decade" loading="lazy" width="1280" height="720">
           <div class="talk-play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><polygon points="10,8 17,12 10,16" fill="white"/></svg></div>
         </a>
         <div class="talk-body">
           <div class="article-type blue">India AI Impact Summit • Mar 2026</div>
-          <h3><a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" target="_blank">After the Summit Lights Fade: Hard Decisions for India's AI Decade</a></h3>
+          <h3><a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" data-video-id="AmiwBAMd9SM" class="js-video-trigger">After the Summit Lights Fade: Hard Decisions for India's AI Decade</a></h3>
           <p>Hard decisions for CTOs shaping 12–24 month roadmaps: digital rails, healthcare AI governance, voice-first design, and board-level AI accountability.</p>
-          <div class="talk-meta"><span>March 2026</span><span><a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" target="_blank" style="color:var(--accent)">Watch →</a></span></div>
+          <div class="talk-meta"><span>March 2026</span><span><a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" data-video-id="AmiwBAMd9SM" class="js-video-trigger" style="color:var(--accent)">Watch →</a></span></div>
         </div>
       </div>
 
@@ -1567,16 +1603,71 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.4.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.5.0</div></div></footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Video lightbox -->
+<div id="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div id="video-modal-backdrop"></div>
+  <div id="video-modal-inner">
+    <button id="video-modal-close" aria-label="Close video">&#x2715;</button>
+    <iframe id="video-modal-iframe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
 <script>
-const nav=document.querySelector('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+// Nav scroll
+const nav=document.querySelector('nav');
+
+// Scroll utilities (single listener)
+const scrollBar=document.getElementById('scroll-progress');
+const backTop=document.getElementById('back-to-top');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY,doc=document.documentElement;
+  // nav
+  nav.classList.toggle('scrolled',y>60);
+  // progress bar
+  scrollBar.style.width=(y/(doc.scrollHeight-doc.clientHeight)*100)+'%';
+  // back to top
+  backTop.classList.toggle('visible',y>400);
+  // active nav links
+  const sections=document.querySelectorAll('section[id]');
+  sections.forEach(s=>{const t=s.offsetTop-140,h=s.offsetHeight,id=s.getAttribute('id'),l=document.querySelector(`nav a[href="#${id}"]`);if(l)l.classList.toggle('active',y>=t&&y<t+h)});
+},{passive:true});
+
+// Fade-in observer
 const observer=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-in,.timeline-item').forEach(el=>observer.observe(el));
-const sections=document.querySelectorAll('section[id]');
-window.addEventListener('scroll',()=>{const y=window.pageYOffset;sections.forEach(s=>{const t=s.offsetTop-140,h=s.offsetHeight,id=s.getAttribute('id'),l=document.querySelector(`nav a[href="#${id}"]`);if(l)l.classList.toggle('active',y>=t&&y<t+h)})});
+
+// Mobile nav close on link click
 document.querySelectorAll('nav ul a').forEach(a=>{a.addEventListener('click',()=>document.querySelector('nav ul').classList.remove('open'))});
 
+// Video lightbox
+const modal=document.getElementById('video-modal');
+const iframe=document.getElementById('video-modal-iframe');
+function openVideo(id){
+  iframe.src=`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  modal.classList.remove('open');
+  iframe.src='';
+  document.body.style.overflow='';
+}
+document.querySelectorAll('.js-video-trigger').forEach(el=>{
+  el.addEventListener('click',e=>{
+    e.preventDefault();
+    openVideo(el.dataset.videoId);
+  });
+});
+document.getElementById('video-modal-close').addEventListener('click',closeVideo);
+document.getElementById('video-modal-backdrop').addEventListener('click',closeVideo);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideo()});
 </script>
 </body>
 </html>
