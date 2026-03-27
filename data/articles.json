@@ -1,0 +1,66 @@
+[
+  {
+    "type": "blue",
+    "label": "India AI Impact Summit 2026",
+    "title": "Beyond the Hype: Operationalizing AI for the Next Billion",
+    "url": "https://www.linkedin.com/posts/tuhinmohanta_indiaai2026-globalleadership-digitaltransformation-activity-7442023637521526785-dqtY",
+    "description": "A field walk-through from India AI Impact Summit 2026 on what operational AI looks like in practice: custom inferencing hardware for affordability, multilingual systems at population scale, and high-impact deployments across clinical trials, mobility, and food operations.",
+    "meta": ["LinkedIn Post + Video", "March 24, 2026"]
+  },
+  {
+    "type": "blue",
+    "label": "Leadership Circle Reflection",
+    "title": "Conscious Leadership in India's AI Decade: Inside a Closed-Door Circle",
+    "url": "https://www.linkedin.com/pulse/conscious-leadership-indias-ai-decade-inside-circle-tuhin-mohanta-xa9rc",
+    "description": "A leadership reflection from Bengaluru on AI strategy through three lenses: system, society, and self, with a clear argument for humans in the lead, not just in the loop.",
+    "meta": ["Long-form Article", "March 17, 2026"]
+  },
+  {
+    "type": "blue",
+    "label": "Post Summit KeyNote for CTO Community",
+    "title": "After the Summit Lights Fade: Hard Decisions for India's AI Decade",
+    "url": "https://www.linkedin.com/pulse/after-summit-lights-fade-hard-decisions-indias-ai-decade-mohanta-6m7qc/",
+    "description": "A post-summit leadership reflection for CTOs and tech leaders on what to do next: define your role on India's digital rails, make data and trust architecture production-grade, and move AI governance to board-level execution over the next 12-24 months.",
+    "meta": ["Long-form Article", "March 12, 2026"]
+  },
+  {
+    "type": "blue",
+    "label": "ISB Alumni Article",
+    "title": "When Technology Meets Humanity: Inside India's AI Kumbh and the Blueprint for 1.4 Billion",
+    "url": "https://www.linkedin.com/pulse/when-technology-meets-humanity-inside-indias-ai-kumbh-tuhin-mohanta-xhlgc",
+    "description": "Reflections from a pan-India ISB alumni leadership conversation at India AI Impact Summit 2026. Focused on healthcare AI governance, equity architecture, and why India's SAHI-BODH-ABHA stack creates infrastructure for responsible AI at population scale—where governance and equity are built in by design.",
+    "meta": ["Long-form Article", "March 2, 2026"]
+  },
+  {
+    "type": "silver",
+    "label": "Featured Post",
+    "title": "Completed: ISB Leadership with AI - Levelling Up for AI-Led Leadership",
+    "url": "https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/",
+    "description": "Reflections on completing dual ISB executive programmes - CTO + Leadership with AI. Top leadership learnings for AI-era leaders on strategy, governance, ethics, and execution at scale.",
+    "meta": ["Long-form Post", "242 reactions · 112 comments"]
+  },
+  {
+    "type": "gold",
+    "label": "LinkedIn Article",
+    "title": "Why 77% of Organizations Can't Scale AI Beyond Pilots",
+    "url": "https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/",
+    "description": "A data-driven analysis of what 87 senior executives at ISB revealed about AI scaling barriers, the three structural constraints blocking most organizations, and how the successful 23% approach task distribution.",
+    "meta": ["6 min read", "56 reactions · 22 comments"]
+  },
+  {
+    "type": "green",
+    "label": "Podcast",
+    "title": "AI Leadership Dialogues: Why AI ROI Frameworks Built for ERP Fail for AI",
+    "url": "https://www.linkedin.com/pulse/ai-hype-roi-reality-589b-wake-up-call-cxos-harshal-jawale-jwk0f/",
+    "description": "A practical conversation on why AI programs fail to convert pilots into business outcomes, and the missing operating bridges leaders need now for production-grade ROI.",
+    "meta": ["Podcast Episode", "62 reactions · 4 comments"]
+  },
+  {
+    "type": "silver",
+    "label": "Leadership Post",
+    "title": "Build a Team So Strong No One Knows Who the Leader Is",
+    "url": "https://www.linkedin.com/in/tuhinmohanta/recent-activity/articles/",
+    "description": "My leadership operating model for building high-trust, high-accountability teams that scale without heroics, while strengthening succession depth and execution culture.",
+    "meta": ["Long-form Post", "63 reactions · 23 comments"]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "APb4Vuuwx-Q",
+    "title": "Beyond the Hype: Token Dynamics & AI Sovereignty",
+    "event": "India AI Impact Summit • Mar 2026",
+    "date": "March 2026",
+    "description": "Token economics, inference cost structures, model portability, and AI sovereignty choices — an execution-first lens for leaders moving AI from pilots to core operations.",
+    "watchLink": null,
+    "extraLink": null
+  },
+  {
+    "id": "Qu2TOpPfkdg",
+    "title": "Beyond the Hype: Operationalizing AI for the Next Billion",
+    "event": "India AI Impact Summit • Mar 2026",
+    "date": "March 2026",
+    "description": "Custom inferencing silicon, multilingual AI across 22 Indic languages, and real-world deployments in healthcare, mobility, and food systems. Where execution replaces hype.",
+    "watchLink": null,
+    "extraLink": {
+      "label": "LinkedIn Post →",
+      "url": "https://www.linkedin.com/posts/tuhinmohanta_indiaai2026-globalleadership-digitaltransformation-activity-7442023637521526785-dqtY"
+    }
+  },
+  {
+    "id": "AmiwBAMd9SM",
+    "title": "After the Summit Lights Fade: Hard Decisions for India's AI Decade",
+    "event": "India AI Impact Summit • Mar 2026",
+    "date": "March 2026",
+    "description": "Hard decisions for CTOs shaping 12–24 month roadmaps: digital rails, healthcare AI governance, voice-first design, and board-level AI accountability.",
+    "watchLink": null,
+    "extraLink": null
+  }
+]
