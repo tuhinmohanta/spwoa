@@ -411,6 +411,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 .fade-in-left{opacity:0;transform:translateX(-28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .fade-in-left.visible{opacity:1;transform:translateX(0)}
 
+@media(min-width:1025px){.hero{flex-direction:column;justify-content:center;align-items:stretch}.hero .container{max-width:none;padding-left:max(2.5rem,5vw);padding-right:max(2.5rem,5vw)}.hero-grid{grid-template-columns:minmax(0,1fr) 440px}.portrait-frame{width:340px;height:420px}}
+
 @media(max-width:1024px){
   .hero-grid{grid-template-columns:1fr;gap:2.5rem}
   .hero-portrait{order:-1;justify-content:flex-start}
@@ -1615,7 +1617,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 </section>
 
 </main>
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.10.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.11.0</div></div></footer>
 
 <!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
