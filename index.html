@@ -425,8 +425,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .portrait-frame{width:180px;height:220px}
   .presence-pillars{grid-template-columns:1fr}
   .presence{padding:4rem 0}
-  .mobile-cta-bar{display:flex}
-  body{padding-bottom:56px}
 }
 
 /* ── Scroll progress bar ── */
@@ -438,11 +436,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 #back-to-top:hover{background:var(--accent);color:var(--bg-deep);transform:translateY(-3px)}
 @media(max-width:768px){#back-to-top{bottom:4.5rem;right:1rem}}
 
-/* ── Mobile CTA bar ── */
+/* ── Mobile CTA bar (base: hidden; shown via media query below) ── */
 .mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:600;padding:.85rem 1.5rem;background:rgba(21,21,24,0.96);backdrop-filter:blur(20px) saturate(1.2);border-top:1px solid var(--border);align-items:center;justify-content:space-between;gap:1rem}
 .mobile-cta-bar span{font-size:.72rem;color:var(--text-secondary);font-weight:300;letter-spacing:.03em}
 .mobile-cta-bar a{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.4rem;background:var(--accent);color:var(--bg-deep);border-radius:6px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .3s}
 .mobile-cta-bar a:hover{background:var(--accent-bright)}
+@media(max-width:768px){.mobile-cta-bar{display:flex}body{padding-bottom:56px}}
 
 /* ── Video lightbox modal ── */
 #video-modal{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .35s var(--ease)}
@@ -1603,7 +1602,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   </div>
 </section>
 
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.5.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.6.0</div></div></footer>
 
 <!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
