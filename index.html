@@ -228,7 +228,7 @@ nav ul a:hover::after,nav ul a.active::after{width:100%}
 .hero-eyebrow{display:flex;flex-direction:column;gap:.6rem;font-size:.65rem;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem;opacity:0;animation:fadeIn .8s .3s forwards;align-items:flex-start}
 .hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);flex-shrink:0}
 .hero-eyebrow strong{font-weight:700;display:block}
-.hero h1{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,3.8rem);font-weight:400;line-height:1.18;letter-spacing:-.01em;margin-bottom:1.6rem;opacity:0;animation:fadeUp 1s .5s forwards}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3rem);font-weight:400;line-height:1.18;letter-spacing:-.01em;margin-bottom:1.6rem;opacity:0;animation:fadeUp 1s .5s forwards}
 .hero h1 .line-accent{display:block;color:var(--accent);font-style:italic;font-weight:400}
 .hero-desc{font-size:.95rem;color:var(--text-secondary);line-height:1.85;max-width:540px;margin-bottom:2.5rem;font-weight:300;opacity:0;animation:fadeUp 1s .7s forwards}
 .hero-meta-row{display:flex;flex-wrap:wrap;gap:2rem;opacity:0;animation:fadeUp 1s .9s forwards}
@@ -262,6 +262,11 @@ section{padding:6rem 0}
 .section-label::before{content:'';width:22px;height:1px;background:var(--accent)}
 .section-title{font-family:var(--font-display);font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:400;line-height:1.22;letter-spacing:-.01em;margin-bottom:3rem}
 .section-title em{font-style:italic;color:var(--accent)}
+.section-intro{font-size:.92rem;color:var(--text-secondary);margin-bottom:2rem;max-width:640px}
+.hero-endorsements{display:grid;grid-template-columns:1fr 1fr;gap:.8rem 2rem;margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,0.08)}
+.hero-endorsement{font-size:.76rem;color:var(--text-secondary);line-height:1.5}
+.hero-endorsement .endorsement-quote{display:block;font-style:italic;margin-bottom:.2rem}
+.hero-endorsement .endorsement-attr{font-size:.7rem;opacity:.65}
 
 /* EXECUTIVE PRESENCE */
 .presence{padding:6rem 0;background:var(--bg-deep);position:relative;overflow:hidden}
@@ -313,7 +318,8 @@ section{padding:6rem 0}
 .timeline-item.current::before{border-color:var(--accent);background:var(--accent);animation:pulseGlow 2.5s ease-in-out infinite}
 .timeline-period{font-size:.68rem;font-weight:300;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.3rem}
 .timeline-role{font-family:var(--font-display);font-size:1.2rem;font-weight:400;margin-bottom:.15rem;color:var(--text)}
-.timeline-company{font-size:.8rem;color:var(--accent);margin-bottom:.7rem;font-weight:300}
+.timeline-company{font-size:.8rem;color:var(--accent);margin-bottom:.4rem;font-weight:300}
+.timeline-scope{font-size:.78rem;color:var(--text-secondary);margin-bottom:.7rem;font-style:italic;letter-spacing:.01em}
 .timeline-desc{font-size:.82rem;color:var(--text-secondary);line-height:1.7;margin-bottom:.8rem;font-weight:300;max-width:680px}
 .timeline-tags{display:flex;flex-wrap:wrap;gap:.35rem}
 .timeline-tags span{font-size:.66rem;padding:.22rem .6rem;border-radius:20px;font-weight:300;background:var(--surface);color:var(--text-muted);border:1px solid var(--border);transition:all .3s var(--ease)}
@@ -431,8 +437,9 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   .menu-toggle{display:block}
   section{padding:4rem 0}
   .hero{min-height:auto;padding:7rem 0 3rem}
-  .hero h1{font-size:2.2rem}
+  .hero h1{font-size:1.6rem}
   .impact-row{gap:1.5rem}.impact-divider{display:none}.impact-item{min-width:110px}
+  .hero-endorsements{grid-template-columns:1fr}
   .skills-grid,.awards-grid,.testimonials-grid{grid-template-columns:1fr}
   .timeline{padding-left:2rem}.timeline-item{padding-left:1.2rem}
   .portrait-frame{width:180px;height:220px}
@@ -1253,7 +1260,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 </nav>
 <main>
 <div class="mobile-cta-bar">
-  <span>Open to executive leadership opportunities</span>
+  <span>Open to VP Engineering / Director of Engineering / CTO opportunities — Bengaluru</span>
   <a href="mailto:tuhin.mohanta@gmail.com">Let's Talk</a>
 </div>
 
@@ -1261,13 +1268,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="hero-eyebrow"><strong>Enterprise Technology & Platform Engineering Leader</strong><div style="line-height:1.6">Modernizing Systems · Scaling Teams · Enabling AI-Ready Enterprises</div><div style="height:.8rem"></div><div>ISB Chief Technology Officer Programme | ISB Leadership with AI</div></div>
-        <h1>Engineering leader who builds<span class="line-accent">organizations that scale.</span></h1>
+        <div class="hero-eyebrow"><strong>Enterprise Technology & Platform Engineering Leader</strong><div style="line-height:1.6">C-Suite Partner · Cloud Transformation at $2B+ Scale · ISB-Certified CTO</div><div style="height:.8rem"></div><div>ISB Chief Technology Officer Programme | ISB Leadership with AI</div></div>
+        <h1>Global Engineering Leader. $2B Platform. Influencing 550+ Engineers.<span class="line-accent">Healthcare Cloud at Scale.</span></h1>
         <p class="hero-desc">Two decades of architecting enterprise platforms and building high-performance engineering organizations across cloud, platform, and product engineering. I operate at the intersection of strategy, technology, and people – with deep ownership of outcomes.</p>
         <div class="hero-meta-row">
-          <div class="hero-meta-item"><span class="label">Current</span><span class="value">Senior Manager, Software Engineering (Head of Platform Engineering) – Oracle Health</span></div>
+          <div class="hero-meta-item"><span class="label">Current</span><span class="value">VP-Level Engineering Leader · Oracle Health (Head of Platform Engineering)</span></div>
           <div class="hero-meta-item"><span class="label">Credentials</span><span class="value">ISB CTO · ISB Leadership with AI</span></div>
           <div class="hero-meta-item"><span class="label">Based in</span><span class="value">Bengaluru, India</span></div>
+        </div>
+        <div class="hero-endorsements">
+          <div class="hero-endorsement">
+            <span class="endorsement-quote">"He translates vision into reality"</span>
+            <span class="endorsement-attr">— <strong>Michael Damman</strong>, Chief Technology Officer</span>
+          </div>
+          <div class="hero-endorsement">
+            <span class="endorsement-quote">"Inspires excellence — a DevOps evangelist and global team leader"</span>
+            <span class="endorsement-attr">— <strong>Ben Thrift</strong>, VP Engineering · Redwood Software</span>
+          </div>
         </div>
       </div>
       <div class="hero-portrait">
@@ -1291,13 +1308,15 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="impact-row">
       <div class="impact-item"><div class="impact-number">$2B<span class="unit">+</span></div><div class="impact-desc">Portfolio Scale</div></div>
       <div class="impact-divider"></div>
-      <div class="impact-item"><div class="impact-number">550<span class="unit">+</span></div><div class="impact-desc">Engineers Led</div></div>
+      <div class="impact-item"><div class="impact-number">550<span class="unit">+</span></div><div class="impact-desc">Engineers Influenced</div></div>
       <div class="impact-divider"></div>
       <div class="impact-item"><div class="impact-number">$25M<span class="unit">+</span></div><div class="impact-desc">Cost Savings Delivered</div></div>
       <div class="impact-divider"></div>
       <div class="impact-item"><div class="impact-number">99.9<span class="unit">%</span></div><div class="impact-desc">Platform Uptime</div></div>
       <div class="impact-divider"></div>
       <div class="impact-item"><div class="impact-number">50<span class="unit">+</span></div><div class="impact-desc">Global Deployments</div></div>
+      <div class="impact-divider"></div>
+      <div class="impact-item"><div class="impact-number">14<span class="unit"> Yrs</span></div><div class="impact-desc">Oracle/Cerner Tenure</div></div>
     </div>
   </div>
 </div>
@@ -1357,14 +1376,14 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="about-grid fade-in">
       <div class="about-text">
         <p>I'm an enterprise platform engineering leader and ISB-Certified Chief Technology Officer with 20+ years building scalable systems and high-performance organizations. My career spans embedded systems, telecom, mobile platforms, enterprise architecture, and healthcare technology leadership – always at the intersection of deep technical complexity and organizational impact.</p>
-        <p>Currently at Oracle Health, I lead platform modernization and cloud migration strategy for a $2B+ product portfolio across 50+ global deployments with 550+ engineers. I specialize in building AI-ready enterprise systems, DevOps transformation, and regulated enterprise platforms. My identity isn't tied to one industry – wherever I go, I build engineering organizations that are fast, precise, accountable, and deeply human.</p>
+        <p>Currently at Oracle Health, I lead platform modernization and cloud migration strategy for a $2B+ product portfolio across 50+ global deployments with 550+ engineers. I specialize in building AI-ready enterprise systems, DevOps transformation, and regulated enterprise platforms. I specialise in healthcare SaaS platforms, regulated cloud migrations, and building engineering organisations that operate at global scale — fast, precise, accountable, and deeply human.</p>
         <p>I hold dual executive certifications from ISB – Chief Technology Officer Programme and Leadership with AI – equipping me with both enterprise architecture thinking and AI governance frameworks that modern technology organizations demand.</p>
         <p>Outside work, I write about engineering leadership, AI governance, technology strategy, and the culture of excellence. I believe the best engineering leaders are those who make themselves invisible – building teams so strong that the system runs without them.</p>
       </div>
       <div class="credential-row">
         <div class="credential">
           <div class="cred-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 12 0 12 0v-5"/></svg></div>
-          <div><h3>ISB-Certified Chief Technology Officer</h3><p>Indian School of Business Executive Education · 2024–2025</p></div>
+          <div><h3>ISB-Certified Chief Technology Officer</h3><p>Indian School of Business · #1 in India, #2 in Asia, #12 Globally (FT 2026) · Executive Education · 2024–2025</p></div>
         </div>
         <div class="credential">
           <div class="cred-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div>
@@ -1398,14 +1417,15 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="timeline">
       <div class="timeline-item current">
         <div class="timeline-period">Sep 2022 – Present</div>
-        <div class="timeline-role">Sr. Manager, Software Development</div>
+        <div class="timeline-role">Sr. Manager, Software Development (VP-Equivalent — Head of Platform Engineering, India)</div>
         <div class="timeline-company">Oracle Health · Bengaluru</div>
+        <div class="timeline-scope">Platform Engineering Head · $2B+ Portfolio · 550+ Engineers · OCI Cloud Transformation</div>
         <div class="timeline-desc">Leading platform modernization and cloud migration strategy for Oracle's healthcare product portfolio – a $2B+ digital transformation across 50+ global deployments. Architected enterprise DevOps CI/CD platform reducing deployment cycles by 60%. Managing $25M+ in cloud infrastructure optimization. Driving AI transformation strategy with GenAI-augmented DevOps and AI governance frameworks for regulated enterprise systems.</div>
         <div class="timeline-tags"><span>Platform Modernization</span><span>Cloud Migration</span><span>Enterprise DevOps</span><span>AI Governance</span><span>Healthcare Tech</span><span>$2B+ Portfolio</span></div>
       </div>
       <div class="timeline-item">
         <div class="timeline-period">Aug 2015 – Sep 2022</div>
-        <div class="timeline-role">Engineering Manager | Sr. Engineering Manager</div>
+        <div class="timeline-role">Sr. Engineering Manager (Built 5→200+ Engineer Org · 2x KNOTT Award · SRE Practice Lead)</div>
         <div class="timeline-company">Cerner Corporation · Bengaluru</div>
         <div class="timeline-desc">Scaled DevOps transformation from 12 to 200+ engineers. Built enterprise-wide Site Reliability Engineering (SRE) function. Achieved 99.9% uptime for mission-critical healthcare platforms. Led cloud infrastructure optimization and enterprise DevOps practices. Won 2x KNOTT Awards (Cerner's highest engineering honor). Top-rated keynote speaker at global tech conferences for 5 consecutive years.</div>
         <div class="timeline-tags"><span>DevOps Transformation</span><span>Site Reliability Engineering</span><span>Enterprise DevOps</span><span>Cloud Infrastructure</span><span>Healthcare Tech</span></div>
@@ -1474,6 +1494,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   <div class="container">
     <div class="section-label fade-in">Thought Leadership</div>
     <h2 class="section-title fade-in">Writing, speaking &<br><em>shaping the discourse.</em></h2>
+    <p class="section-intro fade-in">Invited speaker at national AI leadership forums. Published on AI governance, cloud transformation, and engineering leadership.</p>
     <div class="articles-grid fade-in">
       <div class="article-card"><div class="article-type blue">India AI Impact Summit 2026</div><h3><a href="https://www.linkedin.com/posts/tuhinmohanta_indiaai2026-globalleadership-digitaltransformation-activity-7442023637521526785-dqtY" target="_blank">Beyond the Hype: Operationalizing AI for the Next Billion</a></h3><p>A field walk-through from India AI Impact Summit 2026 on what operational AI looks like in practice: custom inferencing hardware for affordability, multilingual systems at population scale, and high-impact deployments across clinical trials, mobility, and food operations.</p><div class="article-meta"><span>LinkedIn Post + Video</span><span>March 24, 2026</span></div></div>
       <div class="article-card"><div class="article-type blue">Leadership Circle Reflection</div><h3><a href="https://www.linkedin.com/pulse/conscious-leadership-indias-ai-decade-inside-circle-tuhin-mohanta-xa9rc" target="_blank">Conscious Leadership in India's AI Decade: Inside a Closed-Door Circle</a></h3><p>A leadership reflection from Bengaluru on AI strategy through three lenses: system, society, and self, with a clear argument for humans in the lead, not just in the loop.</p><div class="article-meta"><span>Long-form Article</span><span>March 17, 2026</span></div></div>
@@ -1556,7 +1577,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="section-label fade-in">Recognition</div>
     <h2 class="section-title fade-in">Awards & milestones<br>along <em>the journey.</em></h2>
     <div class="awards-grid fade-in">
-      <div class="award-item"><div class="award-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 12 0 12 0v-5"/></svg></div><div><h3>ISB-Certified Chief Technology Officer</h3><p>Indian School of Business Executive Education · 2024-2025</p></div></div>
+      <div class="award-item"><div class="award-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c6 3 12 0 12 0v-5"/></svg></div><div><h3>ISB-Certified Chief Technology Officer</h3><p>Indian School of Business · #1 in India, #2 in Asia, #12 Globally (FT 2026) · Executive Education · 2024-2025</p></div></div>
       <div class="award-item"><div class="award-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v4a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div><div><h3>Top-Rated Keynote Speaker</h3><p>Distinguished speaker at Cerner's global tech conferences, 5 consecutive years (2017-2022)</p></div></div>
       <div class="award-item"><div class="award-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h3>2x Cerner KNOTT Award Winner</h3><p>Highest recognition in Cerner's engineering organization for operational excellence</p></div></div>
       <div class="award-item"><div class="award-icon"><svg class="icon" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><h3>Leadership Excellence Award</h3><p>For next-generation product architecture and hybrid cloud integration</p></div></div>
@@ -1606,7 +1627,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
   <div class="container">
     <div class="section-label">Let's Connect</div>
     <h2>Ready to build<br><em>something that lasts?</em></h2>
-    <p>Whether you're scaling an engineering organization, driving platform transformation, or seeking a leader who operates with strategic depth and genuine care – let's talk.</p>
+    <p>Whether you're scaling an engineering organization, driving platform transformation, or seeking a leader who operates with strategic depth and genuine care – let's talk. Exploring VP Engineering / CTO opportunities in Bengaluru? Let's talk.</p>
     <div class="cta-links">
       <a href="https://www.linkedin.com/in/tuhinmohanta/" target="_blank" class="cta-btn icon-btn" title="LinkedIn" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
       <a href="https://x.com/tuhin_mohanta" target="_blank" class="cta-btn icon-btn" title="X" aria-label="X (Twitter) profile"><svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.207-6.802-5.997 6.802H2.186l7.694-8.794-8.159-10.706h6.882l4.702 6.217 5.853-6.217zM17.15 18.75h1.802L6.883 3.897H5.074l12.076 14.853z"/></svg></a>
@@ -1617,7 +1638,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 </section>
 
 </main>
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.12.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.13.0</div></div></footer>
 
 <!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
