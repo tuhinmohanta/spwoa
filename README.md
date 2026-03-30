@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.13.0` &nbsp;·&nbsp; **83 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.14.0` &nbsp;·&nbsp; **85 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,14 +78,14 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v4.13.0
+// sw.js — cache name: tm-v4.14.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
 // Cross-origin    →  Skipped entirely                (fonts, YouTube, Cloudflare analytics)
 ```
 
-The cache name is version-stamped (`tm-v4.13.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
+The cache name is version-stamped (`tm-v4.14.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
 
 ### Analytics — Privacy-First
 
@@ -236,6 +236,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.11` | Layout Fix | Eliminated hero dead-space on wide desktop viewports (≥ 1025px) |
 | `v4.12` | Executive README | Added repository README as executive signature — architecture, SEO-for-AI, deployment, and AI workflow documented |
 | `v4.13` | Title Inflation Fix | VP-level signalling throughout — H1, hero meta, timeline roles, open-to banner, ISB ranking qualifier, hero endorsement strip (Damman + Thrift), 14 Yrs metric card, about section, writing intro, contact CTA |
+| `v4.14` | Testimonials + SEO | 4 new LinkedIn testimonials (Susan Narducci Sr. Director, Anindya Deb Director/direct manager, Michael Geib Sr. Manager, David Joyce Sr. Architect) — 12 cards, 14 endorsers total. Aggressive SEO: FAQ schema, Speakable, hasCredential, date refresh, keyword expansion, llms.txt peer endorsements section |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -268,4 +269,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.13.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.14.0`*
