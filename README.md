@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.19.0` &nbsp;·&nbsp; **95 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.20.0` &nbsp;·&nbsp; **97 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -242,6 +242,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.17` | Banner conviction + Discovery | Banner updated: "Actively exploring VP Engineering / CTO roles in Bengaluru — Let's talk." Director of Engineering added to all meta/ATS keyword targets (job-titles, ats:target-roles, profession, humans.txt) for search discoverability. VP Engineering Candidate → VP Engineering in Person schema. Meta availability sharpened. humans.txt version and date corrected. Paul Stein added to JSON-LD review schema. |
 | `v4.18` | Testimonial depth | Ben Thrift expanded to full LinkedIn recommendation text. Neeraj Singh expanded with intro and closing from LinkedIn recommendation. Both sets of paired cards now visually height-aligned. |
 | `v4.19` | Jagjeet Bhatia testimonial | Added Jagjeet Bhatia (Senior Director, Platform Engineering · Oracle Health) as second testimonial — sourced from LinkedIn recommendation. Paul Stein card updated to full LinkedIn text for visual alignment. |
+| `v4.20` | Testimonial alignment | Michael Damman card updated to full LinkedIn recommendation text. Ben Thrift + Damman row now visually balanced. |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -274,4 +275,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.19.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.20.0`*
