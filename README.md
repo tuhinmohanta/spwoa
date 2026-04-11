@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.20.0` &nbsp;·&nbsp; **97 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.21.0` &nbsp;·&nbsp; **99 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,7 +78,7 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v4.18.0
+// sw.js — cache name: tm-v4.21.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
@@ -108,7 +108,7 @@ Every major entity on the page is machine-readable:
 | `WebSite` + `WebPage` | Site metadata, canonical URL, publication and last-modified timestamps |
 | `DefinedTermSet` | Skills taxonomy — Platform Engineering, DevOps/SRE, AI Governance, Enterprise Architecture, Cloud Modernization, Healthcare Technology |
 | `ItemList` × 2 | Featured articles and featured talks as structured, indexable collections |
-| `AggregateRating` | 11 attributed testimonials — social proof encoded as machine-readable signal |
+| `AggregateRating` | 15 attributed testimonials — social proof encoded as machine-readable signal |
 | `ProfessionalService` | Leadership offering with credentials and scope |
 | `BreadcrumbList` | 8-item navigation structure for rich result eligibility |
 | `CreativeWork` | Executive bio as a citable, retrievable document |
@@ -243,6 +243,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.18` | Testimonial depth | Ben Thrift expanded to full LinkedIn recommendation text. Neeraj Singh expanded with intro and closing from LinkedIn recommendation. Both sets of paired cards now visually height-aligned. |
 | `v4.19` | Jagjeet Bhatia testimonial | Added Jagjeet Bhatia (Senior Director, Platform Engineering · Oracle Health) as second testimonial — sourced from LinkedIn recommendation. Paul Stein card updated to full LinkedIn text for visual alignment. |
 | `v4.20` | Testimonial alignment | Michael Damman card updated to full LinkedIn recommendation text. Ben Thrift + Damman row now visually balanced. |
+| `v4.21` | Sunil Rawlani testimonial | Added ISB mentor Sunil Rawlani (Transformational Leader & Executive Coach) at position 3. CSS grid fix centers lone last card in odd-count layout. AggregateRating updated to 15 reviews. |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -275,4 +276,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.20.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.21.0`*
