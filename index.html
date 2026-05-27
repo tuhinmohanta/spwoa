@@ -344,6 +344,7 @@ section{padding:6rem 0}
 .article-card p{font-size:.78rem;color:var(--text-secondary);line-height:1.65;margin-bottom:.8rem;font-weight:300}
 .article-meta{font-size:.66rem;color:var(--text-muted);display:flex;gap:1.2rem;font-weight:300}
 .talks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.talks-grid>*:last-child:nth-child(3n+1){grid-column:2}
 .talk-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .4s var(--ease)}
 .talk-card:hover{border-color:var(--border-accent);transform:translateY(-2px)}
 .talk-thumb-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;display:block}
@@ -1738,6 +1739,19 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
     <div class="talks-grid fade-in">
 
       <div class="talk-card">
+        <a href="https://www.youtube.com/watch?v=5vWvpsPNpaE" data-video-id="5vWvpsPNpaE" class="talk-thumb-wrap js-video-trigger" aria-label="Watch ISB Leadership with AI: Learner Testimonial">
+          <img src="https://i.ytimg.com/vi/5vWvpsPNpaE/hqdefault.jpg" alt="ISB Leadership with AI: Learner Testimonial" loading="lazy" width="480" height="360">
+          <div class="talk-play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><polygon points="10,8 17,12 10,16" fill="white"/></svg></div>
+        </a>
+        <div class="talk-body">
+          <div class="article-type gold">ISB Learner Testimonial • 2026</div>
+          <h3><a href="https://www.youtube.com/watch?v=5vWvpsPNpaE" data-video-id="5vWvpsPNpaE" class="js-video-trigger">ISB Leadership with AI: Learner Testimonial</a></h3>
+          <p>Featured by ISB — sharing what it takes to lead in an AI-driven world and how the Leadership with AI Programme shapes strategy, decision-making, and organisational transformation.</p>
+          <div class="talk-meta"><span>2026</span><span><a href="https://www.youtube.com/watch?v=5vWvpsPNpaE" data-video-id="5vWvpsPNpaE" class="js-video-trigger" style="color:var(--accent)">Watch →</a></span></div>
+        </div>
+      </div>
+
+      <div class="talk-card">
         <a href="https://www.youtube.com/watch?v=APb4Vuuwx-Q" data-video-id="APb4Vuuwx-Q" class="talk-thumb-wrap js-video-trigger" aria-label="Watch Beyond the Hype: Token Dynamics &amp; AI Sovereignty">
           <img src="https://i.ytimg.com/vi/APb4Vuuwx-Q/maxresdefault.jpg" alt="Beyond the Hype: Token Dynamics &amp; AI Sovereignty" loading="lazy" width="1280" height="720">
           <div class="talk-play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,0.4)" stroke="rgba(255,255,255,0.75)" stroke-width="1.2"/><polygon points="10,8 17,12 10,16" fill="white"/></svg></div>
@@ -1775,6 +1789,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
           <div class="talk-meta"><span>March 2026</span><span><a href="https://www.youtube.com/watch?v=AmiwBAMd9SM" data-video-id="AmiwBAMd9SM" class="js-video-trigger" style="color:var(--accent)">Watch →</a></span></div>
         </div>
       </div>
+
 
     </div>
 
@@ -1861,7 +1876,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;text-align:center;fon
 </section>
 
 </main>
-<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.24.0</div></div></footer>
+<footer><div class="container"><p>© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India</p><div class="version-tag">v4.25.0</div></div></footer>
 
 <!-- Back to top -->
 <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
