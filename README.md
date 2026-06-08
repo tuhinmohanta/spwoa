@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.27.0` &nbsp;·&nbsp; **105 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.28.0` &nbsp;·&nbsp; **106 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,14 +78,14 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v4.27.0
+// sw.js — cache name: tm-v4.28.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
 // Cross-origin    →  Skipped entirely                (fonts, YouTube, Cloudflare analytics)
 ```
 
-The cache name is version-stamped (`tm-v4.27.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
+The cache name is version-stamped (`tm-v4.28.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
 
 ### Analytics — Privacy-First
 
@@ -250,6 +250,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.25` | ISB card — Featured Talks | ISB learner testimonial added as first card in the Featured Talks section on the homepage. |
 | `v4.26` | Emeritus feature + LinkedIn links | Emeritus LinkedIn post added as first article on media.html. LinkedIn links added to ISB video cards on both pages. |
 | `v4.27` | CLC article + video | Conscious Leadership Circle published conversation added as article (2nd) and video (2nd) on media.html. JSON-LD VideoObject schema updated. |
+| `v4.28` | CLC on homepage | CLC article added as 1st in Thought Leadership section; CLC video added as 2nd in Featured Talks on index.html. |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -282,4 +283,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.27.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.28.0`*
