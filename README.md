@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.34.0` &nbsp;·&nbsp; **112 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.35.0` &nbsp;·&nbsp; **113 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,14 +78,14 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v4.34.0
+// sw.js — cache name: tm-v4.35.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
 // Cross-origin    →  Skipped entirely                (fonts, YouTube, Cloudflare analytics)
 ```
 
-The cache name is version-stamped (`tm-v4.34.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
+The cache name is version-stamped (`tm-v4.35.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
 
 ### Analytics — Privacy-First
 
@@ -286,4 +286,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.34.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.35.0`*
