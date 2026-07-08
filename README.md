@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.38.0` &nbsp;·&nbsp; **116 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v4.39.0` &nbsp;·&nbsp; **117 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,14 +78,14 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v4.38.0
+// sw.js — cache name: tm-v4.39.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
 // Cross-origin    →  Skipped entirely                (fonts, YouTube, Cloudflare analytics)
 ```
 
-The cache name is version-stamped (`tm-v4.38.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
+The cache name is version-stamped (`tm-v4.39.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
 
 ### Analytics — Privacy-First
 
@@ -257,6 +257,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.36` | Impact strip precision | "Global Deployments" label sharpened to "Live Hospital Networks" — domain-specific, matches SRE capabilities section. Meta leadership-scope updated to match. |
 | `v4.37` | Impact strip label tweak | "Live Hospital Networks" expanded to "Live Global Hospital Networks" — geographic scope explicit in the metric card. |
 | `v4.38` | Timeline date correction | Lead Integration Engineer period corrected from Oct 2007 - Sep 2012 to Oct 2007 - Dec 2010. |
+| `v4.39` | Timeline date correction | Siemens Healthcare DevOps Practice Lead period corrected from Oct 2012 - Aug 2015 to Jan 2011 - Jan 2015. |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -289,4 +290,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.38.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v4.39.0`*
