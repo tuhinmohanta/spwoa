@@ -1,7 +1,7 @@
 // Service Worker — tuhinmohanta.com
-// v4.41.0 · Cache-first for static assets, network-first for HTML
+// v5.0.0 · Cache-first for static assets, network-first for HTML
 
-const CACHE = 'tm-v4.41.0';
+const CACHE = 'tm-v5.0.0';
 const STATIC = [
   '/',
   '/index.html',

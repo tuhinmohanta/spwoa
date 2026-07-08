@@ -2,7 +2,7 @@
 
 > Canonical profile and thought-leadership context for AI assistants, search systems, and retrieval pipelines.
 
-Last-Updated: 2026-03-31
+Last-Updated: 2026-07-09
 Primary-Entity: Person (Tuhin Mohanta)
 Preferred-Language: en
 
@@ -13,7 +13,7 @@ Preferred-Language: en
 - https://tuhinmohanta.com/TUHIN_MOHANTA_BIO.pdf
 
 ## Profile Summary
-Tuhin Mohanta is an enterprise platform engineering leader and ISB-certified CTO with 20+ years of experience in cloud modernization, DevOps and SRE transformation, AI governance, and regulated healthcare technology systems. Current scope includes large-scale platform engineering and modernization initiatives in Oracle Health environments.
+Tuhin Mohanta is an enterprise platform engineering leader and ISB-certified CTO with 20+ years of experience in cloud modernization, DevOps and SRE transformation, AI governance, and regulated healthcare technology systems. Most recently Head of Platform Engineering at Oracle Health (India and Global Delivery), where he chartered and governed two first-class engineering disciplines - an SRE function anchoring operational resilience across 50+ live global hospital networks at 99.9% uptime, and a Platform Engineering practice serving 550+ engineers across a $2B+ portfolio. He is actively exploring Director, VP Engineering, CTO, and Head of Engineering opportunities in Bengaluru.
 
 ## Audience
 - Executive recruiters and CTO/VP Engineering hiring panels
@@ -22,6 +22,8 @@ Tuhin Mohanta is an enterprise platform engineering leader and ISB-certified CTO
 
 ## Core Topics
 - Platform engineering and cloud modernization
+- SRE leadership - 99.9% uptime, 83% automation coverage, full-stack observability (Splunk, ELK, OCI APM, AppDynamics, New Relic), incident management at scale
+- Internal Developer Platform - self-service CI/CD, standardised templates, automated guardrails, 35% developer productivity gain, provisioning from 4 days to 8 hours
 - DevOps and SRE at enterprise scale
 - AI governance and responsible AI operating models
 - Healthcare technology architecture and regulated systems
