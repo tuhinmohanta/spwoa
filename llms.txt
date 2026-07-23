@@ -21,10 +21,12 @@ Tuhin Mohanta is an enterprise platform engineering leader and ISB-certified CTO
 - AI governance and platform engineering practitioners
 
 ## Core Topics
-- Platform engineering and cloud modernization
+- DevOps transformation at enterprise scale - CI/CD frameworks, DevSecOps governance, engineering velocity, regulated systems delivery
+- Digital Transformation - platform modernization, cloud migration, legacy-to-cloud re-platforming, enterprise technology strategy
+- Digital Experience - developer experience (DevEx), Internal Developer Platform, self-service tooling, engineering productivity at scale
 - SRE leadership - 99.9% uptime, 83% automation coverage, full-stack observability (Splunk, ELK, OCI APM, AppDynamics, New Relic), incident management at scale
+- Platform engineering and cloud modernization
 - Internal Developer Platform - self-service CI/CD, standardised templates, automated guardrails, 35% developer productivity gain, provisioning from 4 days to 8 hours
-- DevOps and SRE at enterprise scale
 - AI governance and responsible AI operating models
 - Healthcare technology architecture and regulated systems
 - CTO-level strategy, operating models, and talent leadership

@@ -1,6 +1,6 @@
 # Tuhin Mohanta — Engineering Leadership, in Practice
 
-**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v5.0.0` &nbsp;·&nbsp; **120 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
+**Live site:** [tuhinmohanta.com](https://tuhinmohanta.com) &nbsp;·&nbsp; **Current release:** `v5.1.0` &nbsp;·&nbsp; **121 commits** &nbsp;·&nbsp; **Deployed via GitHub Actions → GitHub Pages**
 
 > *This repository is both a personal website and a working proof of how I build, ship, and operate digital products. Every decision here — architecture, tooling, SEO strategy, deployment automation — reflects the same thinking I bring to enterprise platforms at scale.*
 
@@ -78,14 +78,14 @@ Fully installable as a standalone app on Android, iOS, and desktop Chrome/Edge.
 ### Service Worker — Cache Strategy
 
 ```js
-// sw.js — cache name: tm-v5.0.0
+// sw.js — cache name: tm-v5.1.0
 //
 // HTML documents  →  Network-first, cache fallback   (always fresh content)
 // Static assets   →  Cache-first, network fallback   (instant load after first visit)
 // Cross-origin    →  Skipped entirely                (fonts, YouTube, Cloudflare analytics)
 ```
 
-The cache name is version-stamped (`tm-v5.0.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
+The cache name is version-stamped (`tm-v5.1.0`). On each release, the activate phase clears all prior caches and immediately claims all open clients — no stale assets survive a deployment.
 
 ### Analytics — Privacy-First
 
@@ -261,6 +261,7 @@ Releases use annotated git tags with semantic versioning. Each version is a comp
 | `v4.40` | Timeline date correction | Cerner Corporation Sr. Engineering Manager period corrected from Aug 2015 - Sep 2022 to Feb 2015 - Sep 2023. |
 | `v4.41` | Timeline date correction | Oracle Health Head of Platform Engineering period corrected from Sep 2022 - Apr 2026 to Oct 2023 - Apr 2026. |
 | `v5.0` | SEO & AI signal overhaul | 10-point traditional + AI SEO sweep: current-organization -> previous-organization, worksFor updated to own entity + seeks added for open-to-work signal, stale HR jobTitle removed, og:updated_time and last-modified refreshed, achievements meta updated with correct metrics, llms.txt refreshed with past-tense employment, SRE and Platform Engineering depth, and availability signal. |
+| `v5.1` | DevOps + Digital positioning | DevOps added to hero eyebrow headline and subtitle. Digital Transformation and Digital Experience added across subtitle, keywords, ats:core-skills, expertise-areas, JSON-LD expertise and knowsAbout, and llms.txt. DevOps target roles added to ats:target-roles. |
 
 > **On the v3 → v4 revert:** I shipped the Astro migration, measured its real-world operational cost — build complexity, dependency surface, deployment overhead — determined the benefit did not justify the complexity for this use case, and reverted cleanly with a documented commit. This is what good engineering judgment looks like in version history. Shipping is not the finish line; *the right thing in production* is.
 
@@ -293,4 +294,4 @@ The authoritative context document is `/llms.txt`. The primary entity definition
 
 ---
 
-*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v5.0.0`*
+*© 2026 Tuhin Mohanta · Built with purpose · Bengaluru, India · `v5.1.0`*
